@@ -6,7 +6,7 @@ import Landing from "./Landing/Landing";
 import About from "./About/About";
 import Pricing from "./Pricing/Pricing";
 import Contact from "./Contact";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import JoinUs from "./JoinUs";
 
 function App() {
