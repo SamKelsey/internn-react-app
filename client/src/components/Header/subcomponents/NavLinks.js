@@ -10,7 +10,7 @@ class NavLinks extends Component {
           <HashLink to="/#about-us">About us</HashLink>
         </li>
         <li className="nav-link">
-          <Link to="portfolio.html">Portfolio</Link>
+          <Link to="/portfolio">Portfolio</Link>
         </li>
         <li className="nav-link">
           <HashLink to="/#section-pricing">Pricing</HashLink>

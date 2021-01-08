@@ -1,10 +1,12 @@
 .footer {
-  margin-top: 20px;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
   background-color: rgba(240, 93, 94, 0.8);
   color: #f4f2f3;
   font-family: "Montserrate", sans-serif;
   text-align: center;
-  padding: 20px;
 }
 
 .footer-links {

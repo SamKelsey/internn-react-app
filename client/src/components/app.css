@@ -1,0 +1,9 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#page-container {
+  flex: 10 auto;
+}
