@@ -9,20 +9,29 @@ class NavLinks extends Component {
         <li className="nav-link">
           <HashLink
             to="/#about-us"
-            onClick={(e) => this.props.toggleBurgerMenu(e)}
+            onClick={(e) =>
+              this.props.isBurgerMenu ? this.props.toggleBurgerMenu(e) : ""
+            }
           >
             About us
           </HashLink>
         </li>
         <li className="nav-link">
-          <Link to="/portfolio" onClick={(e) => this.props.toggleBurgerMenu(e)}>
+          <Link
+            to="/portfolio"
+            onClick={(e) =>
+              this.props.isBurgerMenu ? this.props.toggleBurgerMenu(e) : ""
+            }
+          >
             Portfolio
           </Link>
         </li>
         <li className="nav-link">
           <HashLink
             to="/#section-pricing"
-            onClick={(e) => this.props.toggleBurgerMenu(e)}
+            onClick={(e) =>
+              this.props.isBurgerMenu ? this.props.toggleBurgerMenu(e) : ""
+            }
           >
             Pricing
           </HashLink>
@@ -30,7 +39,9 @@ class NavLinks extends Component {
         <li className="nav-link">
           <HashLink
             to="/#contact-form"
-            onClick={(e) => this.props.toggleBurgerMenu(e)}
+            onClick={(e) =>
+              this.props.isBurgerMenu ? this.props.toggleBurgerMenu(e) : ""
+            }
           >
             Get in touch
           </HashLink>

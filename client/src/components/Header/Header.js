@@ -69,7 +69,10 @@ class Header extends Component {
           >
             <div className="burger-menu-links-container">
               <ul className="burger-nav">
-                <NavLinks toggleBurgerMenu={this.toggleBurgerMenu.bind(this)} />
+                <NavLinks
+                  isBurgerMenu={this.state.isBurgerMenu}
+                  toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
+                />
               </ul>
             </div>
           </div>
@@ -81,7 +84,10 @@ class Header extends Component {
           <nav>
             <HeaderLogo />
             <ul className="nav-links">
-              <NavLinks />
+              <NavLinks
+                isBurgerMenu={this.state.isBurgerMenu}
+                toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
+              />
             </ul>
           </nav>
         </React.Fragment>
