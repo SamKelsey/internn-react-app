@@ -29,6 +29,17 @@
   margin: 70px auto;
 }
 
+#header-column {
+  width: 100%;
+  padding: 0 4px;
+}
+
+#header-pic {
+  width: 100%;
+  box-shadow: 2px 3px 6px rgb(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
 /* Create two equal columns that sits next to each other */
 .column {
   flex: 48%;
@@ -39,6 +50,8 @@
   width: 100%;
   margin-top: 8px;
   vertical-align: middle;
+  box-shadow: 2px 3px 6px rgb(0, 0, 0, 0.2);
+  border-radius: 2px;
 }
 
 @media (max-width: 810px) {

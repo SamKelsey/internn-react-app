@@ -24,23 +24,25 @@ class Portfolio extends Component {
         <h2>We love to showcase our work.</h2>
 
         <div class="row">
-          <div class="column">
-            <img src={IMG_0251} />
-            <img src={IMG_0244} />
-            <img src={IMG_0217} />
-            <img src={IMG_1161} />
-            <img src={IMG_1193} />
-            <img src={IMG_0220} />
-            <img src={IMG_0249} />
+          <div id="header-column">
+            <img id="header-pic" src={IMG_0307} />
           </div>
           <div class="column">
-            <img src={IMG_0307} />
             <img src={IMG_1178} />
-            <img src={IMG_0250} />
-            <img src={IMG_1184} />
-            <img src={IMG_1210} />
+            <img src={IMG_0244} />
+            <img src={IMG_0220} />
+            <img src={IMG_1193} />
+            <img src={IMG_0251} />
+
             <img src={IMG_0246} />
-            <img src={IMG_0243} />
+          </div>
+          <div class="column">
+            <img src={IMG_1161} />
+            <img src={IMG_0250} />
+            <img src={IMG_1210} />
+            <img src={IMG_1184} />
+            <img src={IMG_0217} />
+            <img src={IMG_0249} />
           </div>
         </div>
       </div>
