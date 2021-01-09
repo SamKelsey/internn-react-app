@@ -8,7 +8,19 @@ class Header extends Component {
     super(props);
     this.state = {
       isBurgerMenu: false,
+      burgerMenuIsOpen: false,
     };
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", () => {
+      this.handleResize();
+    });
+    this.handleResize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
   }
 
   handleResize() {
@@ -23,26 +35,8 @@ class Header extends Component {
     }
   }
 
-  toggleMenu(e) {
-    const burgerMenu = document.querySelector(".burger-menu");
-    if (burgerMenu.style.display == "block") {
-      burgerMenu.style.display = "none";
-      e.target.classList.remove("change");
-    } else {
-      burgerMenu.style.display = "block";
-      e.target.classList.add("change");
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener("resize", () => {
-      this.handleResize();
-    });
-    this.handleResize();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.handleResize);
+  toggleBurgerMenu() {
+    this.setState({ burgerMenuIsOpen: !this.state.burgerMenuIsOpen });
   }
 
   renderContent() {
@@ -54,19 +48,28 @@ class Header extends Component {
           </div>
           <button
             id="burger-button"
-            className="menu-button"
+            className={
+              this.state.burgerMenuIsOpen == true
+                ? "menu-button change"
+                : "menu-button"
+            }
             onClick={(e) => {
-              this.toggleMenu(e);
+              this.toggleBurgerMenu(e);
             }}
           >
             <div className="menu-button-line bar1"></div>
             <div className="menu-button-line bar2"></div>
             <div className="menu-button-line bar3"></div>
           </button>
-          <div className="burger-menu">
+          <div
+            style={{
+              display: this.state.burgerMenuIsOpen == true ? "block" : "none",
+            }}
+            className="burger-menu"
+          >
             <div className="burger-menu-links-container">
               <ul className="burger-nav">
-                <NavLinks />
+                <NavLinks toggleBurgerMenu={this.toggleBurgerMenu.bind(this)} />
               </ul>
             </div>
           </div>

@@ -7,16 +7,33 @@ class NavLinks extends Component {
     return (
       <React.Fragment>
         <li className="nav-link">
-          <HashLink to="/#about-us">About us</HashLink>
+          <HashLink
+            to="/#about-us"
+            onClick={(e) => this.props.toggleBurgerMenu(e)}
+          >
+            About us
+          </HashLink>
         </li>
         <li className="nav-link">
-          <Link to="/portfolio">Portfolio</Link>
+          <Link to="/portfolio" onClick={(e) => this.props.toggleBurgerMenu(e)}>
+            Portfolio
+          </Link>
         </li>
         <li className="nav-link">
-          <HashLink to="/#section-pricing">Pricing</HashLink>
+          <HashLink
+            to="/#section-pricing"
+            onClick={(e) => this.props.toggleBurgerMenu(e)}
+          >
+            Pricing
+          </HashLink>
         </li>
         <li className="nav-link">
-          <HashLink to="/#contact-form">Get in touch</HashLink>
+          <HashLink
+            to="/#contact-form"
+            onClick={(e) => this.props.toggleBurgerMenu(e)}
+          >
+            Get in touch
+          </HashLink>
         </li>
       </React.Fragment>
     );
