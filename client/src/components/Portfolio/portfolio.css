@@ -64,4 +64,8 @@
   .column {
     flex: 100%;
   }
+
+  .row {
+    flex-wrap: wrap;
+  }
 }

@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./slideshow.css";
-import "./landing.css";
-
-// Create list of slide html elements and function to rotate through them.
-// Create a piece of state that refers to the index position of the slide.
-// When a user clicks just update the state.
+import "./text.css";
 
 class Landing extends Component {
   constructor(props) {
@@ -14,6 +10,14 @@ class Landing extends Component {
     this.state = {
       slideCounter: 0,
     };
+  }
+
+  componentDidMount() {
+    this.toggleSlide();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   toggleSlide() {
@@ -24,14 +28,6 @@ class Landing extends Component {
         this.setState({ slideCounter: parseInt(this.state.slideCounter) + 1 });
       }
     }, 4000);
-  }
-
-  componentDidMount() {
-    this.toggleSlide();
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
   }
 
   currentSlide(e) {
