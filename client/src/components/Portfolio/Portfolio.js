@@ -16,6 +16,8 @@ import IMG_1184 from "../../images/IMG_1184-min.jpg";
 import IMG_1193 from "../../images/IMG_1193-min.jpg";
 import IMG_1210 from "../../images/IMG_1210-min.jpg";
 import IMG_0555 from "../../images/IMG_0555-min.jpg";
+import IMG_8225 from "../../images/IMG_8225-min.jpg";
+import IMG_8256 from "../../images/IMG_8256-min.jpg";
 
 class Portfolio extends Component {
   constructor(props) {
@@ -74,6 +76,7 @@ class Portfolio extends Component {
           ) : (
             <Fragment>
               <div className="column">
+                <img src={IMG_8225} />
                 <img src={IMG_1178} />
                 <img src={IMG_0555} />
                 <img src={IMG_0244} />
@@ -82,6 +85,7 @@ class Portfolio extends Component {
                 {/* <img src={IMG_0246} /> */}
               </div>
               <div className="column">
+                <img src={IMG_8256} />
                 <img src={IMG_1161} />
                 <img src={IMG_0220} />
                 <img src={IMG_0250} />

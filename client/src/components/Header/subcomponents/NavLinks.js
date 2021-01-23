@@ -46,6 +46,9 @@ class NavLinks extends Component {
             Get in touch
           </HashLink>
         </li>
+        <li className="nav-link">
+          <Link to="/book">Book</Link>
+        </li>
       </React.Fragment>
     );
   }

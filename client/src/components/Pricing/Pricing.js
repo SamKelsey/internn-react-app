@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./pricing.css";
+import priceCalculator from "../../services/priceCalculator"
 
 class Pricing extends Component {
   constructor(props) {
@@ -12,17 +13,7 @@ class Pricing extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.selectedPrice == "Please select...") {
-      this.setState({ calculatedPrice: "..." });
-    } else if (this.state.selectedPrice >= 4 && this.state.selectedPrice <= 5) {
-      this.setState({ calculatedPrice: this.state.selectedPrice * 7.5 });
-    } else if (this.state.selectedPrice >= 6 && this.state.selectedPrice <= 7) {
-      this.setState({ calculatedPrice: this.state.selectedPrice * 7 });
-    } else if (this.state.selectedPrice >= 8 && this.state.selectedPrice <= 9) {
-      this.setState({ calculatedPrice: this.state.selectedPrice * 6.5 });
-    } else if (this.state.selectedPrice >= 10) {
-      this.setState({ calculatedPrice: this.state.selectedPrice * 6 });
-    }
+    this.setState({ calculatedPrice: priceCalculator(this.state.selectedPrice)})
   }
 
   render() {
