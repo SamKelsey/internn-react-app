@@ -10,6 +10,12 @@ class Book extends Component {
       formStage: 0,
       formData: {
         numOfRooms: "Rooms...",
+        name: "",
+        email: "",
+        address1: "",
+        address2: "",
+        city: "",
+        postcode: "",
       },
       numOfRoomsOpen: false,
     };
@@ -37,12 +43,12 @@ class Book extends Component {
   renderForm() {
     if (this.state.formStage == 0) {
       return (
-        <form>
+        <React.Fragment>
           <div className="rooms-wrapper">
             <label>No. of rooms</label>
             <div className="rooms-help">
               <p>Here is some help for defining a room...</p>
-              <i class="far fa-question-circle"></i>
+              <i className="far fa-question-circle"></i>
             </div>
             <br />
             <div
@@ -62,7 +68,10 @@ class Book extends Component {
                     }}
                     onClick={(e) => {
                       this.setState({
-                        formData: { numOfRooms: e.target.innerHTML },
+                        formData: {
+                          ...this.state.formData,
+                          numOfRooms: e.target.innerHTML,
+                        },
                       });
                     }}
                   >
@@ -94,7 +103,7 @@ class Book extends Component {
             <textarea placeholder="&#xf4ad; Extra info..." rows="6"></textarea>
             <div className="textarea-help rooms-help">
               <p>Here is some help for extra stuff to add in here...</p>
-              <i class="far fa-question-circle"></i>
+              <i className="far fa-question-circle"></i>
             </div>
           </div>
           <button
@@ -104,12 +113,163 @@ class Book extends Component {
             Next
             <i className="fas fa-chevron-right fa-sm"></i>
           </button>
-        </form>
+        </React.Fragment>
       );
     } else if (this.state.formStage == 1) {
-      return <React.Fragment>Stage 2</React.Fragment>;
+      return (
+        <div className="stage-2">
+          <input
+            type="text"
+            className="name"
+            placeholder="Name..."
+            onChange={(e) =>
+              this.setState({
+                formData: {
+                  ...this.state.formData,
+                  name: e.target.value,
+                },
+              })
+            }
+          />
+          <input
+            type="text"
+            className="email"
+            placeholder="Email..."
+            onChange={(e) =>
+              this.setState({
+                formData: {
+                  ...this.state.formData,
+                  email: e.target.value,
+                },
+              })
+            }
+          />
+          <input
+            type="text"
+            className="address-1"
+            placeholder="Address Line 1..."
+            onChange={(e) =>
+              this.setState({
+                formData: {
+                  ...this.state.formData,
+                  address1: e.target.value,
+                },
+              })
+            }
+          />
+          <input
+            type="text"
+            className="address-2"
+            placeholder="Address Line 2..."
+            onChange={(e) =>
+              this.setState({
+                formData: {
+                  ...this.state.formData,
+                  address2: e.target.value,
+                },
+              })
+            }
+          />
+          <input
+            type="text"
+            className="city"
+            placeholder="City/Town..."
+            onChange={(e) =>
+              this.setState({
+                formData: {
+                  ...this.state.formData,
+                  city: e.target.value,
+                },
+              })
+            }
+          />
+          <input
+            type="text"
+            className="postcode"
+            placeholder="Postcode..."
+            onChange={(e) =>
+              this.setState({
+                formData: {
+                  ...this.state.formData,
+                  postcode: e.target.value,
+                },
+              })
+            }
+          />
+          <div className="buttons">
+            <button onClick={() => this.setState({ formStage: 0 })}>
+              <i className="fas fa-arrow-left"></i>
+            </button>
+            <button onClick={() => this.setState({ formStage: 2 })}>
+              <i className="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      );
     } else if (this.state.formStage == 2) {
-      return "Stage 2";
+      return (
+        <React.Fragment>
+          <div className="confirmation-timeslot">
+            <h1>
+              24<sup>th</sup> December 2021
+            </h1>
+            <br />
+            <h1>10:00 AM</h1>
+            <p
+              className="change-booking"
+              onClick={() => this.setState({ formStage: 0 })}
+            >
+              Change Booking
+            </p>
+          </div>
+          <div className="confirmation-personal-details">
+            <div className="details">
+              <h2>Name:</h2>
+              <p>{this.state.formData.name}</p>
+              <h2>Email:</h2>
+              <p>{this.state.formData.email}</p>
+              <h2>Address:</h2>
+              <p>{this.state.formData.address1}</p>
+              {this.state.formData.address2 != "" && (
+                <p>{this.state.formData.address2}</p>
+              )}
+              <p>{this.state.formData.city}</p>
+              <p>{this.state.formData.postcode}</p>
+            </div>
+            <p
+              className="confirmation-change-info"
+              onClick={() => this.setState({ formStage: 1 })}
+            >
+              Change Information
+            </p>
+          </div>
+          <div className="confirmation-price">
+            <div className="line">
+              <p>{this.state.formData.numOfRooms} rooms</p>
+              <p>
+                £
+                {(
+                  priceCalculator(this.state.formData.numOfRooms) * 0.8
+                ).toFixed(2)}
+              </p>
+            </div>
+            <div className="line vat">
+              <p>VAT</p>
+              <p>
+                £
+                {(
+                  priceCalculator(this.state.formData.numOfRooms) * 0.2
+                ).toFixed(2)}
+              </p>
+            </div>
+            <div className="line total">
+              <p>Total</p>
+              <p>£{priceCalculator(this.state.formData.numOfRooms)}</p>
+            </div>
+          </div>
+          <button className="next-button">Pay</button>
+        </React.Fragment>
+      );
     }
   }
 
@@ -117,8 +277,8 @@ class Book extends Component {
     return (
       <React.Fragment>
         <div className="booking-wrapper">
-          <p>Step {this.state.formStage + 1} of 3</p>
-          {this.renderForm()}
+          <p className="stage-counter">Step {this.state.formStage + 1} of 3</p>
+          <form>{this.renderForm()}</form>
         </div>
       </React.Fragment>
     );
