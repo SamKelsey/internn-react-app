@@ -11,9 +11,12 @@ module.exports = (app) => {
     dateTomorrow.setDate(dateTomorrow.getDate() + 1);
 
     // Find bookings after day and tomorrow
-    const bookingDates = await Booking.find({
-      bookingDate: { $gte: date, $lt: dateTomorrow },
-    });
+    const bookingDates = await Booking.find(
+      {
+        bookingDate: { $gte: date, $lt: dateTomorrow },
+      },
+      "bookingDate"
+    );
 
     res.send(bookingDates);
   });
