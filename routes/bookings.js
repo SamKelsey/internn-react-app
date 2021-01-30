@@ -51,6 +51,7 @@ module.exports = (app) => {
   app.post("/api/checkout", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
+      customer_email: req.body.email,
       line_items: [
         {
           price_data: {
