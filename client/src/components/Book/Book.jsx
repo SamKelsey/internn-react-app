@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import _ from "lodash";
 import "./book.css";
+import { loadStripe } from "@stripe/stripe-js";
 import priceCalculator from "../../services/priceCalculator";
 
 class Book extends Component {
@@ -20,6 +21,46 @@ class Book extends Component {
       numOfRoomsOpen: false,
     };
   }
+  // Make sure to call `loadStripe` outside of a component’s render to avoid
+  // recreating the `Stripe` object on every render.
+  stripePromise = loadStripe(
+    "pk_test_51IEKpEBIl6HQpdRxMsA9bZbp2ScbPOaMSq36IkcqomhGu2ZArFimCr9J5UNtOtuEievfeS1IWy24XHDF4Z8nIusd00xoBdokQN"
+  );
+
+  handleClick = async (event) => {
+    event.preventDefault();
+    // Get Stripe.js instance
+    const stripe = await this.stripePromise;
+
+    const data = {
+      price: priceCalculator(this.state.formData.numOfRooms),
+      numOfRooms: this.state.formData.numOfRooms,
+      email: this.state.formData.email,
+    };
+
+    // Call your backend to create the Checkout Session
+    const response = await fetch("/api/checkout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const session = await response.json();
+
+    // When the customer clicks on the button, redirect them to Checkout.
+    const result = await stripe.redirectToCheckout({
+      sessionId: session.id,
+    });
+
+    if (result.error) {
+      // If `redirectToCheckout` fails due to a browser or network
+      // error, display the localized error message to your customer
+      // using `result.error.message`.
+      console.log(result.error.message);
+    }
+  };
 
   // Define options for number of rooms.
   numOfRooms = _.range(4, 21);
@@ -122,6 +163,7 @@ class Book extends Component {
             type="text"
             className="name"
             placeholder="Name..."
+            value={this.state.formData.name}
             onChange={(e) =>
               this.setState({
                 formData: {
@@ -135,6 +177,7 @@ class Book extends Component {
             type="text"
             className="email"
             placeholder="Email..."
+            value={this.state.formData.email}
             onChange={(e) =>
               this.setState({
                 formData: {
@@ -148,6 +191,7 @@ class Book extends Component {
             type="text"
             className="address-1"
             placeholder="Address Line 1..."
+            value={this.state.formData.address1}
             onChange={(e) =>
               this.setState({
                 formData: {
@@ -161,6 +205,7 @@ class Book extends Component {
             type="text"
             className="address-2"
             placeholder="Address Line 2..."
+            value={this.state.formData.address2}
             onChange={(e) =>
               this.setState({
                 formData: {
@@ -174,6 +219,7 @@ class Book extends Component {
             type="text"
             className="city"
             placeholder="City/Town..."
+            value={this.state.formData.city}
             onChange={(e) =>
               this.setState({
                 formData: {
@@ -187,6 +233,7 @@ class Book extends Component {
             type="text"
             className="postcode"
             placeholder="Postcode..."
+            value={this.state.formData.postcode}
             onChange={(e) =>
               this.setState({
                 formData: {
@@ -267,7 +314,13 @@ class Book extends Component {
               <p>£{priceCalculator(this.state.formData.numOfRooms)}</p>
             </div>
           </div>
-          <button className="next-button">Pay</button>
+          <button
+            role="link"
+            onClick={this.handleClick}
+            className="next-button"
+          >
+            Pay
+          </button>
         </React.Fragment>
       );
     }

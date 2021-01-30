@@ -1,4 +1,7 @@
 const Booking = require("../models/Booking");
+const Stripe = require("stripe");
+const keys = require("../config/keys");
+const stripe = Stripe(keys.stripeSecretKey);
 
 module.exports = (app) => {
   // @route GET api/bookings
@@ -22,8 +25,8 @@ module.exports = (app) => {
   });
 
   // @route POST api/createbooking
-  // @desc Take payment and create booking
-  // @access Public
+  // @desc Create booking in mongo db
+  // @access Private
   app.post("/api/createbooking", (req, res) => {
     const { name, email, address, bookingDate } = req.body;
 
@@ -41,5 +44,30 @@ module.exports = (app) => {
     } catch (err) {
       console.error(err.message);
     }
+  });
+
+  // @route POST /api/checkout
+  // @desc Launch stripe checkout and take payment
+  app.post("/api/checkout", async (req, res) => {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      line_items: [
+        {
+          price_data: {
+            currency: "gbp",
+            product_data: {
+              name: req.body.numOfRooms + " Rooms photographed",
+            },
+            unit_amount_decimal: req.body.price * 100,
+          },
+          quantity: 1,
+        },
+      ],
+      mode: "payment",
+      success_url: "https://localhost:3000/success",
+      cancel_url: "https://localhost:3000/cancel",
+    });
+
+    res.json({ id: session.id });
   });
 };
