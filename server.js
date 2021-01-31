@@ -18,7 +18,7 @@ try {
   process.exit(1);
 }
 
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
 // Implement routes
 require("./routes/bookings")(app);

@@ -34,8 +34,7 @@ class Book extends Component {
 
     const data = {
       price: priceCalculator(this.state.formData.numOfRooms),
-      numOfRooms: this.state.formData.numOfRooms,
-      email: this.state.formData.email,
+      formData: this.state.formData,
     };
 
     // Call your backend to create the Checkout Session

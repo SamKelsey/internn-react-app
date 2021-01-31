@@ -1,6 +1,9 @@
+const bodyParser = require("body-parser");
 const Booking = require("../models/Booking");
 const Stripe = require("stripe");
 const keys = require("../config/keys");
+
+const createBooking = require("../services/createBooking");
 const stripe = Stripe(keys.stripeSecretKey);
 
 module.exports = (app) => {
@@ -24,40 +27,19 @@ module.exports = (app) => {
     res.send(bookingDates);
   });
 
-  // @route POST api/createbooking
-  // @desc Create booking in mongo db
-  // @access Private
-  app.post("/api/createbooking", (req, res) => {
-    const { name, email, address, bookingDate } = req.body;
-
-    try {
-      const booking = new Booking({
-        name,
-        email,
-        address,
-        bookingDate,
-      });
-
-      booking.save();
-
-      res.send(req.body);
-    } catch (err) {
-      console.error(err.message);
-    }
-  });
-
   // @route POST /api/checkout
   // @desc Launch stripe checkout and take payment
-  app.post("/api/checkout", async (req, res) => {
+  // @access Public
+  app.post("/api/checkout", bodyParser.json(), async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
-      customer_email: req.body.email,
+      customer_email: req.body.formData.email,
       line_items: [
         {
           price_data: {
             currency: "gbp",
             product_data: {
-              name: req.body.numOfRooms + " Rooms photographed",
+              name: req.body.formData.numOfRooms + " Rooms photographed",
             },
             unit_amount_decimal: req.body.price * 100,
           },
@@ -65,10 +47,52 @@ module.exports = (app) => {
         },
       ],
       mode: "payment",
-      success_url: "https://localhost:3000/success",
+      metadata: req.body.formData,
+      success_url: "http://localhost:3000/",
       cancel_url: "https://localhost:3000/cancel",
     });
 
     res.json({ id: session.id });
   });
+
+  // @route POST /api/webhook
+  // @desc Create webhook to receive stripe notifications
+  // @access Private
+  app.post(
+    "/api/webhook",
+    bodyParser.raw({ type: "application/json" }),
+    (req, res) => {
+      const payload = req.body;
+
+      const sig = req.headers["stripe-signature"];
+
+      let event;
+
+      // Verify request is coming from stripe.
+      try {
+        event = stripe.webhooks.constructEvent(
+          payload,
+          sig,
+          keys.stripeWebhookSigningSecret
+        );
+      } catch (err) {
+        console.log(err.message);
+        return res.status(400).send(`Webhook Error: ${err.message}`);
+      }
+
+      if (event.type === "checkout.session.completed") {
+        const session = event.data.object;
+        console.log(session);
+
+        let data = session.metadata;
+        if (session.payment_status == "paid") {
+          data = { ...data, paid: true };
+        }
+        // Add booking to db
+        createBooking(data);
+      }
+
+      res.status(200);
+    }
+  );
 };
