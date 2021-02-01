@@ -62,10 +62,29 @@
 }
 
 .textarea-help {
-  position: absolute;
-  top: 0;
-  right: 0;
   padding: 10px 11px;
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  cursor: pointer;
+}
+
+.textarea-help p {
+  color: white;
+  display: none;
+  text-align: left;
+  width: 200px;
+  background-color: rgba(240, 93, 94, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.textarea-help:hover p {
+  display: block;
 }
 
 .next-button {
@@ -135,7 +154,7 @@
 }
 
 .rooms-help {
-  z-index: 0;
+  z-index: 2;
   position: absolute;
   right: 0;
   top: 0;

@@ -141,7 +141,7 @@ class Book extends Component {
           <br />
           <div className="textarea-wrapper">
             <textarea placeholder="&#xf4ad; Extra info..." rows="6"></textarea>
-            <div className="textarea-help rooms-help">
+            <div className="textarea-help">
               <p>Here is some help for extra stuff to add in here...</p>
               <i className="far fa-question-circle"></i>
             </div>
