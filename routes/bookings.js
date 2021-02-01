@@ -92,7 +92,7 @@ module.exports = (app) => {
         createBooking(data);
       }
 
-      res.status(200);
+      res.send();
     }
   );
 };
