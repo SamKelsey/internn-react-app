@@ -30,7 +30,7 @@ module.exports = (app) => {
   // @route POST /api/checkout
   // @desc Launch stripe checkout and take payment
   // @access Public
-  app.post("/api/checkout", bodyParser.json(), async (req, res) => {
+  app.post("/api/checkout", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       customer_email: req.body.formData.email,
@@ -58,41 +58,36 @@ module.exports = (app) => {
   // @route POST /api/webhook
   // @desc Create webhook to receive stripe notifications
   // @access Private
-  app.post(
-    "/api/webhook",
-    bodyParser.raw({ type: "application/json" }),
-    (req, res) => {
-      const payload = req.body;
+  app.post("/api/webhook", (req, res) => {
+    const payload = req.rawBody;
 
-      const sig = req.headers["stripe-signature"];
+    const sig = req.headers["stripe-signature"];
 
-      let event;
+    let event;
 
-      // Verify request is coming from stripe.
-      try {
-        event = stripe.webhooks.constructEvent(
-          payload,
-          sig,
-          keys.stripeWebhookSigningSecret
-        );
-      } catch (err) {
-        console.log(err.message);
-        return res.status(400).send(`Webhook Error: ${err.message}`);
-      }
-
-      if (event.type === "checkout.session.completed") {
-        const session = event.data.object;
-        console.log(session);
-
-        let data = session.metadata;
-        if (session.payment_status == "paid") {
-          data = { ...data, paid: true };
-        }
-        // Add booking to db
-        createBooking(data);
-      }
-
-      res.send();
+    // Verify request is coming from stripe.
+    try {
+      event = stripe.webhooks.constructEvent(
+        payload,
+        sig,
+        keys.stripeWebhookSigningSecret
+      );
+    } catch (err) {
+      console.log(err.message);
+      return res.status(400).send(`Webhook Error: ${err.message}`);
     }
-  );
+
+    if (event.type === "checkout.session.completed") {
+      const session = event.data.object;
+
+      let data = session.metadata;
+      if (session.payment_status == "paid") {
+        data = { ...data, paid: true };
+      }
+      // Add booking to db
+      createBooking(data);
+    }
+
+    res.send();
+  });
 };

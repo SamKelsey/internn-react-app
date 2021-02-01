@@ -18,7 +18,13 @@ try {
   process.exit(1);
 }
 
-//app.use(bodyParser.json());
+app.use(
+  bodyParser.json({
+    verify: (req, res, buf) => {
+      req.rawBody = buf;
+    },
+  })
+);
 
 // Implement routes
 require("./routes/bookings")(app);
