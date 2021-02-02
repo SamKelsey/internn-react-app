@@ -17,6 +17,7 @@ class Book extends Component {
         address2: "",
         city: "",
         postcode: "",
+        addedInfo: "",
       },
       numOfRoomsOpen: false,
     };
@@ -140,11 +141,25 @@ class Book extends Component {
           />
           <br />
           <div className="textarea-wrapper">
-            <textarea placeholder="&#xf4ad; Extra info..." rows="6"></textarea>
-            <div className="textarea-help">
-              <p>Here is some help for extra stuff to add in here...</p>
-              <i className="far fa-question-circle"></i>
-            </div>
+            <textarea
+              value={this.state.formData.addedInfo}
+              onChange={(e) =>
+                this.setState({
+                  formData: {
+                    ...this.state.formData,
+                    addedInfo: e.target.value,
+                  },
+                })
+              }
+              placeholder="&#xf4ad; Extra info..."
+              rows="6"
+            ></textarea>
+            {this.state.formData.addedInfo == "" && (
+              <div className="textarea-help">
+                <p>Here is some help for extra stuff to add in here...</p>
+                <i className="far fa-question-circle"></i>
+              </div>
+            )}
           </div>
           <button
             onClick={() => this.setState({ formStage: 1 })}
@@ -173,7 +188,7 @@ class Book extends Component {
             }
           />
           <input
-            type="text"
+            type="email"
             className="email"
             placeholder="Email..."
             value={this.state.formData.email}
