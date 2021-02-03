@@ -54,18 +54,18 @@
   border-radius: 2px;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 800px) {
   #section-portfolio {
     padding-left: 0;
     padding-right: 0;
     width: 80vw;
   }
 
-  .column {
+  #section-portfolio .column {
     flex: 100%;
   }
 
-  .row {
+  #section-portfolio .row {
     flex-wrap: wrap;
   }
 }

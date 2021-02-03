@@ -71,17 +71,17 @@
     margin-bottom: 30px;
   }
 
-  #stock-img {
+  .about-us #stock-img {
     display: none;
   }
 
-  .right {
+  .about-us .right {
     width: 100%;
   }
 }
 
 @media (max-width: 800px) {
-  .about-us-text h3 {
+  .about-us .about-us-text h3 {
     margin-bottom: 20px;
   }
 }

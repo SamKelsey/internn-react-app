@@ -24,7 +24,7 @@ class Header extends Component {
   }
 
   handleResize() {
-    if (document.documentElement.clientWidth < 800) {
+    if (document.documentElement.clientWidth <= 800) {
       this.setState({
         isBurgerMenu: true,
       });
