@@ -42,8 +42,8 @@ class About extends React.Component {
             </div>
           </div>
           <div className="right">
-            <img id="about-logo" src={logo} />
-            <img id="stock-img" src={stockPicture} />
+            <img id="about-logo" src={logo} alt="internn logo" />
+            <img id="stock-img" src={stockPicture} alt="stock" />
           </div>
         </div>
       </div>

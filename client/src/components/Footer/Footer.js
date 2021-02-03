@@ -11,7 +11,7 @@ class Footer extends Component {
           <div className="logo-wrapper">
             <div className="logo">
               <Link to="/">
-                <img src={logo} />
+                <img src={logo} alt="internn logo" />
               </Link>
             </div>
           </div>
