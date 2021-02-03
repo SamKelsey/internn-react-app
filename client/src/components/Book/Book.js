@@ -99,7 +99,7 @@ class Book extends Component {
             >
               <i className="fas fa-bed"></i>
               <ul className="num-of-rooms">
-                {this.state.formData.numOfRooms}
+                <p>{this.state.formData.numOfRooms}</p>
                 {this.numOfRooms.map((num) => (
                   <li
                     key={num}
@@ -122,12 +122,14 @@ class Book extends Component {
               <i className="fas fa-arrow-down"></i>
             </div>
           </div>
-          <h1 className="booking-section price">
-            {priceCalculator(this.state.formData.numOfRooms) == "..."
-              ? "..."
-              : "£ " + priceCalculator(this.state.formData.numOfRooms)}
-          </h1>
-          <div className="input-header booking-section">
+          <div className="booking-section">
+            <h1 className="booking-price">
+              {priceCalculator(this.state.formData.numOfRooms) == "..."
+                ? "..."
+                : "£ " + priceCalculator(this.state.formData.numOfRooms)}
+            </h1>
+          </div>
+          <div className="booking-section">
             <label>Pick a time slot</label>
             <br />
             <input min={this.getDate()} type="date" className="date" />
@@ -139,7 +141,6 @@ class Book extends Component {
               step="300"
               className="time"
             />
-            <br />
             <div className="textarea-wrapper">
               <textarea
                 value={this.state.formData.addedInfo}
@@ -273,7 +274,7 @@ class Book extends Component {
         <React.Fragment>
           <div className="confirmation-timeslot">
             <h1>
-              24<sup>th</sup> December 2021
+              24<sup>th</sup> September 2021
             </h1>
             <br />
             <h1>10:00 AM</h1>

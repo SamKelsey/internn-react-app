@@ -4,22 +4,21 @@
   border-radius: 10px;
   text-align: center;
   max-width: 500px;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 50px;
   width: 90%;
   padding: 4px;
 }
 
-.booking-wrapper p {
+.booking-wrapper .stage-counter {
   font-size: 0.8rem;
   margin: 0;
-}
-
-.stage-counter {
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 .booking-wrapper form {
-  width: 80%;
+  max-width: 400px;
+  width: 98%;
   margin: auto;
 }
 
@@ -30,17 +29,18 @@
   box-sizing: border-box;
   width: 100%;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
 }
 
 .date,
 .time {
-  font-size: 1rem;
   padding: 5px;
 }
 
-.price {
+.booking-section .booking-price {
   color: rgba(240, 93, 94, 0.8);
-  margin: 5px;
+  margin: 10px;
+  font-size: 4rem;
 }
 
 .date,
@@ -50,7 +50,7 @@
 
 .booking-wrapper form textarea {
   resize: none;
-  padding: 10px;
+  padding: 5px;
   font-family: "Font Awesome 5 Free", "Montserrat", Verdana, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -62,6 +62,7 @@
 }
 
 .textarea-help {
+  font-size: 1rem;
   padding: 10px 11px;
   z-index: 0;
   position: absolute;
@@ -114,14 +115,22 @@
 }
 
 .rooms-wrapper {
+  height: 80px;
   position: relative;
-  height: 50px;
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+.booking-section {
+  font-size: 1.2rem;
   width: 100%;
 }
 
 .custom-select {
-  z-index: 1;
   position: absolute;
+  font-size: 1.4rem;
+  z-index: 1;
+  margin: auto;
   display: flex;
   background-color: white;
   border: 1px solid grey;
@@ -135,6 +144,7 @@
 }
 
 .custom-select .num-of-rooms {
+  font-size: 1.5rem;
   z-index: 2;
   margin: 0;
   padding-left: 0;
@@ -142,6 +152,16 @@
   flex: 1;
   list-style: none;
   font-size: 1rem;
+}
+
+.custom-select p {
+  padding: 0;
+  margin: 0 5px;
+}
+
+.custom-select p,
+.custom-select li {
+  font-size: 1.5rem;
 }
 
 .custom-select .num-of-rooms li {
@@ -154,6 +174,7 @@
 }
 
 .rooms-help {
+  font-size: 1rem;
   z-index: 2;
   position: absolute;
   right: 0;
@@ -178,14 +199,14 @@
   display: block;
 }
 
-.booking-wrapper form .stage-2 input {
+.booking-wrapper form .stage-2 > input {
   box-sizing: border-box;
   width: 100%;
-  font-size: 1rem;
-  padding: 8px 5px;
+  font-size: 1.5rem;
   border: 1px solid grey;
   box-shadow: 1px 2px 4px #888888;
-  margin: 6px 0;
+  margin: 10px 0;
+  padding: 15px 5px;
 }
 
 .booking-wrapper .buttons button {
@@ -211,7 +232,7 @@
 
 .confirmation-timeslot {
   background-color: rgba(240, 93, 94, 0.8);
-  font-size: 0.5rem;
+  font-size: 1rem;
   border-radius: 5px;
   padding: 5px;
 }
@@ -251,9 +272,19 @@
 }
 
 .confirmation-personal-details .details h2 {
-  font-size: 0.8rem;
+  padding: 0;
   margin: 0;
   font-weight: 600;
+}
+
+.confirmation-personal-details .details p {
+  margin: 0;
+  padding: 0;
+}
+
+.confirmation-personal-details .details h2,
+.confirmation-personal-details .details p {
+  font-size: 1rem;
 }
 
 .confirmation-personal-details .details {
@@ -290,10 +321,12 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  font-size: 1.4rem;
 }
 
 .confirmation-price .line p {
-  font-size: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 .confirmation-price .total {
@@ -303,35 +336,37 @@
 
 .confirmation-price .total p {
   font-weight: 600;
-  font-size: 1rem;
-}
-
-.confirmation-price .vat p {
-  font-size: 1rem;
 }
 
 .confirmation-timeslot,
 .confirmation-personal-details,
 .confirmation-price {
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  margin: 8px 0;
 }
 
-@media (max-width: 500px) {
+.booking-wrapper > form > button {
+  border-radius: 5px;
+  margin: 5px 0;
+}
+/* @media (max-width: 500px) {
   .booking-wrapper form {
     width: 98%;
     min-height: 60vh;
   }
 
-  .stage-2 input {
-    min-height: 30px;
-    font-size: 1.2rem;
+  .stage-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .rooms-wrapper {
-    height: 60px;
-    font-size: 1rem;
+  .stage-2 input {
+    min-height: 40px;
+    font-size: 5rem;
   }
-}
+
+} */
 /* 
 .booking-wrapper {
   max-width: 500px;
