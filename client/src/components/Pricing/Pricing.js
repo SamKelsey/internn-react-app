@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./pricing.css";
-import priceCalculator from "../../services/priceCalculator"
+import priceCalculator from "../../services/priceCalculator";
 
 class Pricing extends Component {
   constructor(props) {
@@ -13,7 +13,9 @@ class Pricing extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({ calculatedPrice: priceCalculator(this.state.selectedPrice)})
+    this.setState({
+      calculatedPrice: priceCalculator(this.state.selectedPrice),
+    });
   }
 
   render() {

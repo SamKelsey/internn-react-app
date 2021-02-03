@@ -85,13 +85,12 @@ class Book extends Component {
     if (this.state.formStage == 0) {
       return (
         <React.Fragment>
-          <div className="rooms-wrapper">
+          <div className="booking-section input-header rooms-wrapper">
             <label>No. of rooms</label>
             <div className="rooms-help">
               <p>Here is some help for defining a room...</p>
               <i className="far fa-question-circle"></i>
             </div>
-            <br />
             <div
               className="custom-select"
               onClick={() => {
@@ -123,51 +122,53 @@ class Book extends Component {
               <i className="fas fa-arrow-down"></i>
             </div>
           </div>
-          <h1 className="price">
+          <h1 className="booking-section price">
             {priceCalculator(this.state.formData.numOfRooms) == "..."
               ? "..."
               : "£ " + priceCalculator(this.state.formData.numOfRooms)}
           </h1>
-          <label>Pick a time slot</label>
-          <br />
-          <input min={this.getDate()} type="date" className="date" />
-          <br />
-          <input
-            type="time"
-            min="09:00"
-            max="18:00"
-            step="300"
-            className="time"
-          />
-          <br />
-          <div className="textarea-wrapper">
-            <textarea
-              value={this.state.formData.addedInfo}
-              onChange={(e) =>
-                this.setState({
-                  formData: {
-                    ...this.state.formData,
-                    addedInfo: e.target.value,
-                  },
-                })
-              }
-              placeholder="&#xf4ad; Extra info..."
-              rows="6"
-            ></textarea>
-            {this.state.formData.addedInfo == "" && (
-              <div className="textarea-help">
-                <p>Here is some help for extra stuff to add in here...</p>
-                <i className="far fa-question-circle"></i>
-              </div>
-            )}
+          <div className="input-header booking-section">
+            <label>Pick a time slot</label>
+            <br />
+            <input min={this.getDate()} type="date" className="date" />
+            <br />
+            <input
+              type="time"
+              min="09:00"
+              max="18:00"
+              step="300"
+              className="time"
+            />
+            <br />
+            <div className="textarea-wrapper">
+              <textarea
+                value={this.state.formData.addedInfo}
+                onChange={(e) =>
+                  this.setState({
+                    formData: {
+                      ...this.state.formData,
+                      addedInfo: e.target.value,
+                    },
+                  })
+                }
+                placeholder="&#xf4ad; Extra info..."
+                rows="6"
+              ></textarea>
+              {this.state.formData.addedInfo == "" && (
+                <div className="textarea-help">
+                  <p>Here is some help for extra stuff to add in here...</p>
+                  <i className="far fa-question-circle"></i>
+                </div>
+              )}
+            </div>
+            <button
+              onClick={() => this.setState({ formStage: 1 })}
+              className="next-button"
+            >
+              Next
+              <i className="fas fa-chevron-right fa-sm"></i>
+            </button>
           </div>
-          <button
-            onClick={() => this.setState({ formStage: 1 })}
-            className="next-button"
-          >
-            Next
-            <i className="fas fa-chevron-right fa-sm"></i>
-          </button>
         </React.Fragment>
       );
     } else if (this.state.formStage == 1) {

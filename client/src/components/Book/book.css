@@ -3,9 +3,9 @@
   border: 5px solid rgba(240, 93, 94, 0.8);
   border-radius: 10px;
   text-align: center;
-  width: 90%;
   max-width: 500px;
   margin: 0 auto;
+  width: 90%;
   padding: 4px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .booking-wrapper form {
-  max-width: 300px;
+  width: 80%;
   margin: auto;
 }
 
@@ -92,7 +92,7 @@
   position: relative;
   font-size: 1rem;
   width: 100%;
-  padding: 3px 5px;
+  padding: 8px 5px;
   border-radius: 2px;
   cursor: pointer;
   background-color: rgba(240, 93, 94, 0.8);
@@ -315,3 +315,93 @@
 .confirmation-price {
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 500px) {
+  .booking-wrapper form {
+    width: 98%;
+    min-height: 60vh;
+  }
+
+  .stage-2 input {
+    min-height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .rooms-wrapper {
+    height: 60px;
+    font-size: 1rem;
+  }
+}
+/* 
+.booking-wrapper {
+  max-width: 500px;
+  width: 90%;
+  border: 5px solid rgba(240, 93, 94, 0.8);
+  border-radius: 12px;
+  margin: auto;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+.booking-wrapper p {
+  margin: 1%;
+  font-size: 0.8em;
+}
+
+.booking-wrapper > form {
+  border: 2px solid black;
+}
+
+.booking-wrapper > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.booking-section {
+  border: 2px solid green;
+}
+
+.input-header {
+  font-size: 1.2rem;
+}
+
+.rooms-wrapper {
+  position: relative;
+}
+
+.rooms-help {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  text-align: left;
+  margin: 0.8%;
+}
+
+.rooms-help p {
+  color: white;
+  display: none;
+  text-align: left;
+  width: 200px;
+  background-color: rgba(240, 93, 94, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.rooms-help:hover p {
+  display: block;
+}
+
+.custom-select {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid black;
+}
+.custom-select ul {
+  padding: 0;
+} */
