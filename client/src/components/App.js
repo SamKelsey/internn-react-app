@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Route exact path="/join-us" component={JoinUs} />
         <Route exact path="/portfolio" component={Portfolio} />
-        <Route exact path="/book" component={Book} />
+        <Route path="/book" component={Book} />
       </div>
       <Footer />
     </BrowserRouter>

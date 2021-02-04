@@ -48,7 +48,8 @@ module.exports = (app) => {
       ],
       mode: "payment",
       metadata: req.body.formData,
-      success_url: "http://localhost:3000/",
+      success_url:
+        "http://localhost:3000/book/booking-success?session_id={CHECKOUT_SESSION_ID}",
       cancel_url: "https://localhost:3000/cancel",
     });
 
