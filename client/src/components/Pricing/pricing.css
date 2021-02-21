@@ -1,89 +1,52 @@
-.pricing-section {
-  font-family: "Montserrat", sans-serif;
-  width: 80vw;
-  color: #f05d5e;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 5px 20px;
-  border-radius: 8px;
-  margin: 30px auto;
-}
-
-.pricing-section > h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  margin-top: 20px;
-}
-
-.pricing-section .form-wrapper {
-  padding: 30px;
+.section-pricing {
   text-align: center;
-}
-
-.pricing-section form {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(240, 93, 94, 0.8);
+  padding: 40px 0;
+  width: 90%;
   margin: auto;
 }
 
-.pricing-section form label {
-  padding: 30px;
-  padding-left: 0;
-  font-size: 1.2rem;
+.section-pricing h1 {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin-bottom: 70px;
 }
 
-.pricing-section select {
-  margin-right: 20px;
-  font-size: 1rem;
-  color: #604d53;
-  background-color: #ffffff;
-  padding: 2px;
+.section-pricing > h2 {
+  margin: 50px 0;
+}
+
+.section-pricing > p {
+  position: relative;
+  max-width: 450px;
+  padding: 0 25px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.section-pricing > p > i {
+  color: #717171;
+}
+
+.section-pricing select {
+  font-size: 1.75rem;
+  width: 200px;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  color: rgba(240, 93, 94, 0.8);
   border-radius: 5px;
 }
 
-.pricing-section form button {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
-  border: 2px solid #f05d5e;
-  border-radius: 8px;
-  padding: 0px 10px;
-  background-color: white;
-  transition: all 0.3s;
+.section-pricing .price {
+  font-size: 3rem;
+  padding-bottom: 0;
+  margin-bottom: 40px;
 }
 
-.pricing-section form button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-  background-color: #f05d5e;
-  color: rgba(255, 255, 255, 1);
-}
-
-.pricing-section > .price {
-  text-align: center;
-  font-size: 3.5rem;
-}
-
-.pricing-section p span {
+.section-pricing > p > span {
   font-weight: bolder;
-}
-
-@media (max-width: 800px) {
-  #price-calculator-form label,
-  #price-calculator-form select {
-    display: block;
-    margin: 10px auto 10px auto;
-  }
-
-  #price-calculator-form select {
-    margin-top: 0;
-  }
-
-  #price-calculator-form label {
-    padding: 0;
-  }
-
-  #price-calc-button {
-    margin-top: 10px;
-  }
-
-  #calculated-price {
-    margin-bottom: 30px;
-  }
+  border-bottom: 1px solid rgba(240, 93, 94, 0.8);
+  padding: 0;
 }

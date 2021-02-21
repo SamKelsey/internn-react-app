@@ -1,5 +1,5 @@
 export default function (noOfRooms) {
-  if (noOfRooms == "Please select...") {
+  if (noOfRooms == "Rooms...") {
     return "...";
   } else if (noOfRooms >= 4 && noOfRooms <= 5) {
     return (noOfRooms * 7.5).toFixed(2);
