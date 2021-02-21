@@ -346,7 +346,6 @@ class Book extends Component {
   }
 
   render() {
-    console.log(this.props.location);
     return (
       <React.Fragment>
         <div className="booking-wrapper">

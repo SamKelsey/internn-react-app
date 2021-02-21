@@ -64,7 +64,7 @@ nav > a:hover {
 }
 
 /* ---------------------------
-    MEDIA QUERIES
+    Burger Menu
   ----------------------------*/
 
 .burger-logo {
@@ -82,7 +82,7 @@ nav > a:hover {
   height: 50px;
   border: none;
   border-radius: 5px;
-  background-color: #604d53;
+  background-color: rgba(0, 0, 0, 0);
   margin: 1rem;
   position: fixed;
   right: 0;
@@ -97,10 +97,11 @@ nav > a:hover {
 }
 
 .menu-button-line {
-  height: 2px;
+  height: 5px;
   margin: 9px auto;
   width: 30px;
-  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  background-color: rgb(177, 177, 177);
   transition: 0.4s;
 }
 
@@ -117,7 +118,7 @@ nav > a:hover {
   width: 100%;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 255, 0.4);
 }
 
 .burger-nav .nav-link {
@@ -126,17 +127,17 @@ nav > a:hover {
 }
 
 .burger-nav .nav-link a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(136, 136, 136);
   font-family: "Montserrat", sans-serif;
 }
 
 .burger-nav .nav-link a:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(136, 136, 136, 0.8);
 }
 
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-10.5px, 8.5px);
+  transform: rotate(-45deg) translate(-10.5px, 8.5px);
 }
 
 .change .bar2 {
@@ -144,8 +145,8 @@ nav > a:hover {
 }
 
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-10px, -10px);
+  transform: rotate(45deg) translate(-10px, -10px);
 }
 
 .burger-nav {

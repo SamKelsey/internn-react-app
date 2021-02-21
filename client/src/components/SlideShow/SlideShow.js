@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import Slide from "./Slide/Slide";
 import "./slideshow.css";
-import "./text.css";
 
 class Landing extends Component {
   constructor(props) {
@@ -38,41 +38,11 @@ class Landing extends Component {
 
   renderSlide() {
     if (this.state.slideCounter == 0) {
-      return (
-        <div className="mySlides fade">
-          <div className="landing-text first-slide">
-            <h1>
-              Photography, <span>done by</span> students.
-            </h1>
-            <h2>
-              Photograph <span>your properties</span> for a
-              <span> fraction of the price</span>.
-            </h2>
-          </div>
-        </div>
-      );
+      return "slides-container position-0";
     } else if (this.state.slideCounter == 1) {
-      return (
-        <div className="mySlides fade">
-          <div className="landing-text">
-            <h1>See our results...</h1>
-            <div className="link-wrapper">
-              <Link to="/portfolio">Portfolio</Link>
-            </div>
-          </div>
-        </div>
-      );
+      return "slides-container position-1";
     } else {
-      return (
-        <div className="mySlides fade">
-          <div className="landing-text">
-            <h1>Book now!</h1>
-            <div className="link-wrapper">
-              <HashLink to="/#contact-form">Get in touch</HashLink>
-            </div>
-          </div>
-        </div>
-      );
+      return "slides-container position-2";
     }
   }
 
@@ -80,7 +50,27 @@ class Landing extends Component {
     return (
       <React.Fragment>
         <div className="slideshow-container">
-          {this.renderSlide()}
+          <div className="slides-outer-wrapper">
+            <div className={this.renderSlide()}>
+              <Slide
+                firstLine="think Property Photography."
+                secondLine="think Students."
+                thirdLine="think"
+              />
+              <Slide
+                className="secondSlide"
+                firstLine="Click here to view our"
+                secondLine="Portfolio"
+                thirdLine="Properties sell with"
+              />
+              <Slide
+                className="thirdSlide"
+                firstLine="Make a booking via fb"
+                secondLine="Book now!"
+                thirdLine="Market properties with"
+              />
+            </div>
+          </div>
           {/* The dots/circles */}
           <div style={{ textAlign: "center" }}>
             <span
