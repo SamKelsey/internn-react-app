@@ -1,50 +1,30 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import "./about.css";
-import logo from "../../images/white_orginal_design_withSlogan.png";
-import stockPicture from "../../images/stock-pic.jpg";
+
+import Card from "./Card/Card";
 
 class About extends React.Component {
   render() {
     return (
-      <div id="about-us" className="about-us">
-        <div className="content-wrapper">
-          <div className="left-side">
-            <div className="about-us-text">
-              <h3>What we do...</h3>
-              <p>
-                At <span className="para-logo">internn</span>, we{" "}
-                <span>think Students.</span>
-              </p>
-              <p>
-                We are a <span>team of students</span>, based in{" "}
-                <span>Aberdeen</span>, offering outstanding{" "}
-                <span>property photography</span>, for a{" "}
-                <span>fraction of the price!</span>
-              </p>
-              <p>
-                <span>Unsure about pricing?</span> <br />
-                Get an instant price using our price calculator below! As
-                students, we don't rely on large salaries and instead just love
-                photography and the experience! Therefore, we can offer market
-                leading prices.
-              </p>
-              <p>
-                <span>Unsure about quality?</span> <br />
-                Seeing is believing, so check out our{" "}
-                <Link to="/portfolio">portfolio of work!</Link> Still not
-                convinced? Rest assured, all internn's receive a high standard
-                of training before working independently on client site. This
-                way, our internn's can take time to perfect their skills in a
-                supportive environment before capturing your dream property
-                images.
-              </p>
-            </div>
-          </div>
-          <div className="right">
-            <img id="about-logo" src={logo} alt="internn logo" />
-            <img id="stock-img" src={stockPicture} alt="stock" />
-          </div>
+      <div className="section-about-us" id="about-us">
+        <h1>What is internn?</h1>
+        <div className="about-cards">
+          <Card
+            icon="fas fa-users"
+            title="Your property starts with students"
+            body="Use our team of students, based in Aberdeen, to photograph your property for a fraction of the price."
+          />
+          <Card
+            icon="fas fa-award"
+            title="Professional quality"
+            body="Us internn's unrivalled passion for photography leads us to delivering outstanding quality. Don't believe us? Check out our portfolio."
+          />
+          <Card
+            icon="fas fa-pound-sign"
+            title="Unbeatable pricing"
+            body="As internn's, we are here, simply, to gain experience. Use our price calculator below for an instant quote. You'll be surprised."
+          />
         </div>
       </div>
     );
