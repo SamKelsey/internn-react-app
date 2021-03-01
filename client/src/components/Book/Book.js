@@ -347,22 +347,20 @@ class Book extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className="booking-wrapper">
-          <Switch>
-            <Route exact path={`${this.props.match.path}/`}>
-              <p className="stage-counter">
-                Step {this.state.formStage + 1} of 3
-              </p>
-              <form>{this.renderForm()}</form>
-            </Route>
-            <Route
-              path={`${this.props.match.path}/booking-success`}
-              component={SuccessPage}
-            />
-          </Switch>
-        </div>
-      </React.Fragment>
+      <div className="booking-wrapper">
+        <Switch>
+          <Route exact path={`${this.props.match.path}/`}>
+            <p className="stage-counter">
+              Step {this.state.formStage + 1} of 3
+            </p>
+            <form>{this.renderForm()}</form>
+          </Route>
+          <Route
+            path={`${this.props.match.path}/booking-success`}
+            component={SuccessPage}
+          />
+        </Switch>
+      </div>
     );
   }
 }

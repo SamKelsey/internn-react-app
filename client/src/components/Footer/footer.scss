@@ -1,0 +1,72 @@
+@import "../styleVariables";
+
+.footer {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: $sigRed;
+  color: $sigWhite;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+
+    .logo-wrapper,
+    .join-us-wrapper {
+      width: 200px;
+    }
+
+    .logo-wrapper {
+      text-align: right;
+    }
+
+    .join-us-wrapper {
+      text-align: left;
+      padding-left: 10px;
+
+      .join-us {
+        margin-right: 10px;
+        line-height: 30px;
+        color: $sigWhite;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+
+        &:hover {
+          border-bottom: 1px solid $sigWhite;
+        }
+      }
+    }
+
+    .logo,
+    .join-us {
+      display: inline-block;
+    }
+
+    .logo {
+      margin-right: 10px;
+
+      img {
+        width: 55%;
+      }
+    }
+
+    .center-line {
+      width: 2px;
+      background-color: $sigWhite;
+      border-radius: 1px;
+    }
+  }
+
+  .media-icons {
+    i {
+      font-size: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

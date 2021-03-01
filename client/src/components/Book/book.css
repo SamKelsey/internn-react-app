@@ -22,33 +22,111 @@
   margin: auto;
 }
 
-.date,
-.time,
-.booking-wrapper textarea,
-.booking-wrapper button {
-  box-sizing: border-box;
+.booking-wrapper form .booking-section {
+  font-size: 1.2rem;
   width: 100%;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
 }
 
-.date,
-.time {
+.booking-wrapper form .booking-section .rooms-help {
+  font-size: 1rem;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.booking-wrapper form .booking-section .rooms-help p {
+  color: #f4f2f3;
+  display: none;
+  text-align: left;
+  width: 200px;
+  background-color: rgba(240, 93, 94, 0.8);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.booking-wrapper form .booking-section .rooms-help p:hover {
+  display: block;
+}
+
+.booking-wrapper form .booking-section .custom-select {
+  position: absolute;
+  font-size: 1.4rem;
+  z-index: 1;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f4f2f3;
+  border: 1px solid grey;
+  width: 100%;
+  cursor: pointer;
+}
+
+.booking-wrapper form .booking-section .custom-select i,
+.booking-wrapper form .booking-section .custom-select .num-of-rooms {
   padding: 5px;
 }
 
-.booking-section .booking-price {
-  color: rgba(240, 93, 94, 0.8);
-  margin: 10px;
-  font-size: 4rem;
+.booking-wrapper form .booking-section .custom-select .num-of-rooms {
+  font-size: 1.5rem;
+  z-index: 2;
+  margin: 0;
+  padding-left: 0;
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  list-style: none;
+  font-size: 1rem;
 }
 
-.date,
-.time {
+.booking-wrapper form .booking-section .custom-select .num-of-rooms p {
+  padding: 0;
+  margin: 0 5px;
+}
+
+.booking-wrapper form .booking-section .custom-select .num-of-rooms li {
+  padding: 1px 4px;
+  border-radius: 5px;
+}
+
+.booking-wrapper form .booking-section .custom-select .num-of-rooms li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.booking-wrapper form .booking-section .custom-select .num-of-rooms p,
+.booking-wrapper form .booking-section .custom-select .num-of-rooms li {
+  font-size: 1.5rem;
+}
+
+.booking-wrapper form .booking-section .date,
+.booking-wrapper form .booking-section .time {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  padding: 5px;
   margin-bottom: 2px;
 }
 
-.booking-wrapper form textarea {
+.booking-wrapper form .booking-section .textarea-wrapper {
+  position: relative;
+}
+
+.booking-wrapper form .booking-section .textarea-wrapper textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  font-size: 1.4rem;
   resize: none;
   padding: 5px;
   font-family: "Font Awesome 5 Free", "Montserrat", Verdana, sans-serif;
@@ -57,193 +135,117 @@
   text-decoration: inherit;
 }
 
-.textarea-wrapper {
-  position: relative;
-}
-
-.textarea-help {
+.booking-wrapper form .booking-section .textarea-wrapper .textarea-help {
   font-size: 1rem;
   padding: 10px 11px;
   z-index: 0;
   position: absolute;
   right: 0;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
 }
 
-.textarea-help p {
-  color: white;
+.booking-wrapper form .booking-section .textarea-wrapper .textarea-help:hover p {
+  display: block;
+}
+
+.booking-wrapper form .booking-section .textarea-wrapper .textarea-help p {
+  color: #f4f2f3;
   display: none;
   text-align: left;
   width: 200px;
-  background-color: rgba(240, 93, 94, 0.6);
-  backdrop-filter: blur(4px);
+  background-color: rgba(240, 93, 94, 0.8);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   border-radius: 5px;
   padding: 5px;
   margin: 2px;
 }
 
-.textarea-help:hover p {
-  display: block;
-}
-
-.next-button {
-  z-index: 0;
-  position: relative;
-  font-size: 1rem;
+.booking-wrapper form .booking-section button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
-  padding: 8px 5px;
-  border-radius: 2px;
-  cursor: pointer;
-  background-color: rgba(240, 93, 94, 0.8);
-  color: white;
-  border: none;
-  transition: all 0.3s;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
 }
 
-.next-button:hover {
-  background-color: rgba(240, 93, 94, 0.6);
+.booking-wrapper form .booking-section .booking-price {
+  color: rgba(240, 93, 94, 0.8);
+  margin: 10px;
+  font-size: 4rem;
 }
 
-.fa-chevron-right {
-  color: white;
+.booking-wrapper form .booking-section .next-button .fa-chevron-right {
+  color: #f4f2f3;
   position: absolute;
   padding: 0 15px;
   padding-top: 2.5px;
   right: 0;
 }
 
-.rooms-wrapper {
+.booking-wrapper form .rooms-wrapper {
   height: 80px;
   position: relative;
   width: 100%;
   font-size: 1.4rem;
 }
 
-.booking-section {
-  font-size: 1.2rem;
-  width: 100%;
-}
-
-.custom-select {
-  position: absolute;
-  font-size: 1.4rem;
-  z-index: 1;
-  margin: auto;
-  display: flex;
-  background-color: white;
-  border: 1px solid grey;
-  width: 100%;
-  cursor: pointer;
-}
-
-.custom-select i,
-.custom-select .num-of-rooms {
-  padding: 5px;
-}
-
-.custom-select .num-of-rooms {
-  font-size: 1.5rem;
-  z-index: 2;
-  margin: 0;
-  padding-left: 0;
-  text-align: left;
-  flex: 1;
-  list-style: none;
-  font-size: 1rem;
-}
-
-.custom-select p {
-  padding: 0;
-  margin: 0 5px;
-}
-
-.custom-select p,
-.custom-select li {
-  font-size: 1.5rem;
-}
-
-.custom-select .num-of-rooms li {
-  padding: 1px 4px;
-  border-radius: 5px;
-}
-
-.custom-select .num-of-rooms li:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.rooms-help {
-  font-size: 1rem;
-  z-index: 2;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: flex;
-  cursor: pointer;
-}
-
-.rooms-help p {
-  color: white;
-  display: none;
-  text-align: left;
-  width: 200px;
-  background-color: rgba(240, 93, 94, 0.6);
-  backdrop-filter: blur(4px);
-  border-radius: 5px;
-  padding: 5px;
-  margin: 2px;
-}
-
-.rooms-help:hover p {
-  display: block;
-}
-
-.booking-wrapper form .stage-2 > input {
-  box-sizing: border-box;
+.booking-wrapper form .stage-2 input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   font-size: 1.5rem;
   border: 1px solid grey;
-  box-shadow: 1px 2px 4px #888888;
+  -webkit-box-shadow: 1px 2px 4px #888888;
+          box-shadow: 1px 2px 4px #888888;
   margin: 10px 0;
   padding: 15px 5px;
 }
 
-.booking-wrapper .buttons button {
+.booking-wrapper form .stage-2 .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.booking-wrapper form .stage-2 .buttons button {
   width: 20%;
   margin: 8px;
   padding: 6px;
   background-color: rgba(240, 93, 94, 0.8);
   border: none;
   border-radius: 4px;
-  color: white;
+  color: #f4f2f3;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
 }
 
-.booking-wrapper .buttons {
-  display: flex;
-  justify-content: center;
+.booking-wrapper form .stage-2 .buttons button:hover {
+  background-color: rgba(240, 93, 94, 0.8);
 }
 
-.booking-wrapper .buttons button:hover {
-  background-color: rgba(240, 93, 94, 0.7);
-}
-
-.confirmation-timeslot {
+.booking-wrapper form .confirmation-timeslot {
   background-color: rgba(240, 93, 94, 0.8);
   font-size: 1rem;
   border-radius: 5px;
   padding: 5px;
 }
 
-.confirmation-timeslot h1 {
-  color: white;
+.booking-wrapper form .confirmation-timeslot h1 {
+  color: #f4f2f3;
   padding: 0;
   margin: 0;
 }
 
-.confirmation-timeslot p {
+.booking-wrapper form .confirmation-timeslot p {
   display: inline-block;
   padding: 0;
   margin: 0;
@@ -252,18 +254,19 @@
   cursor: pointer;
 }
 
-.confirmation-timeslot .change-booking {
-  color: rgb(238, 238, 238);
-  border-bottom: 1px solid rgb(238, 238, 238);
+.booking-wrapper form .confirmation-timeslot .change-booking {
+  color: #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.confirmation-timeslot .change-booking:hover {
-  color: white;
-  border-bottom: 1px solid white;
+.booking-wrapper form .confirmation-timeslot .change-booking:hover {
+  color: #f4f2f3;
+  border-bottom: 1px solid #f4f2f3;
 }
 
-.confirmation-personal-details {
+.booking-wrapper form .confirmation-personal-details {
   border: 1px solid rgba(240, 93, 94, 0.8);
   margin: 5px 0 0 0;
   padding: 5px 10px;
@@ -271,27 +274,27 @@
   text-align: center;
 }
 
-.confirmation-personal-details .details h2 {
+.booking-wrapper form .confirmation-personal-details .details {
+  text-align: left;
+}
+
+.booking-wrapper form .confirmation-personal-details .details h2 {
   padding: 0;
   margin: 0;
   font-weight: 600;
 }
 
-.confirmation-personal-details .details p {
+.booking-wrapper form .confirmation-personal-details .details p {
   margin: 0;
   padding: 0;
 }
 
-.confirmation-personal-details .details h2,
-.confirmation-personal-details .details p {
+.booking-wrapper form .confirmation-personal-details .details h2,
+.booking-wrapper form .confirmation-personal-details .details p {
   font-size: 1rem;
 }
 
-.confirmation-personal-details .details {
-  text-align: left;
-}
-
-.confirmation-change-info {
+.booking-wrapper form .confirmation-change-info {
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -299,16 +302,18 @@
   padding-bottom: 0;
   display: inline-block;
   margin: 0 auto;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.confirmation-change-info:hover {
+.booking-wrapper form .confirmation-change-info:hover {
   color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.confirmation-price {
-  box-sizing: border-box;
+.booking-wrapper form .confirmation-price {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 5px 0;
   margin-bottom: 10px;
   width: 100%;
@@ -317,126 +322,55 @@
   border-radius: 5px;
 }
 
-.confirmation-price .line {
+.booking-wrapper form .confirmation-price .line {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 1.4rem;
 }
 
-.confirmation-price .line p {
+.booking-wrapper form .confirmation-price .line p {
   padding: 0;
   margin: 0;
 }
 
-.confirmation-price .total {
+.booking-wrapper form .confirmation-price .total {
   border-top: 1px solid black;
   margin-top: 5px;
 }
 
-.confirmation-price .total p {
+.booking-wrapper form .confirmation-price .total p {
   font-weight: 600;
 }
 
-.confirmation-timeslot,
-.confirmation-personal-details,
-.confirmation-price {
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+.booking-wrapper form .confirmation-timeslot,
+.booking-wrapper form .confirmation-personal-details,
+.booking-wrapper form .confirmation-price {
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
   margin: 8px 0;
 }
 
-.booking-wrapper > form > button {
-  border-radius: 5px;
-  margin: 5px 0;
-}
-/* @media (max-width: 500px) {
-  .booking-wrapper form {
-    width: 98%;
-    min-height: 60vh;
-  }
-
-  .stage-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .stage-2 input {
-    min-height: 40px;
-    font-size: 5rem;
-  }
-
-} */
-/* 
-.booking-wrapper {
-  max-width: 500px;
-  width: 90%;
-  border: 5px solid rgba(240, 93, 94, 0.8);
-  border-radius: 12px;
-  margin: auto;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-}
-
-.booking-wrapper p {
-  margin: 1%;
-  font-size: 0.8em;
-}
-
-.booking-wrapper > form {
-  border: 2px solid black;
-}
-
-.booking-wrapper > form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.booking-section {
-  border: 2px solid green;
-}
-
-.input-header {
-  font-size: 1.2rem;
-}
-
-.rooms-wrapper {
+.booking-wrapper form .next-button {
+  z-index: 0;
   position: relative;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 8px 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: rgba(240, 93, 94, 0.8);
+  color: #f4f2f3;
+  border: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.rooms-help {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  text-align: left;
-  margin: 0.8%;
+.booking-wrapper form .next-button:hover {
+  background-color: rgba(240, 93, 94, 0.8);
 }
-
-.rooms-help p {
-  color: white;
-  display: none;
-  text-align: left;
-  width: 200px;
-  background-color: rgba(240, 93, 94, 0.6);
-  backdrop-filter: blur(4px);
-  border-radius: 5px;
-  padding: 5px;
-  margin: 2px;
-}
-
-.rooms-help:hover p {
-  display: block;
-}
-
-.custom-select {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  border: 1px solid black;
-}
-.custom-select ul {
-  padding: 0;
-} */
+/*# sourceMappingURL=book.css.map */

@@ -1,0 +1,352 @@
+@import "../styleVariables";
+
+.booking-wrapper {
+  font-family: "Montserrat", sans-serif;
+  border: 5px solid $sigRed;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  width: 90%;
+  padding: 4px;
+
+  .stage-counter {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 10px;
+  }
+
+  form {
+    max-width: 400px;
+    width: 98%;
+    margin: auto;
+
+    .booking-section {
+      font-size: 1.2rem;
+      width: 100%;
+
+      .rooms-help {
+        font-size: 1rem;
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        cursor: pointer;
+
+        p {
+          color: $sigWhite;
+          display: none;
+          text-align: left;
+          width: 200px;
+          background-color: $sigRed;
+          backdrop-filter: blur(4px);
+          border-radius: 5px;
+          padding: 5px;
+          margin: 2px;
+
+          &:hover {
+            display: block;
+          }
+        }
+      }
+
+      .custom-select {
+        position: absolute;
+        font-size: 1.4rem;
+        z-index: 1;
+        margin: auto;
+        display: flex;
+        background-color: $sigWhite;
+        border: 1px solid grey;
+        width: 100%;
+        cursor: pointer;
+
+        i,
+        .num-of-rooms {
+          padding: 5px;
+        }
+
+        .num-of-rooms {
+          font-size: 1.5rem;
+          z-index: 2;
+          margin: 0;
+          padding-left: 0;
+          text-align: left;
+          flex: 1;
+          list-style: none;
+          font-size: 1rem;
+
+          p {
+            padding: 0;
+            margin: 0 5px;
+          }
+
+          li {
+            padding: 1px 4px;
+            border-radius: 5px;
+
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.2);
+            }
+          }
+
+          p,
+          li {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .date,
+      .time {
+        box-sizing: border-box;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.4rem;
+        padding: 5px;
+        margin-bottom: 2px;
+      }
+
+      .textarea-wrapper {
+        position: relative;
+
+        textarea {
+          box-sizing: border-box;
+          width: 100%;
+          font-size: 1.4rem;
+          resize: none;
+          padding: 5px;
+          font-family: "Font Awesome 5 Free", "Montserrat", Verdana, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: inherit;
+        }
+
+        .textarea-help {
+          font-size: 1rem;
+          padding: 10px 11px;
+          z-index: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: flex;
+          cursor: pointer;
+
+          &:hover p {
+            display: block;
+          }
+
+          p {
+            color: $sigWhite;
+            display: none;
+            text-align: left;
+            width: 200px;
+            background-color: $sigRed;
+            backdrop-filter: blur(4px);
+            border-radius: 5px;
+            padding: 5px;
+            margin: 2px;
+          }
+        }
+      }
+
+      button {
+        box-sizing: border-box;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.4rem;
+      }
+
+      .booking-price {
+        color: $sigRed;
+        margin: 10px;
+        font-size: 4rem;
+      }
+
+      .next-button {
+        .fa-chevron-right {
+          color: $sigWhite;
+          position: absolute;
+          padding: 0 15px;
+          padding-top: 2.5px;
+          right: 0;
+        }
+      }
+    }
+
+    .rooms-wrapper {
+      height: 80px;
+      position: relative;
+      width: 100%;
+      font-size: 1.4rem;
+    }
+
+    .stage-2 {
+      input {
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 1.5rem;
+        border: 1px solid grey;
+        box-shadow: 1px 2px 4px #888888;
+        margin: 10px 0;
+        padding: 15px 5px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+
+        button {
+          width: 20%;
+          margin: 8px;
+          padding: 6px;
+          background-color: $sigRed;
+          border: none;
+          border-radius: 4px;
+          color: $sigWhite;
+          transition: all 0.3s;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $sigRed;
+          }
+        }
+      }
+    }
+
+    .confirmation-timeslot {
+      background-color: $sigRed;
+      font-size: 1rem;
+      border-radius: 5px;
+      padding: 5px;
+
+      h1 {
+        color: $sigWhite;
+        padding: 0;
+        margin: 0;
+      }
+
+      p {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        margin-top: 5px;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+
+      .change-booking {
+        color: rgb(238, 238, 238);
+        border-bottom: 1px solid rgb(238, 238, 238);
+        transition: all 0.3s;
+
+        &:hover {
+          color: $sigWhite;
+          border-bottom: 1px solid $sigWhite;
+        }
+      }
+    }
+
+    .confirmation-personal-details {
+      border: 1px solid $sigRed;
+      margin: 5px 0 0 0;
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-align: center;
+
+      .details {
+        text-align: left;
+
+        h2 {
+          padding: 0;
+          margin: 0;
+          font-weight: 600;
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
+
+        h2,
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .confirmation-change-info {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+      color: rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      font-size: 0.8rem;
+      padding-bottom: 0;
+      display: inline-block;
+      margin: 0 auto;
+      transition: all 0.3s;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .confirmation-price {
+      box-sizing: border-box;
+      margin: 5px 0;
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 5px 10px;
+      border: 1px solid black;
+      border-radius: 5px;
+
+      .line {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.4rem;
+
+        p {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .total {
+        border-top: 1px solid black;
+        margin-top: 5px;
+
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .confirmation-timeslot,
+    .confirmation-personal-details,
+    .confirmation-price {
+      box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+      margin: 8px 0;
+    }
+
+    .next-button {
+      z-index: 0;
+      position: relative;
+      font-size: 1.5rem;
+      width: 100%;
+      padding: 8px 5px;
+      border-radius: 2px;
+      cursor: pointer;
+      background-color: $sigRed;
+      color: $sigWhite;
+      border: none;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $sigRed;
+      }
+    }
+  }
+}

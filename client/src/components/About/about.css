@@ -1,18 +1,23 @@
 .section-about-us {
   background-color: rgba(240, 93, 94, 0.8);
   text-align: center;
-  color: white;
+  color: #f4f2f3;
   padding: 40px;
 }
 
-.section-about-us > h1 {
+.section-about-us h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
   font-size: 2rem;
 }
 
 .section-about-us .about-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+/*# sourceMappingURL=about.css.map */

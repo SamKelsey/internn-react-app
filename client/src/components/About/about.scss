@@ -1,0 +1,20 @@
+@import "../styleVariables";
+
+.section-about-us {
+  background-color: $sigRed;
+  text-align: center;
+  color: $sigWhite;
+  padding: 40px;
+
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 2rem;
+  }
+
+  .about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
