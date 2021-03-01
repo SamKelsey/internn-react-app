@@ -53,19 +53,23 @@ class Landing extends Component {
           <div className="slides-outer-wrapper">
             <div className={this.renderSlide()}>
               <Slide
+                slideNo="0"
                 firstLine="think Property Photography."
                 secondLine="think Students."
                 thirdLine="think"
               />
               <Slide
-                className="secondSlide"
-                firstLine="Click here to view our"
+                slideNo="1"
+                classes="secondButton"
+                firstLine="Click to view our"
                 secondLine="Portfolio"
                 thirdLine="Properties sell with"
               />
               <Slide
-                className="thirdSlide"
-                firstLine="Make a booking via fb"
+                slideNo="2"
+                classes="secondButton"
+                firstLine="Make a booking via"
+                icon="fab fa-facebook fa-fw"
                 secondLine="Book now!"
                 thirdLine="Market properties with"
               />

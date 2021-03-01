@@ -1,4 +1,5 @@
 import { BrowserRouter, Route } from "react-router-dom";
+import { Switch } from "react-router";
 import "./app.css";
 
 // Import components
@@ -6,7 +7,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import JoinUs from "./JoinUs/JoinUs";
 import Portfolio from "./Portfolio/Portfolio";
-import Landing from "./Landing";
+import Landing from "./Landing/Landing";
 import Book from "./Book/Book";
 
 function App() {

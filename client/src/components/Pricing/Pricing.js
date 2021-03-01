@@ -26,7 +26,7 @@ class Pricing extends Component {
           <div className="rooms-help">
             <p>
               A "room" is defined as any area (eg. kitchen, bedroom, garden,
-              garage, etc...) in your property that requires more than 2
+              garage, etc...) in your property that requires 2 or less
               photographs.
             </p>
             <i className="far fa-question-circle"></i>

@@ -5,13 +5,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(244, 242, 243, 0.6);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 3%;
+  padding: 3%;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -69,7 +68,7 @@ nav > a:hover {
 
 .burger-logo {
   border-radius: 6px;
-  margin: 3%;
+  padding: 3%;
 }
 
 .burger-logo a:hover {
