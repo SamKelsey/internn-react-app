@@ -14,10 +14,11 @@
   margin-bottom: 70px;
 }
 
-.contact-form-wrapper > form {
+.contact-form-wrapper form {
   width: 100%;
   max-width: 600px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: auto;
   padding: 0 10px;
 }
@@ -28,18 +29,27 @@
   display: block;
   width: 100%;
   max-width: 400px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   border-bottom: 1px solid rgba(243, 243, 243, 0.5);
   background: transparent;
-  color: rgba(243, 243, 243, 1);
+  color: #f3f3f3;
   margin-left: 0;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.contact-form-wrapper form input,
-.contact-form-wrapper form textarea {
-  font-size: 1.2rem;
+.contact-form-wrapper form input::-webkit-input-placeholder {
+  color: rgba(243, 243, 243, 0.5);
+}
+
+.contact-form-wrapper form input:-ms-input-placeholder {
+  color: rgba(243, 243, 243, 0.5);
+}
+
+.contact-form-wrapper form input::-ms-input-placeholder {
+  color: rgba(243, 243, 243, 0.5);
 }
 
 .contact-form-wrapper form input::placeholder {
@@ -47,39 +57,84 @@
 }
 
 .contact-form-wrapper form input:focus {
-  border-bottom: 2px solid rgb(243, 243, 243);
-  transform: scale(1.02);
+  border-bottom: 2px solid #f3f3f3;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   outline: none;
 }
 
-.contact-form-wrapper form input:focus::placeholder {
-  color: rgba(243, 243, 243, 1);
+.contact-form-wrapper form input:focus::-webkit-input-placeholder {
+  color: #f3f3f3;
 }
 
-.contact-form-wrapper > form > textarea {
-  box-sizing: border-box;
+.contact-form-wrapper form input:focus:-ms-input-placeholder {
+  color: #f3f3f3;
+}
+
+.contact-form-wrapper form input:focus::-ms-input-placeholder {
+  color: #f3f3f3;
+}
+
+.contact-form-wrapper form input:focus::placeholder {
+  color: #f3f3f3;
+}
+
+.contact-form-wrapper form textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   resize: none;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   background: transparent;
   border: 1px solid rgba(243, 243, 243, 0.5);
   width: 100%;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  color: rgb(243, 243, 243);
+  color: #f3f3f3;
+}
+
+.contact-form-wrapper form textarea::-webkit-input-placeholder {
+  color: rgba(243, 243, 243, 0.5);
+}
+
+.contact-form-wrapper form textarea:-ms-input-placeholder {
+  color: rgba(243, 243, 243, 0.5);
+}
+
+.contact-form-wrapper form textarea::-ms-input-placeholder {
+  color: rgba(243, 243, 243, 0.5);
 }
 
 .contact-form-wrapper form textarea::placeholder {
   color: rgba(243, 243, 243, 0.5);
 }
 
-.contact-form-wrapper > form > textarea:focus {
-  border: 2px solid rgb(243, 243, 243);
-  transform: scale(1.02);
+.contact-form-wrapper form textarea:focus {
+  border: 2px solid #f3f3f3;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   outline: none;
 }
 
-.contact-form-wrapper > form > textarea:focus::placeholder {
-  color: rgb(243, 243, 243);
+.contact-form-wrapper form textarea:focus::-webkit-input-placeholder {
+  color: #f3f3f3;
+}
+
+.contact-form-wrapper form textarea:focus:-ms-input-placeholder {
+  color: #f3f3f3;
+}
+
+.contact-form-wrapper form textarea:focus::-ms-input-placeholder {
+  color: #f3f3f3;
+}
+
+.contact-form-wrapper form textarea:focus::placeholder {
+  color: #f3f3f3;
+}
+
+.contact-form-wrapper form input,
+.contact-form-wrapper form textarea {
+  font-size: 1.2rem;
 }
 
 .contact-form-wrapper form button {
@@ -99,3 +154,4 @@
 .contact-form-wrapper form button:hover {
   background-color: #b8b8b8;
 }
+/*# sourceMappingURL=contact.css.map */

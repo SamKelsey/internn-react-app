@@ -13,11 +13,11 @@
   margin-bottom: 70px;
 }
 
-.section-pricing > h2 {
+.section-pricing h2 {
   margin: 50px 0;
 }
 
-.section-pricing > p {
+.section-pricing p {
   position: relative;
   max-width: 450px;
   padding: 0 25px;
@@ -25,8 +25,14 @@
   margin-bottom: 10px;
 }
 
-.section-pricing > p > i {
+.section-pricing p i {
   color: #717171;
+}
+
+.section-pricing p span {
+  font-weight: bolder;
+  border-bottom: 1px solid rgba(240, 93, 94, 0.8);
+  padding: 0;
 }
 
 .section-pricing select {
@@ -45,9 +51,4 @@
   padding-bottom: 0;
   margin-bottom: 40px;
 }
-
-.section-pricing > p > span {
-  font-weight: bolder;
-  border-bottom: 1px solid rgba(240, 93, 94, 0.8);
-  padding: 0;
-}
+/*# sourceMappingURL=pricing.css.map */

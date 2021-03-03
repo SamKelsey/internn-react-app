@@ -1,0 +1,24 @@
+#root {
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f2f3;
+}
+
+#page-container {
+  flex: 10 auto;
+  background-image: url("../images/stockBackground.jpg");
+  background-attachment: scroll;
+  background-size: 100vw auto;
+  background-repeat: repeat-y;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

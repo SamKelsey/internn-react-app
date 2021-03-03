@@ -1,0 +1,101 @@
+.contact-form-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #e7e7e7;
+  background-color: #707070;
+  text-align: center;
+  padding: 40px 0;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 70px;
+  }
+
+  form {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0 10px;
+
+    input {
+      font-family: "Montserrat", sans-serif;
+      margin: 20px 0;
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid rgba(243, 243, 243, 0.5);
+      background: transparent;
+      color: rgba(243, 243, 243, 1);
+      margin-left: 0;
+      transition: all 0.3s;
+
+      &::placeholder {
+        color: rgba(243, 243, 243, 0.5);
+      }
+
+      &:focus {
+        border-bottom: 2px solid rgb(243, 243, 243);
+        transform: scale(1.02);
+        outline: none;
+
+        &::placeholder {
+          color: rgba(243, 243, 243, 1);
+        }
+      }
+    }
+
+    textarea {
+      box-sizing: border-box;
+      resize: none;
+      font-family: "Montserrat", sans-serif;
+      box-sizing: border-box;
+      background: transparent;
+      border: 1px solid rgba(243, 243, 243, 0.5);
+      width: 100%;
+      transition: all 0.3s;
+      color: rgb(243, 243, 243);
+
+      &::placeholder {
+        color: rgba(243, 243, 243, 0.5);
+      }
+
+      &:focus {
+        border: 2px solid rgb(243, 243, 243);
+        transform: scale(1.02);
+        outline: none;
+
+        &::placeholder {
+          color: rgb(243, 243, 243);
+        }
+      }
+    }
+
+    input,
+    textarea {
+      font-size: 1.2rem;
+    }
+
+    button {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      border-radius: 8px;
+      padding: 10px 0;
+      background-color: #9c9c9c;
+      color: #e7e7e7;
+      border: 2px solid #e7e7e7;
+      width: 100%;
+      max-width: 400px;
+      cursor: pointer;
+      margin: 20px 0;
+
+      &:hover {
+        background-color: #b8b8b8;
+      }
+    }
+  }
+}

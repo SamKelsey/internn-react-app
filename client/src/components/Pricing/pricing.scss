@@ -1,0 +1,55 @@
+@import "../styleVariables";
+
+.section-pricing {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: $sigRed;
+  padding: 40px 0;
+  width: 90%;
+  margin: auto;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 70px;
+  }
+
+  h2 {
+    margin: 50px 0;
+  }
+
+  p {
+    position: relative;
+    max-width: 450px;
+    padding: 0 25px;
+    margin: auto;
+    margin-bottom: 10px;
+
+    i {
+      color: #717171;
+    }
+
+    span {
+      font-weight: bolder;
+      border-bottom: 1px solid $sigRed;
+      padding: 0;
+    }
+  }
+
+  select {
+    font-size: 1.75rem;
+    width: 200px;
+    padding: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    color: $sigRed;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+  .price {
+    font-size: 3rem;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+  }
+}

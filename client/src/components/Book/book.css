@@ -27,35 +27,6 @@
   width: 100%;
 }
 
-.booking-wrapper form .booking-section .rooms-help {
-  font-size: 1rem;
-  z-index: 2;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.booking-wrapper form .booking-section .rooms-help p {
-  color: #f4f2f3;
-  display: none;
-  text-align: left;
-  width: 200px;
-  background-color: rgba(240, 93, 94, 0.8);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  border-radius: 5px;
-  padding: 5px;
-  margin: 2px;
-}
-
-.booking-wrapper form .booking-section .rooms-help p:hover {
-  display: block;
-}
-
 .booking-wrapper form .booking-section .custom-select {
   position: absolute;
   font-size: 1.4rem;
@@ -187,13 +158,6 @@
   right: 0;
 }
 
-.booking-wrapper form .rooms-wrapper {
-  height: 80px;
-  position: relative;
-  width: 100%;
-  font-size: 1.4rem;
-}
-
 .booking-wrapper form .stage-2 input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -255,8 +219,8 @@
 }
 
 .booking-wrapper form .confirmation-timeslot .change-booking {
-  color: #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  color: #f4f2f3;
+  border-bottom: 1px solid #f4f2f3;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -372,5 +336,41 @@
 
 .booking-wrapper form .next-button:hover {
   background-color: rgba(240, 93, 94, 0.8);
+}
+
+.rooms-wrapper {
+  height: 80px;
+  position: relative;
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+.rooms-help {
+  font-size: 1rem;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.rooms-help p {
+  color: #f4f2f3;
+  display: none;
+  text-align: left;
+  width: 200px;
+  background-color: rgba(240, 93, 94, 0.8);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.rooms-help:hover p {
+  display: block;
 }
 /*# sourceMappingURL=book.css.map */

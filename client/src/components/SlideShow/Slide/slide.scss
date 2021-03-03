@@ -1,0 +1,95 @@
+@import "../../styleVariables";
+
+.mySlides {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  height: 92%;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto 15px;
+  width: 33.333%;
+  box-sizing: border-box;
+  background-color: $sigWhite;
+  overflow: hidden;
+
+  .left {
+    width: 50%;
+    background-size: cover;
+  }
+
+  .right {
+    background-color: $sigRed;
+    color: $sigWhite;
+    padding: 8% 5px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .h1-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      padding: 0;
+      border: 2px solid $sigWhite;
+      border-radius: 5px;
+      height: 50%;
+      cursor: pointer;
+      width: 82%;
+      transition: all 0.3s ease;
+
+      &:hover {
+        height: 52%;
+        width: 84%;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: lighter;
+        margin: 0;
+        margin: auto;
+        padding: 0;
+      }
+    }
+
+    h2 {
+      font-weight: lighter;
+      margin: 0;
+      padding: 0;
+
+      img {
+        width: 100px;
+        padding: 0 1px;
+        margin: 0;
+        transform: translate(0, 6px);
+      }
+
+      .fullstop {
+        color: $sigRed;
+      }
+    }
+
+    h2,
+    h2 a {
+      color: $sigWhite;
+    }
+  }
+
+  .slide0 {
+    background-position: center top;
+  }
+}
+
+@media (max-width: 560px) {
+  .right .h1-wrapper h1 {
+    font-size: 1.5rem;
+  }
+
+  .right h2 {
+    font-size: 1rem;
+  }
+}
