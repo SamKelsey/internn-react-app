@@ -5,8 +5,8 @@
   font-family: "Montserrat", sans-serif;
   color: $sigRed;
   padding: 40px 0;
-  width: 90%;
   margin: auto;
+  background-color: $sigWhite;
 
   h1 {
     font-size: 2rem;
@@ -45,6 +45,10 @@
     color: $sigRed;
     border-radius: 5px;
     background-color: white;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .price {

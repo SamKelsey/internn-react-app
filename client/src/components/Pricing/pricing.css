@@ -3,8 +3,8 @@
   font-family: "Montserrat", sans-serif;
   color: #f07474;
   padding: 40px 0;
-  width: 90%;
   margin: auto;
+  background-color: #f4f2f3;
 }
 
 .section-pricing h1 {
@@ -44,6 +44,10 @@
   color: #f07474;
   border-radius: 5px;
   background-color: white;
+}
+
+.section-pricing select:focus {
+  outline: none;
 }
 
 .section-pricing .price {
