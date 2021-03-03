@@ -39,7 +39,7 @@ nav ul:hover {
 }
 
 .header-logo {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .nav-links {
@@ -55,7 +55,7 @@ nav ul:hover {
 }
 
 .nav-link a:hover {
-  border-bottom: 2px solid rgba(240, 93, 94, 0.8);
+  border-bottom: 2px solid #f07474;
   color: rgba(0, 0, 0, 0.9);
 }
 

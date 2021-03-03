@@ -1,7 +1,7 @@
 .section-pricing {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  color: rgba(240, 93, 94, 0.8);
+  color: #f07474;
   padding: 40px 0;
   width: 90%;
   margin: auto;
@@ -31,7 +31,7 @@
 
 .section-pricing p span {
   font-weight: bolder;
-  border-bottom: 1px solid rgba(240, 93, 94, 0.8);
+  border-bottom: 1px solid #f07474;
   padding: 0;
 }
 
@@ -41,7 +41,7 @@
   padding: 5px;
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
-  color: rgba(240, 93, 94, 0.8);
+  color: #f07474;
   border-radius: 5px;
   background-color: white;
 }

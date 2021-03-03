@@ -5,12 +5,12 @@
   text-align: center;
   font-family: "Montserrat", sans-serif;
   width: 50vw;
-  border: 5px solid rgba(240, 93, 94, 0.8);
+  border: 5px solid #f07474;
 }
 
 #section-portfolio h1 {
   font-size: 2rem;
-  background-color: rgba(240, 93, 94, 0.8);
+  background-color: #f07474;
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
@@ -19,7 +19,7 @@
 }
 
 #section-portfolio h2 {
-  color: rgba(240, 93, 94, 0.8);
+  color: #f07474;
 }
 
 #section-portfolio .row {

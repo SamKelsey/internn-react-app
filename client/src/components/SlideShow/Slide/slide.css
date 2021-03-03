@@ -26,7 +26,7 @@
 }
 
 .mySlides .right {
-  background-color: rgba(240, 93, 94, 0.8);
+  background-color: #f07474;
   color: #f4f2f3;
   padding: 8% 5px;
   width: 50%;
@@ -92,7 +92,7 @@
 }
 
 .mySlides .right h2 .fullstop {
-  color: rgba(240, 93, 94, 0.8);
+  color: #f07474;
 }
 
 .mySlides .right h2,

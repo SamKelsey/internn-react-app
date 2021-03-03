@@ -1,6 +1,6 @@
 .booking-wrapper {
   font-family: "Montserrat", sans-serif;
-  border: 5px solid rgba(240, 93, 94, 0.8);
+  border: 5px solid #f07474;
   border-radius: 10px;
   text-align: center;
   max-width: 500px;
@@ -128,7 +128,7 @@
   display: none;
   text-align: left;
   width: 200px;
-  background-color: rgba(240, 93, 94, 0.8);
+  background-color: #f07474;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 5px;
@@ -145,7 +145,7 @@
 }
 
 .booking-wrapper form .booking-section .booking-price {
-  color: rgba(240, 93, 94, 0.8);
+  color: #f07474;
   margin: 10px;
   font-size: 4rem;
 }
@@ -183,7 +183,7 @@
   width: 20%;
   margin: 8px;
   padding: 6px;
-  background-color: rgba(240, 93, 94, 0.8);
+  background-color: #f07474;
   border: none;
   border-radius: 4px;
   color: #f4f2f3;
@@ -193,11 +193,11 @@
 }
 
 .booking-wrapper form .stage-2 .buttons button:hover {
-  background-color: rgba(240, 93, 94, 0.8);
+  background-color: #f07474;
 }
 
 .booking-wrapper form .confirmation-timeslot {
-  background-color: rgba(240, 93, 94, 0.8);
+  background-color: #f07474;
   font-size: 1rem;
   border-radius: 5px;
   padding: 5px;
@@ -231,7 +231,7 @@
 }
 
 .booking-wrapper form .confirmation-personal-details {
-  border: 1px solid rgba(240, 93, 94, 0.8);
+  border: 1px solid #f07474;
   margin: 5px 0 0 0;
   padding: 5px 10px;
   border-radius: 5px;
@@ -327,7 +327,7 @@
   padding: 8px 5px;
   border-radius: 2px;
   cursor: pointer;
-  background-color: rgba(240, 93, 94, 0.8);
+  background-color: #f07474;
   color: #f4f2f3;
   border: none;
   -webkit-transition: all 0.3s;
@@ -335,7 +335,7 @@
 }
 
 .booking-wrapper form .next-button:hover {
-  background-color: rgba(240, 93, 94, 0.8);
+  background-color: #f07474;
 }
 
 .rooms-wrapper {
@@ -362,7 +362,7 @@
   display: none;
   text-align: left;
   width: 200px;
-  background-color: rgba(240, 93, 94, 0.8);
+  background-color: #f07474;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 5px;
