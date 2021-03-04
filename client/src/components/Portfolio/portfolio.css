@@ -1,5 +1,6 @@
 #section-portfolio {
   margin: auto;
+  margin-bottom: 30px;
   padding: 60px 50px 0 50px;
   border-radius: 15px;
   text-align: center;
@@ -10,6 +11,7 @@
 
 #section-portfolio h1 {
   font-size: 2rem;
+  font-weight: lighter;
   background-color: #f07474;
   display: inline-block;
   padding: 5px 10px;
@@ -20,6 +22,7 @@
 
 #section-portfolio h2 {
   color: #f07474;
+  font-weight: lighter;
 }
 
 #section-portfolio .row {
