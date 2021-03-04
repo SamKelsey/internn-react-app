@@ -23,21 +23,25 @@ class Slide extends Component {
             }}
           ></div>
           <div className="right">
-            <h2>
-              {this.props.firstLine}
-              {this.props.icon && (
-                <a href="https://www.facebook.com/">
-                  <i className={this.props.icon}></i>
-                </a>
-              )}
-            </h2>
+            <div className="h2-wrapper">
+              <h2>
+                {this.props.firstLine}
+                {this.props.icon && (
+                  <a href="https://www.facebook.com/">
+                    <i className={this.props.icon}></i>
+                  </a>
+                )}
+              </h2>
+            </div>
             <div className="h1-wrapper">
               <h1>{this.props.secondLine}</h1>
             </div>
-            <h2>
-              {this.props.thirdLine} <img src={logo} alt="logo" />
-              <span className="fullstop">.</span>
-            </h2>
+            <div className="h2-wrapper bottom">
+              <h2>
+                {this.props.thirdLine} <img src={logo} alt="logo" />
+                <span className="fullstop">.</span>
+              </h2>
+            </div>
           </div>
         </div>
       </Fragment>
