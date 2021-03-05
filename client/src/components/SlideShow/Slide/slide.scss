@@ -46,12 +46,17 @@
         flex: 1.2;
       }
 
+      a {
+        text-decoration: none;
+      }
+
       h1 {
         font-size: 2.5rem;
         font-weight: lighter;
         margin: 0;
         margin: auto;
         padding: 0;
+        color: $sigWhite;
       }
     }
 

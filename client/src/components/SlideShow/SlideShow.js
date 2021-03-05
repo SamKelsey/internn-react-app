@@ -60,14 +60,12 @@ class Landing extends Component {
               />
               <Slide
                 slideNo="1"
-                classes="secondButton"
                 firstLine="Click below to view our"
                 secondLine="Portfolio"
                 thirdLine="Properties sell with"
               />
               <Slide
                 slideNo="2"
-                classes="secondButton"
                 firstLine="Make a booking now via"
                 icon="fab fa-facebook fa-fw"
                 secondLine="Book now!"

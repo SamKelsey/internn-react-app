@@ -71,12 +71,17 @@
           flex: 1.2;
 }
 
+.mySlides .right .h1-wrapper a {
+  text-decoration: none;
+}
+
 .mySlides .right .h1-wrapper h1 {
   font-size: 2.5rem;
   font-weight: lighter;
   margin: 0;
   margin: auto;
   padding: 0;
+  color: #f4f2f3;
 }
 
 .mySlides .right .h2-wrapper h2 {
