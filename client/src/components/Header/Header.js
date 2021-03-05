@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import "./header.css";
 import NavLinks from "./subcomponents/NavLinks";
 import HeaderLogo from "./subcomponents/HeaderLogo";
+import logo from "../../images/without_slogan.png";
 
 class Header extends Component {
   constructor(props) {
@@ -9,6 +12,7 @@ class Header extends Component {
     this.state = {
       isBurgerMenu: false,
       burgerMenuIsOpen: false,
+      stickyHeader: false,
     };
   }
 
@@ -17,20 +21,39 @@ class Header extends Component {
       this.handleResize();
     });
     this.handleResize();
+
+    window.addEventListener("scroll", () => {
+      this.handleScroll();
+    });
+    this.handleScroll();
   }
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.handleResize);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   handleResize() {
     if (document.documentElement.clientWidth <= 800) {
       this.setState({
         isBurgerMenu: true,
+        stickyHeader: false,
       });
     } else {
       this.setState({
         isBurgerMenu: false,
+      });
+    }
+  }
+
+  handleScroll() {
+    if (window.scrollY > 88 && !this.state.isBurgerMenu) {
+      this.setState({
+        stickyHeader: true,
+      });
+    } else {
+      this.setState({
+        stickyHeader: false,
       });
     }
   }
@@ -95,8 +118,34 @@ class Header extends Component {
     }
   }
 
+  renderStickyHeader() {
+    return (
+      <div
+        className={
+          this.state.stickyHeader
+            ? "section-stickyHeader header-active"
+            : "section-stickyHeader"
+        }
+      >
+        <div className="stickyHeader-inner">
+          <div className="stickyHeader-logo">
+            <img src={logo} alt="logo" />
+          </div>
+          <Link className="booking-link" to="/">
+            <h2>Book now!</h2>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   render() {
-    return this.renderContent();
+    return (
+      <React.Fragment>
+        {this.renderStickyHeader()}
+        {this.renderContent()}
+      </React.Fragment>
+    );
   }
 }
 
