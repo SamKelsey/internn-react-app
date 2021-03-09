@@ -362,7 +362,7 @@
   display: none;
   text-align: left;
   width: 200px;
-  background-color: #f07474;
+  background-color: rgba(240, 93, 94, 0.6);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 5px;
