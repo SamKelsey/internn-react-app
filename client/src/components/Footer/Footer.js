@@ -25,6 +25,7 @@ class Footer extends Component {
         <div className="media-icons">
           <i className="fab fa-facebook fa-fw"></i>
           <i className="fab fa-instagram fa-fw"></i>
+          <i className="fab fa-linkedin fa-fw"></i>
         </div>
       </div>
     );
