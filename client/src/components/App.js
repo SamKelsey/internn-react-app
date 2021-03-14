@@ -1,5 +1,6 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import { Switch } from "react-router";
+import { Helmet } from "react-helmet";
 import "./app.css";
 
 // Import components
@@ -13,6 +14,9 @@ import Book from "./Book/Book";
 function App() {
   return (
     <BrowserRouter>
+      <Helmet>
+        <title>internn | think Students.</title>
+      </Helmet>
       <div id="page-container">
         <Header />
         <Route exact path="/" component={Landing} />

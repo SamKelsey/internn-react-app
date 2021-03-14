@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import _ from "lodash";
 import "./book.css";
 import { loadStripe } from "@stripe/stripe-js";
@@ -348,6 +349,9 @@ class Book extends Component {
   render() {
     return (
       <div className="booking-wrapper">
+        <Helmet>
+          <title>internn | Book</title>
+        </Helmet>
         <Switch>
           <Route exact path={`${this.props.match.path}/`}>
             <p className="stage-counter">
