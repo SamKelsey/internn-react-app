@@ -1,11 +1,17 @@
 @import "../styleVariables";
 
+.section-header {
+  margin-bottom: 60px;
+
+  background-color: $sigWhiteOpaque;
+  box-shadow: 1px 0px 8px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 3%;
+  padding: 15px 20px;
   font-family: "Montserrat", sans-serif;
-  font-weight: bolder;
 
   ul {
     display: flex;
@@ -43,11 +49,11 @@ nav {
 
 .nav-link a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: $sigGrey;
   transition: 0.2s;
 
   &:hover {
-    color: rgba(0, 0, 0, 0.7);
+    color: $sigGreyOpaque;
   }
 }
 
@@ -96,6 +102,7 @@ nav {
 .burger-logo {
   border-radius: 6px;
   padding: 3%;
+  text-align: center;
 
   a {
     &:hover {

@@ -141,10 +141,10 @@ class Header extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="section-header">
         {this.renderStickyHeader()}
         {this.renderContent()}
-      </React.Fragment>
+      </div>
     );
   }
 }
