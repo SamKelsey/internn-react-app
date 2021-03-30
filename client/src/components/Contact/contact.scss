@@ -1,9 +1,11 @@
+@import "../styleVariables";
+
 .contact-form-wrapper {
   margin: 0 auto;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  color: #e7e7e7;
-  background-color: #707070;
+  color: $sigWhiteOpaque;
+  background-color: $sigGrey;
   text-align: center;
   padding: 40px 0;
 
