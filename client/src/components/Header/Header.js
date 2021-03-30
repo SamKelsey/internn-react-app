@@ -129,7 +129,7 @@ class Header extends Component {
       >
         <div className="stickyHeader-inner">
           <div className="stickyHeader-logo">
-            <img src={logo} alt="logo" />
+            <HeaderLogo />
           </div>
           <Link className="booking-link" to="/">
             <h2>Book now!</h2>

@@ -158,10 +158,10 @@ nav ul:hover {
 
 .section-stickyHeader {
   position: fixed;
-  top: -50px;
+  top: -70px;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color: rgba(244, 242, 243, 0.7);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
@@ -188,14 +188,17 @@ nav ul:hover {
 
 .section-stickyHeader .stickyHeader-inner .stickyHeader-logo {
   margin: auto 0;
-  height: 100%;
-  padding: 7px;
+  height: 80%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .section-stickyHeader .stickyHeader-inner .stickyHeader-logo img {
   height: 100%;
+}
+
+.section-stickyHeader .stickyHeader-inner .stickyHeader-logo .logo {
+  width: auto;
 }
 
 .section-stickyHeader .stickyHeader-inner .booking-link {
@@ -211,15 +214,28 @@ nav ul:hover {
           box-sizing: border-box;
   padding: 0 12px;
   margin: auto 0;
-  max-height: 100%;
+  height: 56px;
+  max-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .section-stickyHeader .stickyHeader-inner .booking-link:hover {
   background-color: rgba(240, 93, 94, 0.6);
 }
 
+.section-stickyHeader .stickyHeader-inner .booking-link h2 {
+  padding: 0;
+  margin: auto 0;
+}
+
 .header-active {
-  -webkit-transform: translate(0, 50px);
-          transform: translate(0, 50px);
+  -webkit-transform: translate(0, 70px);
+          transform: translate(0, 70px);
 }
 /*# sourceMappingURL=header.css.map */

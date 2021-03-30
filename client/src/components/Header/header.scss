@@ -149,7 +149,8 @@ nav {
   }
 }
 
-$stickyHeaderHeight: 50px;
+$stickyHeaderHeight: 70px;
+$elementHeight: 0.8;
 .section-stickyHeader {
   position: fixed;
   top: -$stickyHeaderHeight;
@@ -172,12 +173,15 @@ $stickyHeaderHeight: 50px;
 
     .stickyHeader-logo {
       margin: auto 0;
-      height: 100%;
-      padding: 7px;
+      height: $elementHeight * 100%;
       box-sizing: border-box;
 
       img {
         height: 100%;
+      }
+
+      .logo {
+        width: auto;
       }
     }
 
@@ -192,10 +196,18 @@ $stickyHeaderHeight: 50px;
       box-sizing: border-box;
       padding: 0 12px;
       margin: auto 0;
-      max-height: 100%;
+      height: $stickyHeaderHeight * $elementHeight;
+      max-height: 50px;
+      display: flex;
+      flex-direction: column;
 
       &:hover {
         background-color: $sigRedHover;
+      }
+
+      h2 {
+        padding: 0;
+        margin: auto 0;
       }
     }
   }
