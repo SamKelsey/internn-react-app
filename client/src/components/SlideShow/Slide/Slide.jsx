@@ -2,9 +2,7 @@ import React, { Component, Fragment } from "react";
 import { HashLink } from "react-router-hash-link";
 import "./slide.css";
 import logo from "../../../images/white_without_slogan.png";
-import stockPerson from "../../../images/stockPerson.jpg";
 import stockChair from "../../../images/stockChair.jpg";
-import stockPhone from "../../../images/stockPhone.jpg";
 import stockFacebook from "../../../images/stockFacebook.jpg";
 import stockGirl from "../../../images/stockGirl.jpg";
 
