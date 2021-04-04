@@ -10,6 +10,7 @@ import JoinUs from "./JoinUs/JoinUs";
 import Portfolio from "./Portfolio/Portfolio";
 import Landing from "./Landing/Landing";
 import Book from "./Book/Book";
+import Blog from "./Blog/Blog";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Header />
         <Route exact path="/" component={Landing} />
         <Route exact path="/join-us" component={JoinUs} />
+        <Route exact path="/blog" component={Blog} />
         <Route exact path="/portfolio" component={Portfolio} />
         <Route path="/book" component={Book} />
       </div>

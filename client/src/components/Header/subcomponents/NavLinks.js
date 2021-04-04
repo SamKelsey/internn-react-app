@@ -37,6 +37,16 @@ class NavLinks extends Component {
           </HashLink>
         </li>
         <li className="nav-link">
+          <Link
+            to="/blog"
+            onClick={(e) =>
+              this.props.isBurgerMenu ? this.props.toggleBurgerMenu(e) : ""
+            }
+          >
+            Blog
+          </Link>
+        </li>
+        <li className="nav-link">
           <HashLink
             to="/#contact-form"
             onClick={(e) =>
