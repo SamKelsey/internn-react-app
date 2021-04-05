@@ -10,6 +10,7 @@ import Portfolio from "./Portfolio/Portfolio";
 import Landing from "./Landing/Landing";
 import Book from "./Book/Book";
 import BlogRouter from "./Blog/BlogRouter";
+import BlogMenu from "./Blog/BlogMenu/BlogMenu";
 
 function App() {
   return (

@@ -1,21 +1,22 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, useRouteMatch } from "react-router-dom";
 
 import BlogMenu from "./BlogMenu/BlogMenu";
 import BlogArticle from "./BlogArticle/BlogArticle";
 
-class BlogRouter extends Component {
-  render() {
-    const { match } = this.props;
-    console.log(match);
+const BlogRouter = () => {
+  let { path, url } = useRouteMatch();
 
-    return (
-      <React.Fragment>
-        <Route exact path={`${match.url}/`} component={BlogMenu} />
-        <Route path={`${match.url}/:articleFile`} component={BlogArticle} />
-      </React.Fragment>
-    );
-  }
-}
+  return (
+    <Switch>
+      <Route exact path={`${url}/`}>
+        <BlogMenu />
+      </Route>
+      <Route path={`${url}/:articleId`}>
+        <BlogArticle />
+      </Route>
+    </Switch>
+  );
+};
 
 export default BlogRouter;

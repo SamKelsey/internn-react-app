@@ -1,0 +1,24 @@
+@import "../../styleVariables";
+
+.pageHeader {
+  margin: 10px 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+
+  h1 {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: $sigWhite;
+    background-color: $sigRed;
+    font-size: 2rem;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    color: $sigGrey;
+    font-weight: lighter;
+    font-size: 1.2rem;
+  }
+}
