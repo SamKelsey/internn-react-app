@@ -12,10 +12,17 @@
   max-width: 400px;
   min-width: 300px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .blogCard .image-wrapper {
-  height: 40%;
+  height: 45%;
   overflow: hidden;
   position: relative;
 }
@@ -33,9 +40,19 @@
   padding: 2% 4%;
   font-family: "Montserrat", sans-serif;
   color: #595959;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.blogCard .text-wrapper h1 {
+.blogCard .text-wrapper .header-wrapper h1 {
   text-align: left;
   padding: 0;
   margin: 0;
@@ -43,15 +60,64 @@
   font-size: 1.8rem;
 }
 
-.blogCard .text-wrapper h1 span {
+.blogCard .text-wrapper .header-wrapper h1 span {
   font-weight: 900;
 }
 
-.blogCard .text-wrapper p {
-  text-align: left;
+.blogCard .text-wrapper .p-wrapper {
+  padding: 2% 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.blogCard .text-wrapper button {
-  margin: 3%;
+.blogCard .text-wrapper .p-wrapper p {
+  text-align: left;
+  margin: 0;
+}
+
+.blogCard .text-wrapper .button-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blogCard .text-wrapper .button-wrapper .post-link {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  text-decoration: none;
+  padding: 3% 5%;
+  background-color: #f4f2f3;
+  border: 2px solid #f07474;
+  color: #595959;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+.blogCard .text-wrapper .button-wrapper .post-link:hover {
+  cursor: pointer;
+  color: rgba(89, 89, 89, 0.8);
+}
+
+@media (max-width: 470px) {
+  .blogCard .text-wrapper .header-wrapper h1 {
+    font-size: 1.4rem;
+  }
 }
 /*# sourceMappingURL=blogCard.css.map */

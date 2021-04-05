@@ -1,20 +1,10 @@
 import React, { Component } from "react";
 
 class BlogArticle extends Component {
-  render() {
-    const { title, subtitle, intro, body } = this.props.blogText;
-    console.log(body);
+  // Look at url path to determine which json article to show
 
-    return (
-      <div>
-        Blog Article
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
-        <div>{intro}</div>
-        <div>{body[0].header}</div>
-        <div>{body[0].content}</div>
-      </div>
-    );
+  render() {
+    return <div>Blog Article</div>;
   }
 }
 
