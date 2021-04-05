@@ -2,6 +2,8 @@ import React, { Component, Fragment } from "react";
 import "./portfolio.css";
 import { Helmet } from "react-helmet";
 
+import PageHeader from "../utilities/PageHeader/PageHeader";
+
 import IMG_0220 from "../../images/IMG_0220-min.jpg";
 import IMG_0244 from "../../images/IMG_0244-min.jpg";
 import IMG_0250 from "../../images/IMG_0250-min.jpg";
@@ -51,9 +53,10 @@ class Portfolio extends Component {
         <Helmet>
           <title>internn | Portfolio</title>
         </Helmet>
-        <h1>Our Portfolio...</h1>
-        <h2>We love to showcase our work.</h2>
-
+        <PageHeader
+          title="Portfolio"
+          subtitle="We love to showcase our work!"
+        />
         <div className="row">
           <div id="header-column">
             <img id="header-pic" src={IMG_0307} alt="portfolio" />

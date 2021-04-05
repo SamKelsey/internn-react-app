@@ -11,22 +11,6 @@
   width: 50vw;
   border: 5px solid $sigRed;
 
-  h1 {
-    font-size: 2rem;
-    font-weight: lighter;
-    background-color: $sigRed;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: $sigWhite;
-    margin: 0 auto;
-  }
-
-  h2 {
-    color: $sigRed;
-    font-weight: lighter;
-  }
-
   .row {
     display: flex;
     flex-wrap: wrap;

@@ -1,0 +1,24 @@
+.pageHeader {
+  margin: 10px 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pageHeader h1 {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #f4f2f3;
+  background-color: #f07474;
+  font-size: 2rem;
+}
+
+.pageHeader h2 {
+  margin: 0;
+  padding: 0;
+  color: #595959;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=pageHeader.css.map */
