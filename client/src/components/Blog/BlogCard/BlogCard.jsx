@@ -3,8 +3,11 @@ import { Link, useRouteMatch } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
 import "./blogCard.css";
 
-const BlogCard = ({ image, blogText: { title, subtitle, intro } }) => {
-  let { path, url } = useRouteMatch();
+const BlogCard = ({
+  image,
+  blogText: { filename, title, subtitle, intro },
+}) => {
+  let { url } = useRouteMatch();
   // Remove any trailing slashes from url
   url = url.replace(/\/$/, "");
 
@@ -23,7 +26,7 @@ const BlogCard = ({ image, blogText: { title, subtitle, intro } }) => {
           <TextTruncate line={3} element="p" text={intro} />
         </div>
         <div className="button-wrapper">
-          <Link className="post-link" to={`${url}/${title}`}>
+          <Link className="post-link" to={`${url}/${filename}`}>
             Read post
           </Link>
         </div>

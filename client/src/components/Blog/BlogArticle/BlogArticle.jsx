@@ -1,7 +1,18 @@
 import React, { Component } from "react";
+import { useParams } from "react-router-dom";
+
+import getBlogInfo from "../../utilities/getBlogInfo";
 
 const BlogArticle = () => {
-  return <h1>Blog Article</h1>;
+  let { articleId } = useParams();
+
+  const { title, subtitle, intro, body } = getBlogInfo(articleId);
+
+  return (
+    <h1>
+      {title}: {subtitle}
+    </h1>
+  );
 };
 
 export default BlogArticle;

@@ -5,7 +5,7 @@ import BlogMenu from "./BlogMenu/BlogMenu";
 import BlogArticle from "./BlogArticle/BlogArticle";
 
 const BlogRouter = () => {
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
 
   return (
     <Switch>
