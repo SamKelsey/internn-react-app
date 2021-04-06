@@ -10,7 +10,7 @@ import Portfolio from "./Portfolio/Portfolio";
 import Landing from "./Landing/Landing";
 import Book from "./Book/Book";
 import BlogRouter from "./Blog/BlogRouter";
-import BlogMenu from "./Blog/BlogMenu/BlogMenu";
+import Terms from "./Terms/Terms";
 
 function App() {
   return (
@@ -22,8 +22,9 @@ function App() {
         <Header />
         <Route exact path="/" component={Landing} />
         <Route exact path="/join-us" component={JoinUs} />
-        <Route path="/blog" component={BlogRouter} />
         <Route exact path="/portfolio" component={Portfolio} />
+        <Route path="/blog" component={BlogRouter} />
+        <Route path="/terms-and-conditions" component={Terms} />
         <Route path="/book" component={Book} />
       </div>
       <Footer />

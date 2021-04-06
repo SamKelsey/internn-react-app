@@ -12,7 +12,7 @@
   .footer-links {
     display: flex;
     justify-content: center;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
 
     .logo-wrapper,
     .join-us-wrapper {
@@ -60,7 +60,19 @@
     }
   }
 
+  .terms-link-wrapper {
+    .terms-link {
+      text-decoration: none;
+      font-size: 0.8rem;
+      color: $sigWhite;
+      &:hover {
+        border-bottom: 1px solid $sigWhite;
+      }
+    }
+  }
+
   .media-icons {
+    padding: 10px;
     i {
       font-size: 20px;
 

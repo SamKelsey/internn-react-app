@@ -27,6 +27,11 @@ class Footer extends Component {
           <i className="fab fa-instagram fa-fw"></i>
           <i className="fab fa-linkedin fa-fw"></i>
         </div>
+        <div className="terms-link-wrapper">
+          <Link to="/terms-and-conditions" className="terms-link">
+            Terms and Conditions.
+          </Link>
+        </div>
       </div>
     );
   }
