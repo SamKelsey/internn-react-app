@@ -1,0 +1,60 @@
+@import "../../styleVariables";
+
+.section-article {
+  width: 70%;
+  min-width: 350px;
+  max-width: 700px;
+  margin: 30px auto;
+  border-radius: 10px;
+  background-color: $sigWhite;
+  color: $sigGrey;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+  overflow: hidden;
+
+  .header-wrapper {
+    position: relative;
+    width: 100%;
+
+    img {
+      width: 100%;
+      filter: brightness(30%);
+    }
+
+    h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      color: $sigWhiteOpaque;
+      font-size: 3.5rem;
+      font-weight: lighter;
+      padding: 3%;
+      margin: 0;
+
+      span {
+        font-weight: 900;
+      }
+    }
+  }
+
+  .content-wrapper {
+    text-align: justify;
+    padding: 0 3%;
+  }
+
+  @media (max-width: 720px) {
+    .header-wrapper {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header-wrapper {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
