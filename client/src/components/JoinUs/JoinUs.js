@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import "./joinUs.css";
 
+import PageHeader from "../utilities/PageHeader/PageHeader";
+
 class JoinUs extends Component {
   render() {
     return (
       <div className="section-text">
-        <h1>Are you a student looking to build your portfolio?</h1>
+        <PageHeader
+          title="Join the team!"
+          subtitle="We are looking for talented students."
+        />
         <p>
           Here at <span>internn</span> we always love to hear from new talent.
           If you're an aspiring photographer, eager to build client experience
