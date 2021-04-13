@@ -154,4 +154,27 @@
 .contact-form-wrapper form button:hover {
   background-color: #b8b8b8;
 }
+
+.contact-form-wrapper form .err,
+.contact-form-wrapper form .notification {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: lighter;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1% 5%;
+  margin: 2px 0;
+  border-radius: 3px;
+}
+
+.contact-form-wrapper form .err {
+  background-color: #f13838b2;
+}
+
+.contact-form-wrapper form .notification {
+  background-color: green;
+}
 /*# sourceMappingURL=contact.css.map */
