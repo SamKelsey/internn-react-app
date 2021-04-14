@@ -16,6 +16,11 @@ class Contact extends Component {
   }
 
   handleSubmit() {
+    this.setState({
+      notifications: [],
+      errors: [],
+    });
+
     // Check for any errors
     if (!this.validateFormData()) {
       return;
