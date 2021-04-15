@@ -4,7 +4,7 @@ import BlogCard from "../BlogCard/BlogCard";
 import PageHeader from "../../utilities/PageHeader/PageHeader";
 import getBlogInfo from "../../utilities/getBlogInfo";
 
-import cardImage from "../../../images/IMG_0307-min.jpg";
+import cardImage from "../../../images/IMG_0307.JPG";
 
 import "./BlogMenu.css";
 

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "./header.css";
 import NavLinks from "./subcomponents/NavLinks";
 import HeaderLogo from "./subcomponents/HeaderLogo";
-import logo from "../../images/without_slogan.png";
 
 class Header extends Component {
   constructor(props) {

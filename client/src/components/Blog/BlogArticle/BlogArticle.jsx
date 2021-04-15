@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 
 import getBlogInfo from "../../utilities/getBlogInfo";
-import cardImage from "../../../images/IMG_0307-min.jpg";
+import cardImage from "../../../images/IMG_0307.JPG";
 
 import "./blogArticle.css";
 
