@@ -140,7 +140,7 @@ class Contact extends Component {
           />
           <textarea
             rows="4"
-            placeholder="Hire an internn or ask us a question..."
+            placeholder="How can we help you?"
             name="message"
             value={this.state.message}
             onChange={(e) => {
