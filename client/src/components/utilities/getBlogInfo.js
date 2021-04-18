@@ -1,5 +1,5 @@
 // @args Path to directory, filename
-export default (filename) => {
+const fn = (filename) => {
   const {
     title,
     subtitle,
@@ -15,3 +15,5 @@ export default (filename) => {
     body,
   };
 };
+
+export default fn;

@@ -1,4 +1,4 @@
-export default function (noOfRooms) {
+const fn = (noOfRooms) => {
   if (noOfRooms == "Rooms...") {
     return "...";
   } else if (noOfRooms >= 4 && noOfRooms <= 5) {
@@ -12,4 +12,6 @@ export default function (noOfRooms) {
   } else {
     return "...";
   }
-}
+};
+
+export default fn;
