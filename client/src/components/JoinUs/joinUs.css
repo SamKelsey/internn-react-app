@@ -1,15 +1,24 @@
 .section-text {
-  margin: 80px 5vw;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 800px;
   font-family: "Montserrat", sans-serif;
   color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(244, 242, 243, 0.7);
+  border-radius: 10px;
+  padding: 1% 2%;
 }
 
-.section-text p {
-  font-size: 1.3rem;
+.section-text .bold-text {
+  font-weight: 900;
 }
 
-.section-text p span {
-  font-size: 1.4rem;
-  font-weight: bolder;
+.section-text .section {
+  text-align: justify;
+  margin: 30px 0;
+}
+
+.section-text .section .header {
+  font-weight: 900;
 }
 /*# sourceMappingURL=joinUs.css.map */
