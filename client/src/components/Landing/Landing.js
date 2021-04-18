@@ -3,7 +3,6 @@ import SlideShow from "../SlideShow/SlideShow";
 import About from "../About/About";
 import Pricing from "../Pricing/Pricing";
 import Contact from "../Contact/Contact";
-import Slideshow from "../SlideShow/SlideShow";
 
 class Landing extends Component {
   render() {

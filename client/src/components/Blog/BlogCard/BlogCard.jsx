@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
 import "./blogCard.css";

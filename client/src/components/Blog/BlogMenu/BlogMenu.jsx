@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import BlogCard from "../BlogCard/BlogCard";
 
 import PageHeader from "../../utilities/PageHeader/PageHeader";
