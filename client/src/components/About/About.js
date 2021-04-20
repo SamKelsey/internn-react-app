@@ -7,7 +7,7 @@ class About extends React.Component {
   render() {
     return (
       <div className="section-about-us" id="about-us">
-        <h1>What is internn?</h1>
+        <h2>What is internn?</h2>
         <div className="about-cards">
           <Card
             icon="fas fa-users"

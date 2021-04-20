@@ -19,8 +19,8 @@ class Pricing extends Component {
   render() {
     return (
       <div id="section-pricing" className="section-pricing">
-        <h1>Price Calculator</h1>
-        <h2>Receive an instant quote</h2>
+        <h2>Price Calculator</h2>
+        <h3>Receive an instant quote</h3>
         <p>
           How many rooms do you need photographed?{" "}
           <div className="rooms-help">
@@ -52,11 +52,11 @@ class Pricing extends Component {
           <option>19</option>
           <option>20</option>
         </select>
-        <h1 className="price">
+        <h2 className="price">
           {this.state.calculatedPrice == "..."
             ? "..."
             : "£ " + this.state.calculatedPrice}
-        </h1>
+        </h2>
         <p>
           Like what you see? <span>Book now</span>
         </p>

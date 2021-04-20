@@ -6,7 +6,7 @@ class Card extends Component {
     return (
       <div className="about-card">
         <i className={this.props.icon}></i>
-        <h1>{this.props.title}</h1>
+        <h2>{this.props.title}</h2>
         <p>{this.props.body}</p>
       </div>
     );

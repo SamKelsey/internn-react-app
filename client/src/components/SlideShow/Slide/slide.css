@@ -75,7 +75,8 @@
   text-decoration: none;
 }
 
-.mySlides .right .h1-wrapper h1 {
+.mySlides .right .h1-wrapper h1,
+.mySlides .right .h1-wrapper h2 {
   font-size: 2.5rem;
   font-weight: lighter;
   margin: 0;
@@ -84,13 +85,17 @@
   color: #f4f2f3;
 }
 
-.mySlides .right .h2-wrapper h2 {
+.mySlides .right .h3-wrapper {
+  font-size: 1.5rem;
+}
+
+.mySlides .right .h3-wrapper h3 {
   font-weight: lighter;
   margin: 0 auto;
   padding: 0;
 }
 
-.mySlides .right .h2-wrapper h2 img {
+.mySlides .right .h3-wrapper h3 img {
   width: 100px;
   padding: 0 1px;
   margin: 0;
@@ -98,11 +103,11 @@
           transform: translate(0, 6px);
 }
 
-.mySlides .right .h2-wrapper h2 .fullstop {
+.mySlides .right .h3-wrapper h3 .fullstop {
   color: #f4f2f3;
 }
 
-.mySlides .right .h2-wrapper,
+.mySlides .right .h3-wrapper,
 .mySlides .right .h1-wrapper {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -113,7 +118,7 @@
   position: relative;
 }
 
-.mySlides .right .bottom h2 {
+.mySlides .right .bottom h3 {
   position: absolute;
   bottom: 0;
   margin: 0 auto;
@@ -123,8 +128,8 @@
   width: 100%;
 }
 
-.mySlides .right h2,
-.mySlides .right h2 a {
+.mySlides .right h3,
+.mySlides .right h3 a {
   color: #f4f2f3;
 }
 
@@ -133,10 +138,11 @@
 }
 
 @media (max-width: 560px) {
-  .mySlides .right .h1-wrapper h1 {
+  .mySlides .right .h1-wrapper h1,
+  .mySlides .right .h1-wrapper h2 {
     font-size: 1.5rem;
   }
-  .right h2 {
+  .right .h3-wrapper h3 {
     font-size: 1rem;
   }
 }
