@@ -350,7 +350,11 @@ class Book extends Component {
     return (
       <div className="booking-wrapper">
         <Helmet>
-          <title>internn | Book</title>
+          <title>internn | Make a booking.</title>
+          <meta
+            name="description"
+            content="Make a booking now and have one of our students come and take low-cost, beautiful property photographs of your property."
+          />
         </Helmet>
         <Switch>
           <Route exact path={`${this.props.match.path}/`}>

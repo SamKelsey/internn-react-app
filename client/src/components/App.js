@@ -16,7 +16,11 @@ function App() {
   return (
     <BrowserRouter>
       <Helmet>
-        <title>internn | think Students.</title>
+        <title>internn | think Students. | Paving a low-cost future.</title>
+        <meta
+          name="description"
+          content="Property photography services, provided by the best students for a fraction of the price. Leading a new, low-cost alternative to property photography."
+        />
       </Helmet>
       <div id="page-container">
         <Header />

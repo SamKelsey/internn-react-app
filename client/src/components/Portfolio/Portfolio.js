@@ -51,7 +51,11 @@ class Portfolio extends Component {
     return (
       <div id="section-portfolio">
         <Helmet>
-          <title>internn | Portfolio</title>
+          <title>internn | Portfolio.</title>
+          <meta
+            name="description"
+            content="Seeing is believing. View our portfolio of property photographs taken by our incredible student photographers. Stunning, low-cost photographs."
+          />
         </Helmet>
         <PageHeader
           title="Portfolio"
