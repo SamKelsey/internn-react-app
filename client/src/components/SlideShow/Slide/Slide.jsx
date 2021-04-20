@@ -7,7 +7,7 @@ import stockFacebook from "../../../images/stockFacebook.jpg";
 import stockGirl from "../../../images/stockGirl.jpg";
 
 const images = [stockGirl, stockChair, stockFacebook];
-const links = ["/#about-us", "/portfolio", "https://facebook.com"];
+const links = ["/#about-us", "/portfolio", "https://www.facebook.com"];
 
 class Slide extends Component {
   renderLink() {
