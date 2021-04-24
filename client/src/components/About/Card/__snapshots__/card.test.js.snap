@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="about-card"
+>
+  <i
+    className="fas fa-users"
+  />
+  <h2>
+    test title
+  </h2>
+  <p>
+    test body
+  </p>
+</div>
+`;
