@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.css";
-
 import Card from "./Card/Card";
 
 class About extends React.Component {
