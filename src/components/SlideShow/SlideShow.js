@@ -58,7 +58,7 @@ class Landing extends Component {
               />
               <Slide
                 slideNo="1"
-                firstLine="Properties sell with Students"
+                firstLine="Properties sell with students"
                 secondLine="View Portfolio"
                 thirdLine="Properties sell with"
               />
