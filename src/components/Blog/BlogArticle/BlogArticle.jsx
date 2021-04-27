@@ -14,13 +14,13 @@ const BlogArticle = () => {
   const renderBody = (body) => {
     return body.map(({ header, content, isNumbered }, index) => {
       return (
-        <React.Fragment>
+        <div key={index}>
           <h2>
             {isNumbered && <span>{index + 1}. </span>}
             {header}
           </h2>
           <p>{content}</p>
-        </React.Fragment>
+        </div>
       );
     });
   };
