@@ -56,4 +56,33 @@
   padding-bottom: 0;
   margin-bottom: 40px;
 }
+
+.rooms-help {
+  font-size: 1rem;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.rooms-help p {
+  color: #f4f2f3;
+  display: none;
+  text-align: left;
+  width: 200px;
+  background-color: rgba(240, 93, 94, 0.6);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.rooms-help:hover p {
+  display: block;
+}
 /*# sourceMappingURL=pricing.css.map */

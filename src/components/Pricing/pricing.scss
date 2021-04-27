@@ -58,3 +58,29 @@
     margin-bottom: 40px;
   }
 }
+
+.rooms-help {
+  font-size: 1rem;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  cursor: pointer;
+
+  p {
+    color: $sigWhite;
+    display: none;
+    text-align: left;
+    width: 200px;
+    background-color: $sigRedHover;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+  }
+
+  &:hover p {
+    display: block;
+  }
+}
