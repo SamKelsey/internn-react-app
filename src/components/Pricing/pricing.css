@@ -32,8 +32,11 @@
 
 .section-pricing p span {
   font-weight: bolder;
-  border-bottom: 1px solid #f07474;
   padding: 0;
+}
+
+.section-pricing p span a {
+  color: #f07474;
 }
 
 .section-pricing select {

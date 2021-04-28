@@ -64,8 +64,7 @@ class Landing extends Component {
               />
               <Slide
                 slideNo="2"
-                firstLine="Make a booking now via"
-                icon="fab fa-facebook fa-fw"
+                firstLine="Rethinking photography."
                 secondLine="Book now!"
                 thirdLine="Market properties with"
               />

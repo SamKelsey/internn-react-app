@@ -32,8 +32,11 @@
 
     span {
       font-weight: bolder;
-      border-bottom: 1px solid $sigRed;
       padding: 0;
+
+      a {
+        color: $sigRed;
+      }
     }
   }
 

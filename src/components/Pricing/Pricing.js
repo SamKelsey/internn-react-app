@@ -58,7 +58,12 @@ class Pricing extends Component {
             : "£ " + this.state.calculatedPrice}
         </h2>
         <p>
-          Like what you see? <span>Book now</span>
+          Like what you see?{" "}
+          <span>
+            <a href="https://squareup.com/appointments/book/lh5bwjbbh62mfi/L9SG5QR4MCQA8/services">
+              Book now
+            </a>
+          </span>
         </p>
       </div>
     );
