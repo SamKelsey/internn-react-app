@@ -1,0 +1,15 @@
+#section-terms-and-conditions {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 3% 2%;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  background-color: rgba(244, 242, 243, 0.7);
+}
+
+#section-terms-and-conditions h6 {
+  font-size: 1rem;
+}
+/*# sourceMappingURL=terms.css.map */
