@@ -29,7 +29,7 @@ class Footer extends Component {
         </div>
         <div className="terms-link-wrapper">
           <Link to="/terms-and-conditions" className="terms-link">
-            Terms and Conditions.
+            Terms & Conditions and Privacy Policy.
           </Link>
         </div>
       </div>
