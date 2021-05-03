@@ -78,11 +78,15 @@
   padding: 10px;
 }
 
-.footer .media-icons i {
+.footer .media-icons a {
+  color: #f4f2f3;
+}
+
+.footer .media-icons a i {
   font-size: 20px;
 }
 
-.footer .media-icons i:hover {
+.footer .media-icons a i:hover {
   cursor: pointer;
 }
 /*# sourceMappingURL=footer.css.map */

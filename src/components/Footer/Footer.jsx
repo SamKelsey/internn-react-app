@@ -23,9 +23,15 @@ class Footer extends Component {
           </div>
         </div>
         <div className="media-icons">
-          <i className="fab fa-facebook fa-fw"></i>
-          <i className="fab fa-instagram fa-fw"></i>
-          <i className="fab fa-linkedin fa-fw"></i>
+          <a href="https://www.facebook.com/internnOfficial">
+            <i className="fab fa-facebook fa-fw"></i>
+          </a>
+          <a href="https://www.instagram.com/internnofficial">
+            <i className="fab fa-instagram fa-fw"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/internn">
+            <i className="fab fa-linkedin fa-fw"></i>
+          </a>
         </div>
         <div className="terms-link-wrapper">
           <Link to="/terms-and-conditions" className="terms-link">
