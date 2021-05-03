@@ -40,6 +40,12 @@
   .content-wrapper {
     text-align: justify;
     padding: 0 3%;
+
+    h2 {
+      span {
+        color: $sigRed;
+      }
+    }
   }
 
   @media (max-width: 720px) {

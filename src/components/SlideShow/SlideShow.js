@@ -58,14 +58,13 @@ class Landing extends Component {
               />
               <Slide
                 slideNo="1"
-                firstLine="Click below to view our"
-                secondLine="Portfolio"
+                firstLine="Properties sell with students."
+                secondLine="View Portfolio"
                 thirdLine="Properties sell with"
               />
               <Slide
                 slideNo="2"
-                firstLine="Make a booking now via"
-                icon="fab fa-facebook fa-fw"
+                firstLine="Rethinking photography."
                 secondLine="Book now!"
                 thirdLine="Market properties with"
               />

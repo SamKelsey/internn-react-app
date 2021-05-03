@@ -63,6 +63,7 @@
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background-color: rgba(240, 93, 94, 0.6);
 }
 
 .mySlides .right .h1-wrapper:hover {

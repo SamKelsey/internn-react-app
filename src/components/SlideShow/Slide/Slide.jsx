@@ -7,7 +7,11 @@ import stockFacebook from "../../../images/stockFacebook.jpg";
 import stockGirl from "../../../images/stockGirl.jpg";
 
 const images = [stockGirl, stockChair, stockFacebook];
-const links = ["/#about-us", "/portfolio", "https://www.facebook.com"];
+const links = [
+  "/#about-us",
+  "/portfolio",
+  "https://squareup.com/appointments/book/lh5bwjbbh62mfi/L9SG5QR4MCQA8/services",
+];
 
 class Slide extends Component {
   renderLink() {

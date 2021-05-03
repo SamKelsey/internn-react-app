@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "./app.css";
 
@@ -10,6 +10,7 @@ import Portfolio from "./Portfolio/Portfolio";
 import Landing from "./Landing/Landing";
 import BlogRouter from "./Blog/BlogRouter";
 import Terms from "./Terms/Terms";
+import NotFound from "./NotFound/NotFound";
 
 function App() {
   return (
@@ -23,11 +24,14 @@ function App() {
       </Helmet>
       <div id="page-container">
         <Header />
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/join-us" component={JoinUs} />
-        <Route exact path="/portfolio" component={Portfolio} />
-        <Route path="/blog" component={BlogRouter} />
-        <Route path="/terms-and-conditions" component={Terms} />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/join-us" component={JoinUs} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route path="/blog" component={BlogRouter} />
+          <Route path="/terms-and-conditions" component={Terms} />
+          <Route path="/" component={NotFound} />
+        </Switch>
       </div>
       <Footer />
     </BrowserRouter>

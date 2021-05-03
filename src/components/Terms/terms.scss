@@ -1,0 +1,17 @@
+@import "../styleVariables";
+
+#section-terms-and-conditions {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 3% 2%;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  background-color: $sigWhiteOpaque;
+  color: $sigGrey;
+
+  h6 {
+    font-size: 1rem;
+  }
+}

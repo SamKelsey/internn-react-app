@@ -41,6 +41,7 @@
       width: 90%;
       cursor: pointer;
       transition: all 0.3s ease;
+      background-color: $sigRedHover;
 
       &:hover {
         flex: 1.2;

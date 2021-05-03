@@ -4,20 +4,24 @@
   "intro": "So you’ve booked your slot with internn, great! Before our internn arrives to capture some amazing photos of your property there’s a few steps you can take in advance to make sure you get the most out of your property shoot. Below is internn’s simple 3 step guide to getting the most out of your property shoot.",
   "body": [
     {
-      "header": "1. Set the scene.",
-      "content": "Our first tip covers some of the basic, but essential, steps. This tip is really all about setting the scene for your property. Often in property photography, less really is more. That’s why it’s helpful to remove unnecessary objects from sight. Doing so will make the property appear more spacious and appealing to the viewers. Additionally, things like removing the cars from the driveway, hiding the chopping boards and dishes in the kitchen and decluttering the garden of any rubbish can really go a long way in drawing more attention to your property. Lastly, a spot of light dusting never does any harm and can add a real gleam to your surfaces and windows."
+      "header": "Set the scene.",
+      "content": "Our first tip covers some of the basic, but essential, steps. This tip is really all about setting the scene for your property. Often in property photography, less really is more. That’s why it’s helpful to remove unnecessary objects from sight. Doing so will make the property appear more spacious and appealing to the viewers. Additionally, things like removing the cars from the driveway, hiding the chopping boards and dishes in the kitchen and decluttering the garden of any rubbish can really go a long way in drawing more attention to your property. Lastly, a spot of light dusting never does any harm and can add a real gleam to your surfaces and windows.",
+      "isNumbered": true
     },
     {
-      "header": "2. Remove the personal.",
-      "content": "Tip number two, and something people often forget about! Remove the personal touch from your property. Viewers want to see a blank canvas and try to imagine themselves in that property. This is much harder to do with a picture of Felix, your pet german shepherd, hanging on the wall… sorry Felix! Additional things that are commonly missed are family photos and more importantly the infamous fridge magnets, they’ve simply got to go… for now anyway! Lastly, any pet bowls in the kitchen or toys lying on the floor should be cleared away, leaving a spacious, blank canvas for your viewers."
+      "header": "Remove the personal.",
+      "content": "Tip number two, and something people often forget about! Remove the personal touch from your property. Viewers want to see a blank canvas and try to imagine themselves in that property. This is much harder to do with a picture of Felix, your pet german shepherd, hanging on the wall… sorry Felix! Additional things that are commonly missed are family photos and more importantly the infamous fridge magnets, they’ve simply got to go… for now anyway! Lastly, any pet bowls in the kitchen or toys lying on the floor should be cleared away, leaving a spacious, blank canvas for your viewers.",
+      "isNumbered": true
     },
     {
-      "header": "3. Bonus tip!",
-      "content": "Our final tip is for those who really want to go the extra mile to get the very best out of their internn experience. This tip is all about dressing the property. Just like how we dress ourselves in colour coordinated clothing, we should be doing the same to our property before a shoot. Examples of this might be neatly adding throws to beds that compliment the room nicely, some fresh flowers and a lovely bowl of fresh, ripe fruit in the kitchen or even simply setting the table! But don’t stop there, get creative and play around with different ideas to see what works best for your property. We can’t wait to see what you come up with and we will always be there to help and provide our expertise to help you choose what setting works best."
+      "header": "Bonus tip!",
+      "content": "Our final tip is for those who really want to go the extra mile to get the very best out of their internn experience. This tip is all about dressing the property. Just like how we dress ourselves in colour coordinated clothing, we should be doing the same to our property before a shoot. Examples of this might be neatly adding throws to beds that compliment the room nicely, some fresh flowers and a lovely bowl of fresh, ripe fruit in the kitchen or even simply setting the table! But don’t stop there, get creative and play around with different ideas to see what works best for your property. We can’t wait to see what you come up with and we will always be there to help and provide our expertise to help you choose what setting works best.",
+      "isNumbered": true
     },
     {
       "header": "Rounding up",
-      "content": "Well this concludes internn’s essential 3 step guide to getting the most out of your property shoot. We really hope it’s been of help to you and we can’t wait to see you soon!"
+      "content": "Well this concludes internn’s essential 3 step guide to getting the most out of your property shoot. We really hope it’s been of help to you and we can’t wait to see you soon!",
+      "isNumbered": false
     }
   ]
 }
