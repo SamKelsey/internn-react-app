@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slide from "./Slide/Slide";
+import Notifications from "../utilities/Notifications/Notifications";
 import "./slideshow.css";
 
 class Landing extends Component {
@@ -7,11 +8,34 @@ class Landing extends Component {
     super(props);
     this.state = {
       slideCounter: 0,
+      notifications: [],
     };
   }
 
   componentDidMount() {
     this.toggleSlide();
+
+    // Add notifications to state
+    this.setState({
+      notifications: [
+        {
+          message: "We currently are NOT accepting bookings. Opening soon!",
+          notificationType: "error",
+        },
+      ],
+    });
+
+    // Set a timer to remove the FIRST notification's from state
+    setTimeout(() => {
+      this.setState({
+        notifications: [
+          {
+            message: this.state.notifications[0].message,
+            notificationType: "none",
+          },
+        ],
+      });
+    }, 7000);
   }
 
   componentWillUnmount() {
@@ -48,6 +72,9 @@ class Landing extends Component {
     return (
       <React.Fragment>
         <div className="slideshow-container">
+          {this.state.notifications && (
+            <Notifications notifications={this.state.notifications} />
+          )}
           <div className="slides-outer-wrapper">
             <div className={this.renderSlide()}>
               <Slide
