@@ -1,0 +1,42 @@
+@import "../../styleVariables";
+
+.notifications {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 100%;
+
+  .notification {
+    color: $sigWhite;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 8px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 700px;
+    margin: 3px auto;
+    box-shadow: 2px 2px 5px $sigGrey;
+    transition: 0.5s all ease-in-out;
+    h4 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: lighter;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.error {
+  background-color: $errorRed;
+}
+
+.warning {
+  background-color: yellow;
+}
+
+.none {
+  width: 0px;
+  opacity: 0;
+}
