@@ -1,0 +1,10 @@
+@import "../styleVariables";
+
+.no-bookings {
+  background-color: $sigWhite;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 5px;
+  padding: 20px 5px;
+}

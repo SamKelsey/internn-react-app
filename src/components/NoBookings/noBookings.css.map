@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,YAAY,CAAC;EACX,gBAAgB,ECDP,OAAO;EDEhB,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,MAAM,EAAE,QAAQ;EAChB,OAAO,EAAE,QAAQ;CAClB",
+    "sources": [
+        "noBookings.scss",
+        "../_styleVariables.scss"
+    ],
+    "names": [],
+    "file": "noBookings.css"
+}

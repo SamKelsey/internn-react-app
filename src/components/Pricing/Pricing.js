@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./pricing.css";
 import priceCalculator from "../../services/priceCalculator";
 
@@ -60,9 +61,7 @@ class Pricing extends Component {
         <p>
           Like what you see?{" "}
           <span>
-            <a href="https://squareup.com/appointments/book/lh5bwjbbh62mfi/L9SG5QR4MCQA8/services">
-              Book now
-            </a>
+            <Link to="/make-a-booking">Book now</Link>
           </span>
         </p>
       </div>
