@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -8,6 +8,9 @@ import cardImage from "../../../images/IMG_0307.JPG";
 import "./blogArticle.css";
 
 const BlogArticle = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   let { articleId } = useParams();
   const { title, subtitle, intro, body } = getBlogInfo(articleId);
 
