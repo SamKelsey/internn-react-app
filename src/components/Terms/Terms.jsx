@@ -10,6 +10,8 @@ const Terms = () => {
   const [markdown, setMarkdown] = useState("");
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     // Get markdownFile text and set state value.
     fetch(markdownFile)
       .then((res) => res.text())
