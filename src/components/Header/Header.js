@@ -130,12 +130,9 @@ class Header extends Component {
           <div className="stickyHeader-logo">
             <HeaderLogo />
           </div>
-          <a
-            className="booking-link"
-            href="https://squareup.com/appointments/book/lh5bwjbbh62mfi/L9SG5QR4MCQA8/services"
-          >
+          <Link to="/make-a-booking" className="booking-link">
             <h2>Book now!</h2>
-          </a>
+          </Link>
         </div>
       </div>
     );

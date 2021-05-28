@@ -7,19 +7,15 @@ import stockFacebook from "../../../images/stockFacebook.jpg";
 import stockGirl from "../../../images/stockGirl.jpg";
 
 const images = [stockGirl, stockChair, stockFacebook];
-const links = [
-  "/#about-us",
-  "/portfolio",
-  "https://squareup.com/appointments/book/lh5bwjbbh62mfi/L9SG5QR4MCQA8/services",
-];
+const links = ["/#about-us", "/portfolio", "/make-a-booking"];
 
 class Slide extends Component {
   renderLink() {
     if (this.props.slideNo == 2) {
       return (
-        <a href={links[this.props.slideNo]}>
+        <HashLink to={links[this.props.slideNo]}>
           <h2>{this.props.secondLine}</h2>
-        </a>
+        </HashLink>
       );
     } else if (this.props.slideNo == 0) {
       return (
