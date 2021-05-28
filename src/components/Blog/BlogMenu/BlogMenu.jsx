@@ -16,10 +16,10 @@ const BlogMenu = () => {
   return (
     <div className="section-blog">
       <Helmet>
-        <title>internn | Blog.</title>
+        <title>Blog. | internn</title>
         <meta
           name="description"
-          content="Stay up to date with the incredible work all our internn students are doing whilst on the job, taking beautiful property photos for our customers."
+          content="Stay up to date with all the incredible work and hot tips our internn students have to offer whilst taking beautiful property photos for our customers."
         />
       </Helmet>
       <PageHeader title="Blog" subtitle="Keep watch for new posts soon!" />

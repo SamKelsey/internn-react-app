@@ -34,6 +34,11 @@ const BlogArticle = () => {
           rel="canonical"
           href="https://www.internn.co.uk/blog/prepare-your-property"
         />
+        <title>{subtitle} | Blog.</title>
+        <meta
+          name="description"
+          content="What can you do to get the most out your photoshoot with internn? This blog article will give you some quick tips on how you can prepare your property for a photoshoot."
+        />
       </Helmet>
       <div className="header-wrapper">
         <img src={cardImage} alt="Article" />
