@@ -8,11 +8,22 @@ import cardImage from "../../../images/IMG_0307.JPG";
 import "./blogArticle.css";
 
 const BlogArticle = () => {
+  const DESCRIPTION_LENGTH = 160;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   let { articleId } = useParams();
-  const { title, subtitle, intro, body } = getBlogInfo(articleId);
+
+  const { title, subtitle, intro, body, description } = getBlogInfo(articleId);
+
+  const getDescription = () => {
+    if (description) {
+      return description.substring(0, DESCRIPTION_LENGTH);
+    } else {
+      return intro.substring(0, DESCRIPTION_LENGTH);
+    }
+  };
 
   const renderBody = (body) => {
     return body.map(({ header, content, isNumbered }, index) => {
@@ -27,18 +38,12 @@ const BlogArticle = () => {
       );
     });
   };
+
   return (
     <div className="section-article">
       <Helmet>
-        <link
-          rel="canonical"
-          href="https://www.internn.co.uk/blog/prepare-your-property"
-        />
-        <title>{subtitle} | Blog.</title>
-        <meta
-          name="description"
-          content="What can you do to get the most out your photoshoot with internn? This blog article will give you some quick tips on how you can prepare your property for a photoshoot."
-        />
+        <title>{`${subtitle} | internn`}</title>
+        <meta name="description" content={getDescription()} />
       </Helmet>
       <div className="header-wrapper">
         <img src={cardImage} alt="Article" />
