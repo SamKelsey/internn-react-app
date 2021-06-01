@@ -15,7 +15,8 @@ const BlogArticle = () => {
   }, []);
   let { articleId } = useParams();
 
-  const { title, subtitle, intro, body, description } = getBlogInfo(articleId);
+  const { title, subtitle, intro, body, imageName, description } =
+    getBlogInfo(articleId);
 
   const getDescription = () => {
     if (description) {
@@ -46,7 +47,10 @@ const BlogArticle = () => {
         <meta name="description" content={getDescription()} />
       </Helmet>
       <div className="header-wrapper">
-        <img src={cardImage} alt="Article" />
+        <img
+          src={require(`../../../images/${imageName}`).default}
+          alt="Article"
+        />
         <h1>
           <span>{title}:</span> {subtitle}
         </h1>
