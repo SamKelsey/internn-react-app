@@ -4,6 +4,10 @@ import "./joinUs.css";
 import PageHeader from "../utilities/PageHeader/PageHeader";
 
 class JoinUs extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const {
       title,
@@ -34,16 +38,16 @@ class JoinUs extends Component {
           <p className="header">Role responsibilities</p>
           <p>{responsibilities.paragraph}</p>
           <ul>
-            {responsibilities.bullets.map((bullet) => (
-              <li>{bullet}</li>
+            {responsibilities.bullets.map((bullet, index) => (
+              <li key={index}>{bullet}</li>
             ))}
           </ul>
         </div>
         <div className="section">
           <p className="header">Role requirements</p>
           <ul>
-            {requirements.map((requirement) => (
-              <li>{requirement}</li>
+            {requirements.map((requirement, index) => (
+              <li key={index}>{requirement}</li>
             ))}
           </ul>
         </div>
