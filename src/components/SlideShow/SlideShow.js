@@ -19,7 +19,7 @@ class Landing extends Component {
     this.setState({
       notifications: [
         {
-          message: "We currently are NOT accepting bookings. Opening soon!",
+          message: "Opening soon!",
           notificationType: "error",
         },
       ],
@@ -35,7 +35,7 @@ class Landing extends Component {
           },
         ],
       });
-    }, 7000);
+    }, 2500);
   }
 
   componentWillUnmount() {
