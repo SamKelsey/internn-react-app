@@ -42,5 +42,3 @@ jobs:
           SOURCE_DIR: "build"
         if: github.event.inputs.environment == 'prod'
         echo 'Production variables'
-        if: github.event.inputs.environment != 'dev' || github.event.inputs.environment != 'prod'
-        echo 'Invalid input environment.'
