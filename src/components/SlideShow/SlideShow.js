@@ -19,7 +19,7 @@ class Landing extends Component {
     this.setState({
       notifications: [
         {
-          message: "Opening soon!",
+          message: "Opening 9th July!",
           notificationType: "error",
         },
       ],
