@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+import config from "../../../config.json";
 
 class NavLinks extends Component {
   render() {
@@ -55,6 +56,16 @@ class NavLinks extends Component {
           >
             Get in touch
           </HashLink>
+        </li>
+        <li className="nav-link header-booking-link">
+          <a
+            href={config["booking-url"]}
+            onClick={(e) =>
+              this.props.isBurgerMenu ? this.props.toggleBurgerMenu(e) : ""
+            }
+          >
+            Book now!
+          </a>
         </li>
       </React.Fragment>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import config from "../../config.json";
 
 import "./header.css";
 import NavLinks from "./subcomponents/NavLinks";
@@ -130,9 +131,9 @@ class Header extends Component {
           <div className="stickyHeader-logo">
             <HeaderLogo />
           </div>
-          <Link to="/make-a-booking" className="booking-link">
+          <a href={config["booking-url"]} className="booking-link">
             <h2>Book now!</h2>
-          </Link>
+          </a>
         </div>
       </div>
     );

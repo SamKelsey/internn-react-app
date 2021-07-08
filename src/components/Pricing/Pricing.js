@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./pricing.css";
 import priceCalculator from "../../services/priceCalculator";
+import config from "../../config.json";
 
 class Pricing extends Component {
   constructor(props) {
@@ -61,7 +62,7 @@ class Pricing extends Component {
         <p>
           Like what you see?{" "}
           <span>
-            <Link to="/make-a-booking">Book now</Link>
+            <a href={config["booking-url"]}>Book now</a>
           </span>
         </p>
       </div>

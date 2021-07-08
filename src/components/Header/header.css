@@ -98,15 +98,6 @@ nav ul:hover {
   font-size: 1.5rem;
 }
 
-.burger-menu .burger-menu-links-container .burger-nav .nav-link a {
-  color: #888888;
-  font-family: "Montserrat", sans-serif;
-}
-
-.burger-menu .burger-menu-links-container .burger-nav .nav-link a:hover {
-  color: rgba(136, 136, 136, 0.8);
-}
-
 .burger-logo {
   border-radius: 6px;
   padding: 15px;
@@ -243,5 +234,21 @@ nav ul:hover {
 .header-active {
   -webkit-transform: translate(0, 70px);
           transform: translate(0, 70px);
+}
+
+.header-booking-link {
+  color: #f4f2f3;
+}
+
+.header-booking-link a {
+  font-weight: bolder;
+  padding: 14px 6px;
+  border-radius: 4px;
+  background-color: #f07474;
+  color: #f4f2f3;
+}
+
+.header-booking-link:hover {
+  color: rgba(244, 242, 243, 0.7);
 }
 /*# sourceMappingURL=header.css.map */

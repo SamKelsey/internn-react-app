@@ -83,15 +83,6 @@ nav {
       .nav-link {
         padding: 5vh 0;
         font-size: 1.5rem;
-
-        a {
-          color: rgb(136, 136, 136);
-          font-family: "Montserrat", sans-serif;
-
-          &:hover {
-            color: rgba(136, 136, 136, 0.8);
-          }
-        }
       }
     }
   }
@@ -220,4 +211,20 @@ $elementHeight: 0.8;
 
 .header-active {
   transform: translate(0, $stickyHeaderHeight);
+}
+
+.header-booking-link {
+  color: $sigWhite;
+
+  a {
+    font-weight: bolder;
+    padding: 14px 6px;
+    border-radius: 4px;
+    background-color: $sigRed;
+    color: $sigWhite;
+  }
+
+  &:hover {
+    color: $sigWhiteOpaque;
+  }
 }
