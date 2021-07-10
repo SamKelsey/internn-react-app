@@ -15,7 +15,7 @@ const HowItWorks = () => {
     },
     {
       icon: "far fa-check-circle",
-      title: "We will confirm your booking.",
+      title: "We confirm your booking.",
       body: "Once we see your booking we will find an internn who is available for the appointment. After we've got an internn, we will confirm you're booking and notify you. This usually takes no more than a day.",
     },
     {
@@ -40,7 +40,7 @@ const HowItWorks = () => {
       <h2>How it works</h2>
       <div className="about-cards">
         {infoList.map(({ icon, title, body }) => (
-          <Card icon={icon} title={title} body={body} height={250} />
+          <Card icon={icon} title={title} body={body} height={300} />
         ))}
       </div>
     </div>
