@@ -12,7 +12,6 @@ import Landing from "./Landing/Landing";
 import BlogRouter from "./Blog/BlogRouter";
 import Terms from "./Terms/Terms";
 import NotFound from "./NotFound/NotFound";
-import NoBookings from "./NoBookings/NoBookings";
 
 function App() {
   return (
@@ -32,7 +31,6 @@ function App() {
           <Route exact path="/portfolio" component={Portfolio} />
           <Route path="/blog" component={BlogRouter} />
           <Route path="/terms-and-conditions" component={Terms} />
-          <Route path="/make-a-booking" component={NoBookings} />
           <Route path="/" component={NotFound} />
         </Switch>
       </div>
