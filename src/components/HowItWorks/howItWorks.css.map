@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,qBAAqB,CAAC;EACpB,gBAAgB,ECHT,OAAO;EDId,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,IAAI;EACb,KAAK,ECJI,OAAO;CDiBjB;;AAjBD,AAME,qBANmB,GAMjB,EAAE,CAAC;EACH,WAAW,EAAE,wBAAwB;EACrC,WAAW,EAAE,OAAO;EACpB,SAAS,EAAE,IAAI;CAChB;;AAVH,AAYE,qBAZmB,CAYnB,YAAY,CAAC;EACX,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,YAAY;CAC9B",
+    "sources": [
+        "howItWorks.scss",
+        "../_styleVariables.scss"
+    ],
+    "names": [],
+    "file": "howItWorks.css"
+}
