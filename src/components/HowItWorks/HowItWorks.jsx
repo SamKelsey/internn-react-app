@@ -16,7 +16,7 @@ const HowItWorks = () => {
     {
       icon: "far fa-check-circle",
       title: "We confirm your booking.",
-      body: "Once we see your booking we will find an internn who is available for the appointment. After we've got an internn, we will confirm you're booking and notify you. This usually takes no more than a day.",
+      body: "Once we see your booking we will find an internn who is available for the appointment. After we've got an internn, we will confirm your booking and notify you. This usually takes no more than a day.",
     },
     {
       icon: "fas fa-camera",
