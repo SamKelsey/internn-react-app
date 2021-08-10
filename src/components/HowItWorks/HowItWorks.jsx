@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../Card/Card";
-import "./howItWorks.css";
+import "./howItWorks.scss";
 const HowItWorks = () => {
   const infoList = [
     {

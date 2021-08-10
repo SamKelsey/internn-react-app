@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACE,aADW,CACX,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,MAAM;CACxB",
-    "sources": [
-        "BlogMenu.scss"
-    ],
-    "names": [],
-    "file": "BlogMenu.css"
-}

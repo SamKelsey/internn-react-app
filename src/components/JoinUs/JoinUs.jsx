@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./joinUs.css";
+import "./joinUs.scss";
 
 import PageHeader from "../utilities/PageHeader/PageHeader";
 

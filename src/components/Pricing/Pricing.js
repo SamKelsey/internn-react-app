@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import "./pricing.css";
+import "./pricing.scss";
 import priceCalculator from "../../services/priceCalculator";
 import config from "../../config.json";
 

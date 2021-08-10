@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./terms.css";
+import "./terms.scss";
 import ReactMarkdown from "react-markdown";
 
 import PageHeader from "../utilities/PageHeader/PageHeader";

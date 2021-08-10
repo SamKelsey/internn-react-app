@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import config from "../../config.json";
 
-import "./header.css";
+import "./header.scss";
 import NavLinks from "./subcomponents/NavLinks";
 import HeaderLogo from "./subcomponents/HeaderLogo";
 

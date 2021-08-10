@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import "./portfolio.css";
+import "./portfolio.scss";
 import { Helmet } from "react-helmet";
 
 import PageHeader from "../utilities/PageHeader/PageHeader";

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./notifications.css";
+import "./notifications.scss";
 
 const Notification = ({ notifications }) => {
   return (

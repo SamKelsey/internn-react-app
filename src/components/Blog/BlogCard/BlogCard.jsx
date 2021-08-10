@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
-import "./blogCard.css";
+import "./blogCard.scss";
 
 const BlogCard = ({ title, subtitle, intro, imageName }) => {
   let { url } = useRouteMatch();

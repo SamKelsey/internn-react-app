@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./contact.css";
+import "./contact.scss";
 
 import validateEmail from "../utilities/validateEmail";
 

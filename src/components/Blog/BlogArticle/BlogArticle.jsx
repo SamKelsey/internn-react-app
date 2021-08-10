@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import getBlogInfo from "../../utilities/getBlogInfo";
-import cardImage from "../../../images/IMG_0307.JPG";
 
-import "./blogArticle.css";
+import "./blogArticle.scss";
 
 const BlogArticle = () => {
   const DESCRIPTION_LENGTH = 160;

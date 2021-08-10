@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import "./app.css";
+import "./app.scss";
 
 // Import components
 import Header from "./Header/Header";

@@ -7,7 +7,7 @@ import blogFiles from "../articleData";
 
 // import cardImage from "../../../images/IMG_0307.JPG";
 
-import "./BlogMenu.css";
+import "./BlogMenu.scss";
 
 const BlogMenu = () => {
   // Return each blogFiles as a BlogCard.
