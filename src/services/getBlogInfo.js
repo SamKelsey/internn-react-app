@@ -1,4 +1,4 @@
-// @args Path to directory, filename
+// @args filename
 const fn = (filename) => {
   const blogObject = require(`../Blog/articleData/${filename}`);
 
