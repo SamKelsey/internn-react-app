@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./contact.scss";
 
-import validateEmail from "../utilities/validateEmail";
+import validateEmail from "../../services/validateEmail";
 
 class Contact extends Component {
   constructor(props) {

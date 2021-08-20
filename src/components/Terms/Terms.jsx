@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./terms.scss";
 import ReactMarkdown from "react-markdown";
 
-import PageHeader from "../utilities/PageHeader/PageHeader";
+import PageHeader from "../utils/PageHeader/PageHeader";
 
 import markdownFile from "./terms-and-conditions.md";
 

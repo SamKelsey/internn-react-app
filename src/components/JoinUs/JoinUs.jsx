@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./joinUs.scss";
 
-import PageHeader from "../utilities/PageHeader/PageHeader";
+import PageHeader from "../utils/PageHeader/PageHeader";
 
 class JoinUs extends Component {
   componentDidMount() {

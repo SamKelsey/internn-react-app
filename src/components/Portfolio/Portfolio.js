@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import "./portfolio.scss";
 import { Helmet } from "react-helmet";
 
-import PageHeader from "../utilities/PageHeader/PageHeader";
+import PageHeader from "../utils/PageHeader/PageHeader";
 
 import IMG_0220 from "../../images/IMG_0220.JPG";
 import IMG_0244 from "../../images/IMG_0244.JPG";

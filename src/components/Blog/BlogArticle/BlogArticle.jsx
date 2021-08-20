@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-import getBlogInfo from "../../utilities/getBlogInfo";
+import getBlogInfo from "../getBlogInfo";
 
 import "./blogArticle.scss";
 

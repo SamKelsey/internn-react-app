@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slide from "./Slide/Slide";
-import Notifications from "../utilities/Notifications/Notifications";
+import Notifications from "../utils/Notifications/Notifications";
 import "./slideshow.scss";
 
 class Landing extends Component {

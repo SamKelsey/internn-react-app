@@ -2,7 +2,7 @@ import React from "react";
 import BlogCard from "../BlogCard/BlogCard";
 import { Helmet } from "react-helmet";
 
-import PageHeader from "../../utilities/PageHeader/PageHeader";
+import PageHeader from "../../utils/PageHeader/PageHeader";
 import blogFiles from "../articleData";
 
 // import cardImage from "../../../images/IMG_0307.JPG";
