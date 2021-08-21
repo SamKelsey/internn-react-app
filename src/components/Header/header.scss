@@ -1,10 +1,5 @@
 @import "../styleVariables";
 
-.section-header {
-  background-color: $sigWhiteOpaque;
-  box-shadow: 1px 0px 8px;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -12,48 +7,35 @@ nav {
   font-family: "Montserrat", sans-serif;
 
   ul {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding-left: 0;
-    width: 65vw;
-
-    &:hover {
-      cursor: pointer;
-    }
+    padding: 0 10px;
+    width: $headerLinksWidth;
+    height: $headerLinksHeight;
+    border-radius: 15px;
+    background-color: $headerBlack;
   }
 }
 
-.logo {
-  width: 180px;
-  transition: all 0.3s;
-
-  a {
-    margin: 0 auto auto auto;
-    font-size: 1.5rem;
-    padding: 3px 3px;
-    text-decoration: none;
-  }
+.header-logo img {
+  height: $headerLinksHeight;
 }
+// .nav-links {
+//   margin: auto;
+//   margin-right: 0;
+// }
 
-.header-logo {
-  opacity: 0.9;
-}
+// .nav-link a {
+//   text-decoration: none;
+//   color: $sigGrey;
+//   transition: 0.2s;
 
-.nav-links {
-  margin: auto;
-  margin-right: 0;
-}
-
-.nav-link a {
-  text-decoration: none;
-  color: $sigGrey;
-  transition: 0.2s;
-
-  &:hover {
-    color: $sigGreyOpaque;
-  }
-}
+//   &:hover {
+//     color: $sigGreyOpaque;
+//   }
+// }
 
 .burger-menu {
   z-index: 3;
@@ -173,10 +155,6 @@ $elementHeight: 0.8;
       height: $elementHeight * 100%;
       box-sizing: border-box;
 
-      img {
-        height: 100%;
-      }
-
       .logo {
         width: auto;
       }
@@ -214,18 +192,18 @@ $elementHeight: 0.8;
   transform: translate(0, $stickyHeaderHeight);
 }
 
-.header-booking-link {
-  color: $sigWhite;
+// .header-booking-link {
+//   color: $sigWhite;
 
-  a {
-    font-weight: bolder;
-    padding: 14px 6px;
-    border-radius: 4px;
-    background-color: $sigRed;
-    color: $sigWhite;
-  }
+//   a {
+//     font-weight: bolder;
+//     padding: 14px 6px;
+//     border-radius: 4px;
+//     background-color: $sigRed;
+//     color: $sigWhite;
+//   }
 
-  &:hover {
-    color: $sigWhiteOpaque;
-  }
-}
+//   &:hover {
+//     color: $sigWhiteOpaque;
+//   }
+// }

@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import config from "../../../config.json";
+import "./navlinks.scss";
 
 class NavLinks extends Component {
   render() {
     return (
-      <React.Fragment>
+      <ul className="nav-links">
         <li className="nav-link">
           <HashLink
             to="/#about-us"
@@ -67,7 +68,7 @@ class NavLinks extends Component {
             Book now!
           </a>
         </li>
-      </React.Fragment>
+      </ul>
     );
   }
 }

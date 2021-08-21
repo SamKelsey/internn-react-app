@@ -4,7 +4,7 @@ import config from "../../config.json";
 
 import "./header.scss";
 import NavLinks from "./subcomponents/NavLinks";
-import HeaderLogo from "./subcomponents/HeaderLogo";
+import HeaderLogo from "../utils/HeaderLogo";
 
 class Header extends Component {
   constructor(props) {
@@ -67,7 +67,7 @@ class Header extends Component {
       return (
         <React.Fragment>
           <div className="burger-logo">
-            <HeaderLogo />
+            <HeaderLogo extraClasses="header-logo" />
           </div>
           <button
             id="burger-button"
@@ -105,13 +105,11 @@ class Header extends Component {
       return (
         <React.Fragment>
           <nav>
-            <HeaderLogo />
-            <ul className="nav-links">
-              <NavLinks
-                isBurgerMenu={this.state.isBurgerMenu}
-                toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
-              />
-            </ul>
+            <HeaderLogo extraClasses="header-logo" />
+            <NavLinks
+              isBurgerMenu={this.state.isBurgerMenu}
+              toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
+            />
           </nav>
         </React.Fragment>
       );
@@ -129,7 +127,7 @@ class Header extends Component {
       >
         <div className="stickyHeader-inner">
           <div className="stickyHeader-logo">
-            <HeaderLogo />
+            <HeaderLogo extraClasses="header-logo" />
           </div>
           <a href={config["booking-url"]} className="booking-link">
             <h2>Book now!</h2>
