@@ -51,7 +51,10 @@ class Header extends Component {
       <React.Fragment>
         <nav className="header-wrapper">
           <HeaderLogo extraClasses="header-logo" />
-          <NavLinks toggleBurgerMenu={this.toggleBurgerMenu.bind(this)} />
+          <NavLinks
+            toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
+            extraClasses="header-links"
+          />
         </nav>
         <nav className="burger-menu-wrapper">
           <HeaderLogo extraClasses="burger-logo header-logo" />

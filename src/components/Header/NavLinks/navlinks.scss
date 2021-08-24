@@ -1,26 +1,33 @@
 @import "../../styleVariables";
 
 .nav-links {
-  .nav-link a {
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    font-size: $headerLinksFontSize;
-    line-height: $headerLinksHeight;
-    color: $sigWhite;
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    &:hover {
-      color: $sigWhiteOpaque;
+    a {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: $headerLinksFontSize;
+      line-height: $headerLinksHeight;
+      color: $sigWhite;
+
+      &:hover {
+        color: $sigWhiteOpaque;
+      }
     }
   }
 
   .header-booking-link {
+    background-color: $sigRed;
+    border-radius: 6px;
+
     a {
       display: block;
       $bookingButtonVerticalMargin: 10px;
       margin: $bookingButtonVerticalMargin 0;
       padding: 0 10px;
-      background-color: $sigRed;
-      border-radius: 10px;
       // Vertically center "book now" in button
       line-height: $headerLinksHeight - (2 * $bookingButtonVerticalMargin);
       font-weight: bolder;

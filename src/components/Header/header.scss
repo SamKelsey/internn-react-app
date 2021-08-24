@@ -11,7 +11,7 @@ $headerPadding: 25px;
   padding: $headerPadding;
   font-family: "Montserrat", sans-serif;
 
-  ul {
+  .header-links {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -21,6 +21,11 @@ $headerPadding: 25px;
     height: $headerLinksHeight;
     border-radius: 15px;
     background-color: $headerBlack;
+
+    .header-booking-link {
+      height: 60%;
+      margin: auto 0;
+    }
   }
 }
 
