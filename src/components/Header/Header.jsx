@@ -17,11 +17,6 @@ class Header extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", () => {
-      this.handleResize();
-    });
-    this.handleResize();
-
     window.addEventListener("scroll", () => {
       this.handleScroll();
     });
@@ -29,21 +24,7 @@ class Header extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.handleResize);
     window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleResize() {
-    // if (document.documentElement.clientWidth <= 800) {
-    //   this.setState({
-    //     isBurgerMenu: true,
-    //     stickyHeader: false,
-    //   });
-    // } else {
-    //   this.setState({
-    //     isBurgerMenu: false,
-    //   });
-    // }
   }
 
   handleScroll() {
