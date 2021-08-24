@@ -1,91 +1,48 @@
 @import "../styleVariables";
 
 nav {
-  .header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-family: "Montserrat", sans-serif;
+
+  ul {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
-    font-family: "Montserrat", sans-serif;
-
-    ul {
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
-      padding: 0 10px;
-      width: $headerLinksWidth;
-      height: $headerLinksHeight;
-      border-radius: 15px;
-      background-color: $headerBlack;
-    }
+    list-style: none;
+    padding: 0 10px;
+    width: $headerLinksWidth;
+    height: $headerLinksHeight;
+    border-radius: 15px;
+    background-color: $headerBlack;
   }
 }
 
-.header-logo img {
-  height: $headerLinksHeight;
-}
+$menuButtonHeight: 50px;
+$menuButtonPadding: 5px;
+$menuButtonLineHeight: 5px;
 
 .burger-menu-wrapper {
   display: none;
 
-  .burger-menu {
-    z-index: 3;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-
-    .burger-menu-links-container {
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.4);
-
-      .burger-nav {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        list-style: none;
-        padding-left: 0;
-        text-align: center;
-
-        .nav-link {
-          padding: 5vh 0;
-          font-size: 1.5rem;
-          font-family: "Montserrat", sans-serif;
-        }
-      }
-    }
-  }
-
-  .burger-logo {
-    border-radius: 6px;
-    padding: 15px;
-    text-align: center;
-
-    a {
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-
   .menu-button {
-    z-index: 4;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0);
-    margin: 1rem;
     position: fixed;
     right: 0;
     top: 0;
-    text-align: center;
+    box-sizing: border-box;
+    padding: $menuButtonPadding 0;
+    z-index: 4;
+    width: $menuButtonHeight;
+    height: $menuButtonHeight;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 1rem;
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &:focus {
       outline: none;
@@ -93,20 +50,59 @@ nav {
     }
 
     .menu-button-line {
-      height: 5px;
-      margin: 9px auto;
+      height: $menuButtonLineHeight;
       width: 30px;
+      margin: 0 auto;
       border-radius: 2px;
-      background-color: rgb(177, 177, 177);
+      background-color: $sigGrey;
       transition: 0.4s;
+    }
+  }
+
+  .burger-menu {
+    z-index: 3;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: $headerBlack;
+
+    .burger-links {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+
+      li {
+        padding: 5vh 0;
+        font-size: 1.5rem;
+        font-family: "Montserrat", sans-serif;
+
+        a {
+          font-weight: bolder;
+        }
+      }
     }
   }
 }
 
 .change {
   .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-10.5px, 8.5px);
-    transform: rotate(-45deg) translate(-10.5px, 8.5px);
+    -webkit-transform: translate(
+        0,
+        ($menuButtonHeight / 2) - $menuButtonPadding - ($menuButtonLineHeight/2)
+      )
+      rotate(45deg);
+    transform: translate(
+        0,
+        ($menuButtonHeight / 2) - $menuButtonPadding - ($menuButtonLineHeight/2)
+      )
+      rotate(45deg);
   }
 
   .bar2 {
@@ -114,9 +110,27 @@ nav {
   }
 
   .bar3 {
-    -webkit-transform: rotate(45deg) translate(-10px, -10px);
-    transform: rotate(45deg) translate(-10px, -10px);
+    -webkit-transform: translate(
+        0,
+        -(($menuButtonHeight / 2) - $menuButtonPadding -
+              ($menuButtonLineHeight/2))
+      )
+      rotate(-45deg);
+    transform: translate(
+        0,
+        -(($menuButtonHeight / 2) - $menuButtonPadding -
+              ($menuButtonLineHeight/2))
+      )
+      rotate(-45deg);
   }
+}
+
+.header-logo img {
+  height: $headerLinksHeight;
+}
+
+.burger-logo {
+  padding: 15px;
 }
 
 $stickyHeaderHeight: 70px;

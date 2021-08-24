@@ -50,21 +50,16 @@ class Header extends Component {
   renderContent() {
     return (
       <React.Fragment>
-        <nav>
-          <div className="header-wrapper">
-            <HeaderLogo extraClasses="header-logo" />
-            <NavLinks
-              isBurgerMenu={this.state.isBurgerMenu}
-              toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
-            />
-          </div>
+        <nav className="header-wrapper">
+          <HeaderLogo extraClasses="header-logo" />
+          <NavLinks
+            isBurgerMenu={this.state.isBurgerMenu}
+            toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
+          />
         </nav>
         <div className="burger-menu-wrapper">
-          <div className="burger-logo">
-            <HeaderLogo extraClasses="header-logo" />
-          </div>
+          <HeaderLogo extraClasses="burger-logo header-logo" />
           <button
-            id="burger-button"
             className={
               this.state.burgerMenuIsOpen == true
                 ? "menu-button change"
@@ -84,14 +79,11 @@ class Header extends Component {
             }}
             className="burger-menu"
           >
-            <div className="burger-menu-links-container">
-              <ul className="burger-nav">
-                <NavLinks
-                  isBurgerMenu={this.state.isBurgerMenu}
-                  toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
-                />
-              </ul>
-            </div>
+            <NavLinks
+              isBurgerMenu={this.state.isBurgerMenu}
+              toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
+              extraClasses="burger-links"
+            />
           </div>
         </div>
       </React.Fragment>

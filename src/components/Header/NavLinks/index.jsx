@@ -5,9 +5,9 @@ import config from "../../../config.json";
 import "./navlinks.scss";
 import links from "./linkInfo.js";
 
-const NavLinks = ({ isBurgerMenu, toggleBurgerMenu }) => {
+const NavLinks = ({ isBurgerMenu, toggleBurgerMenu, extraClasses }) => {
   return (
-    <ul className="nav-links">
+    <ul className={`nav-links ${extraClasses}`}>
       {links.map(({ linkName, relativePath }) => (
         <li key={linkName} className="nav-link">
           {relativePath.includes("#") ? (
