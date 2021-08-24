@@ -5,7 +5,7 @@ import config from "../../../config.json";
 import "./navlinks.scss";
 import links from "./linkInfo.js";
 
-const NavLinks = ({ isBurgerMenu, toggleBurgerMenu, extraClasses }) => {
+const NavLinks = ({ toggleBurgerMenu, extraClasses }) => {
   return (
     <ul className={`nav-links ${extraClasses}`}>
       {links.map(({ linkName, relativePath }) => (
@@ -27,7 +27,7 @@ const NavLinks = ({ isBurgerMenu, toggleBurgerMenu, extraClasses }) => {
       <li className="nav-link header-booking-link">
         <a
           href={config["booking-url"]}
-          onClick={(e) => (isBurgerMenu ? toggleBurgerMenu(e) : "")}
+          onClick={(e) => toggleBurgerMenu(e, false)}
         >
           Book now!
         </a>

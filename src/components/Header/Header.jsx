@@ -10,7 +10,6 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isBurgerMenu: false,
       burgerMenuIsOpen: false,
       stickyHeader: false,
     };
@@ -28,7 +27,7 @@ class Header extends Component {
   }
 
   handleScroll() {
-    if (window.scrollY > 88 && !this.state.isBurgerMenu) {
+    if (window.scrollY > 88) {
       this.setState({
         stickyHeader: true,
       });
@@ -52,10 +51,7 @@ class Header extends Component {
       <React.Fragment>
         <nav className="header-wrapper">
           <HeaderLogo extraClasses="header-logo" />
-          <NavLinks
-            isBurgerMenu={this.state.isBurgerMenu}
-            toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
-          />
+          <NavLinks toggleBurgerMenu={this.toggleBurgerMenu.bind(this)} />
         </nav>
         <nav className="burger-menu-wrapper">
           <HeaderLogo extraClasses="burger-logo header-logo" />
@@ -80,7 +76,6 @@ class Header extends Component {
             className="burger-menu"
           >
             <NavLinks
-              isBurgerMenu={this.state.isBurgerMenu}
               toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
               extraClasses="burger-links"
             />
@@ -95,14 +90,12 @@ class Header extends Component {
       <div
         className={
           this.state.stickyHeader
-            ? "section-stickyHeader header-active"
+            ? "section-stickyHeader stickyHeader-active"
             : "section-stickyHeader"
         }
       >
         <div className="stickyHeader-inner">
-          <div className="stickyHeader-logo">
-            <HeaderLogo extraClasses="header-logo" />
-          </div>
+          <HeaderLogo extraClasses="stickyHeader-logo" />
           <a href={config["booking-url"]} className="booking-link">
             <h2>Book now!</h2>
           </a>
