@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import config from "../../config.json";
 
 import "./header.scss";
-import NavLinks from "./subcomponents/NavLinks";
+import NavLinks from "./NavLinks";
 import HeaderLogo from "../utils/HeaderLogo";
 
 class Header extends Component {
@@ -34,16 +34,16 @@ class Header extends Component {
   }
 
   handleResize() {
-    if (document.documentElement.clientWidth <= 800) {
-      this.setState({
-        isBurgerMenu: true,
-        stickyHeader: false,
-      });
-    } else {
-      this.setState({
-        isBurgerMenu: false,
-      });
-    }
+    // if (document.documentElement.clientWidth <= 800) {
+    //   this.setState({
+    //     isBurgerMenu: true,
+    //     stickyHeader: false,
+    //   });
+    // } else {
+    //   this.setState({
+    //     isBurgerMenu: false,
+    //   });
+    // }
   }
 
   handleScroll() {
@@ -58,14 +58,27 @@ class Header extends Component {
     }
   }
 
-  toggleBurgerMenu() {
-    this.setState({ burgerMenuIsOpen: !this.state.burgerMenuIsOpen });
+  toggleBurgerMenu(e, value) {
+    if (typeof value === "undefined") {
+      this.setState({ burgerMenuIsOpen: !this.state.burgerMenuIsOpen });
+    } else {
+      this.setState({ burgerMenuIsOpen: value });
+    }
   }
 
   renderContent() {
-    if (this.state.isBurgerMenu) {
-      return (
-        <React.Fragment>
+    return (
+      <React.Fragment>
+        <nav>
+          <div className="header-wrapper">
+            <HeaderLogo extraClasses="header-logo" />
+            <NavLinks
+              isBurgerMenu={this.state.isBurgerMenu}
+              toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
+            />
+          </div>
+        </nav>
+        <div className="burger-menu-wrapper">
           <div className="burger-logo">
             <HeaderLogo extraClasses="header-logo" />
           </div>
@@ -99,21 +112,9 @@ class Header extends Component {
               </ul>
             </div>
           </div>
-        </React.Fragment>
-      );
-    } else {
-      return (
-        <React.Fragment>
-          <nav>
-            <HeaderLogo extraClasses="header-logo" />
-            <NavLinks
-              isBurgerMenu={this.state.isBurgerMenu}
-              toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
-            />
-          </nav>
-        </React.Fragment>
-      );
-    }
+        </div>
+      </React.Fragment>
+    );
   }
 
   renderStickyHeader() {

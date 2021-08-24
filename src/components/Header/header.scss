@@ -1,114 +1,105 @@
 @import "../styleVariables";
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-  font-family: "Montserrat", sans-serif;
-
-  ul {
-    box-sizing: border-box;
+  .header-wrapper {
     display: flex;
     justify-content: space-between;
-    list-style: none;
-    padding: 0 10px;
-    width: $headerLinksWidth;
-    height: $headerLinksHeight;
-    border-radius: 15px;
-    background-color: $headerBlack;
+    padding: 15px 20px;
+    font-family: "Montserrat", sans-serif;
+
+    ul {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding: 0 10px;
+      width: $headerLinksWidth;
+      height: $headerLinksHeight;
+      border-radius: 15px;
+      background-color: $headerBlack;
+    }
   }
 }
 
 .header-logo img {
   height: $headerLinksHeight;
 }
-// .nav-links {
-//   margin: auto;
-//   margin-right: 0;
-// }
 
-// .nav-link a {
-//   text-decoration: none;
-//   color: $sigGrey;
-//   transition: 0.2s;
-
-//   &:hover {
-//     color: $sigGreyOpaque;
-//   }
-// }
-
-.burger-menu {
-  z-index: 3;
+.burger-menu-wrapper {
   display: none;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
 
-  .burger-menu-links-container {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.4);
+  .burger-menu {
+    z-index: 3;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
 
-    .burger-nav {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      list-style: none;
-      padding-left: 0;
-      text-align: center;
+    .burger-menu-links-container {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.4);
 
-      .nav-link {
-        padding: 5vh 0;
-        font-size: 1.5rem;
-        font-family: "Montserrat", sans-serif;
+      .burger-nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        padding-left: 0;
+        text-align: center;
+
+        .nav-link {
+          padding: 5vh 0;
+          font-size: 1.5rem;
+          font-family: "Montserrat", sans-serif;
+        }
       }
     }
   }
-}
 
-.burger-logo {
-  border-radius: 6px;
-  padding: 15px;
-  text-align: center;
+  .burger-logo {
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
 
-  a {
-    &:hover {
-      cursor: pointer;
+    a {
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
-}
 
-.menu-button {
-  z-index: 4;
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0);
-  margin: 1rem;
-  position: fixed;
-  right: 0;
-  top: 0;
-  text-align: center;
-  cursor: pointer;
+  .menu-button {
+    z-index: 4;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 1rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: center;
+    cursor: pointer;
 
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
 
-  .menu-button-line {
-    height: 5px;
-    margin: 9px auto;
-    width: 30px;
-    border-radius: 2px;
-    background-color: rgb(177, 177, 177);
-    transition: 0.4s;
+    .menu-button-line {
+      height: 5px;
+      margin: 9px auto;
+      width: 30px;
+      border-radius: 2px;
+      background-color: rgb(177, 177, 177);
+      transition: 0.4s;
+    }
   }
 }
 
@@ -192,18 +183,12 @@ $elementHeight: 0.8;
   transform: translate(0, $stickyHeaderHeight);
 }
 
-// .header-booking-link {
-//   color: $sigWhite;
+@media (max-width: $HEADER_SWITCH_WIDTH) {
+  nav {
+    display: none;
+  }
 
-//   a {
-//     font-weight: bolder;
-//     padding: 14px 6px;
-//     border-radius: 4px;
-//     background-color: $sigRed;
-//     color: $sigWhite;
-//   }
-
-//   &:hover {
-//     color: $sigWhiteOpaque;
-//   }
-// }
+  .burger-menu-wrapper {
+    display: block;
+  }
+}

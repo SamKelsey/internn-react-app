@@ -19,7 +19,7 @@ class Pricing extends Component {
 
   render() {
     return (
-      <div id="section-pricing" className="section-pricing">
+      <div id="pricing" className="section-pricing">
         <h2>Price Calculator</h2>
         <h3>Receive an instant quote</h3>
         <p>

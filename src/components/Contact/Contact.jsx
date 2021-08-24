@@ -115,7 +115,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="contact-form-wrapper">
+      <div id="contact-us" className="contact-form-wrapper">
         <h2>Get in touch!</h2>
         <form id="contact-form">
           <input
