@@ -1,9 +1,11 @@
 @import "../styleVariables";
 
+$headerPadding: 25px;
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: $headerPadding;
   font-family: "Montserrat", sans-serif;
 
   ul {
@@ -37,7 +39,7 @@ $menuButtonLineHeight: 5px;
     height: $menuButtonHeight;
     border: none;
     background-color: rgba(0, 0, 0, 0);
-    margin: 1rem;
+    margin: $headerPadding;
     cursor: pointer;
 
     display: flex;
@@ -77,13 +79,18 @@ $menuButtonLineHeight: 5px;
       list-style: none;
       padding-left: 0;
       text-align: center;
+      height: 90vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       li {
-        padding: 5vh 0;
         font-size: 1.5rem;
         font-family: "Montserrat", sans-serif;
 
         a {
+          margin: 0;
           font-weight: bolder;
         }
       }
@@ -130,7 +137,7 @@ $menuButtonLineHeight: 5px;
 }
 
 .burger-logo {
-  padding: 15px;
+  margin: $headerPadding;
 }
 
 $stickyHeaderHeight: 70px;
