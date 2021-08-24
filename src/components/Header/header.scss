@@ -2,6 +2,9 @@
 
 $headerPadding: 25px;
 
+/* --------------------------
+  HEADER
+  -------------------------*/
 .header-wrapper {
   display: flex;
   justify-content: space-between;
@@ -21,6 +24,9 @@ $headerPadding: 25px;
   }
 }
 
+/* --------------------------
+  BURGER HEADER
+  -------------------------*/
 $menuButtonHeight: 50px;
 $menuButtonPadding: 5px;
 $menuButtonLineHeight: 5px;
@@ -140,8 +146,12 @@ $menuButtonLineHeight: 5px;
   margin: $headerPadding;
 }
 
+/* --------------------------
+  STICKY HEADER
+  -------------------------*/
 $stickyHeaderHeight: 70px;
 $elementHeight: 0.8;
+
 .section-stickyHeader {
   position: fixed;
   top: -$stickyHeaderHeight;
@@ -162,14 +172,8 @@ $elementHeight: 0.8;
     height: 100%;
     box-sizing: border-box;
 
-    .stickyHeader-logo {
-      margin: auto 0;
-      height: $elementHeight * 100%;
-      box-sizing: border-box;
-
-      .logo {
-        width: auto;
-      }
+    .stickyHeader-logo img {
+      height: $elementHeight * $stickyHeaderHeight;
     }
 
     .booking-link {
@@ -200,10 +204,13 @@ $elementHeight: 0.8;
   }
 }
 
-.header-active {
+.stickyHeader-active {
   transform: translate(0, $stickyHeaderHeight);
 }
 
+/* --------------------------
+  MEDIA QUERIES
+  -------------------------*/
 @media (max-width: $HEADER_SWITCH_WIDTH) {
   .header-wrapper {
     display: none;
@@ -211,5 +218,9 @@ $elementHeight: 0.8;
 
   .burger-menu-wrapper {
     display: block;
+  }
+
+  .section-stickyHeader {
+    display: none;
   }
 }
