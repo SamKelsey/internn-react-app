@@ -1,6 +1,6 @@
 @import "../styleVariables";
 
-nav {
+.header-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 15px 20px;
@@ -198,7 +198,7 @@ $elementHeight: 0.8;
 }
 
 @media (max-width: $HEADER_SWITCH_WIDTH) {
-  nav {
+  .header-wrapper {
     display: none;
   }
 

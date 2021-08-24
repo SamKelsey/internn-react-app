@@ -57,7 +57,7 @@ class Header extends Component {
             toggleBurgerMenu={this.toggleBurgerMenu.bind(this)}
           />
         </nav>
-        <div className="burger-menu-wrapper">
+        <nav className="burger-menu-wrapper">
           <HeaderLogo extraClasses="burger-logo header-logo" />
           <button
             className={
@@ -85,7 +85,7 @@ class Header extends Component {
               extraClasses="burger-links"
             />
           </div>
-        </div>
+        </nav>
       </React.Fragment>
     );
   }
