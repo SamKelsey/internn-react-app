@@ -40,37 +40,35 @@ class Slide extends Component {
 
   render() {
     return (
-      <Fragment>
-        <div className="mySlides fade">
-          <div
-            className={
-              this.props.slideNo == 0 ? `left ${this.props.slideNo}` : "left"
-            }
-            style={{
-              backgroundImage: `url(${images[this.props.slideNo]})`,
-            }}
-          ></div>
-          <div className="right">
-            <div className="h3-wrapper">
-              <h3>
-                {this.props.firstLine}
-                {this.props.icon && (
-                  <a href="https://www.facebook.com/">
-                    <i className={this.props.icon}></i>
-                  </a>
-                )}
-              </h3>
-            </div>
-            <div className="h1-wrapper">{this.renderLink()}</div>
-            <div className="h3-wrapper bottom">
-              <h3>
-                {this.props.thirdLine} <img src={logo} alt="logo" />
-                <span className="fullstop">.</span>
-              </h3>
-            </div>
+      <div className="mySlides fade">
+        <div
+          className={
+            this.props.slideNo == 0 ? `left ${this.props.slideNo}` : "left"
+          }
+          style={{
+            backgroundImage: `url(${images[this.props.slideNo]})`,
+          }}
+        ></div>
+        <div className="right">
+          <div className="h3-wrapper">
+            <h3>
+              {this.props.firstLine}
+              {this.props.icon && (
+                <a href="https://www.facebook.com/">
+                  <i className={this.props.icon}></i>
+                </a>
+              )}
+            </h3>
+          </div>
+          <div className="h1-wrapper">{this.renderLink()}</div>
+          <div className="h3-wrapper bottom">
+            <h3>
+              {this.props.thirdLine} <img src={logo} alt="logo" />
+              <span className="fullstop">.</span>
+            </h3>
           </div>
         </div>
-      </Fragment>
+      </div>
     );
   }
 }

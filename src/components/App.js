@@ -8,7 +8,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import JoinUs from "./JoinUs/JoinUs";
 import Portfolio from "./Portfolio/Portfolio";
-import Landing from "./Landing/Landing";
+import Landing from "./Landing";
 import BlogRouter from "./Blog/BlogRouter";
 import Terms from "./Terms/Terms";
 import NotFound from "./NotFound/NotFound";
