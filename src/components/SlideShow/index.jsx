@@ -26,7 +26,6 @@ const SlideShow = () => {
             ))}
           </div>
         </div>
-        {/* The dots/circles */}
         <div className="dots">
           {slideInfo.map((_, index) => (
             <span
