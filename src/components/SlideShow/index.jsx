@@ -22,7 +22,7 @@ const SlideShow = () => {
         <div className="slides-outer-wrapper">
           <div className={`slides-container position-${currentSlide}`}>
             {slideInfo.map((slide) => (
-              <Slide key={slide.image} slide={slide} />
+              <Slide key={slide.image} slideInfo={slide} />
             ))}
           </div>
         </div>

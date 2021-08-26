@@ -22,7 +22,7 @@ export default [
       text: "Click me",
       link: "https://instagram.com",
     },
-    image: "IMG_0555.JPG",
+    image: "IMG_0555.jpg",
     extraClasses: "",
   },
 ];

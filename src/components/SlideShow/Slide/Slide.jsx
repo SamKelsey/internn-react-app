@@ -1,76 +1,33 @@
-import React, { Component, Fragment } from "react";
-import { HashLink } from "react-router-hash-link";
+import React from "react";
+import config from "../../../config.json";
 import "./slide.scss";
-import logo from "../../../images/white_without_slogan.png";
-import stockChair from "../../../images/stockChair.jpg";
-import stockFacebook from "../../../images/stockFacebook.jpg";
-import stockGirl from "../../../images/stockGirl.jpg";
 
-const images = [stockGirl, stockChair, stockFacebook];
-const links = ["/#about-us", "/portfolio", "/make-a-booking"];
-
-class Slide extends Component {
-  renderLink() {
-    if (this.props.slideNo == 2) {
-      return (
-        <HashLink to={links[this.props.slideNo]}>
-          <h2>{this.props.secondLine}</h2>
-        </HashLink>
-      );
-    } else if (this.props.slideNo == 0) {
-      return (
-        <HashLink
-          to={links[this.props.slideNo]}
-          style={{ textDecoration: "none" }}
-        >
-          <h1>{this.props.secondLine}</h1>
-        </HashLink>
-      );
-    } else {
-      return (
-        <HashLink
-          to={links[this.props.slideNo]}
-          style={{ textDecoration: "none" }}
-        >
-          <h2>{this.props.secondLine}</h2>
-        </HashLink>
-      );
-    }
-  }
-
-  render() {
-    return (
-      <div className="mySlides fade">
-        <div
-          className={
-            this.props.slideNo == 0 ? `left ${this.props.slideNo}` : "left"
-          }
-          style={{
-            backgroundImage: `url(${images[this.props.slideNo]})`,
-          }}
-        ></div>
-        <div className="right">
-          <div className="h3-wrapper">
-            <h3>
-              {this.props.firstLine}
-              {this.props.icon && (
-                <a href="https://www.facebook.com/">
-                  <i className={this.props.icon}></i>
-                </a>
-              )}
-            </h3>
-          </div>
-          <div className="h1-wrapper">{this.renderLink()}</div>
-          <div className="h3-wrapper bottom">
-            <h3>
-              {this.props.thirdLine} <img src={logo} alt="logo" />
-              <span className="fullstop">.</span>
-            </h3>
-          </div>
-        </div>
+const Slide = ({
+  slideInfo: {
+    text: { line1, line2, line3 },
+    button,
+    image,
+    extraClasses,
+  },
+}) => {
+  return (
+    <div
+      className={`slide ${extraClasses}`}
+      style={{
+        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(
+          ${config["s3-images-url"]}/${image}
+        )`,
+      }}
+    >
+      <div className="slide-text">
+        <h2>{line1}</h2>
+        <h2>{line2}</h2>
+        <h2>{line3}</h2>
       </div>
-    );
-  }
-}
+      {/* Create link generator component to return an a or Link component here. */}
+      <a href={button.link}>{button.text}</a>
+    </div>
+  );
+};
 
 export default Slide;
