@@ -29,7 +29,7 @@ const SlideShow = () => {
         <div className="dots">
           {slideInfo.map((_, index) => (
             <span
-              className={currentSlide == 0 ? "dot active" : "dot"}
+              className={currentSlide == index ? "dot active" : "dot"}
               onClick={(e) => setCurrentSlide(e.target.getAttribute("name"))}
               name={index}
               key={index}

@@ -2,6 +2,15 @@
 
 $headerPadding: 25px;
 
+.section-header {
+  position: absolute;
+
+  /* Make div stretch entire width of screen. */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 /* --------------------------
   HEADER
   -------------------------*/
@@ -10,6 +19,7 @@ $headerPadding: 25px;
   justify-content: space-between;
   padding: $headerPadding;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 
   .header-links {
     box-sizing: border-box;
