@@ -89,7 +89,6 @@ $menuButtonLineHeight: 5px;
     width: 100vw;
     top: 0;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     background-color: $headerBlack;
 
     .burger-links {
@@ -100,7 +99,7 @@ $menuButtonLineHeight: 5px;
       list-style: none;
       padding-left: 0;
       text-align: center;
-      height: 90vh;
+      height: 80vh;
 
       display: flex;
       flex-direction: column;
