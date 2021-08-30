@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import config from "../../config.json";
+import config from "../../config";
 
 import "./header.scss";
 import NavLinks from "./NavLinks";

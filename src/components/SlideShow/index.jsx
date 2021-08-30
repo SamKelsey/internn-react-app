@@ -11,11 +11,10 @@ const SlideShow = () => {
       currentSlide == slideInfo.length - 1
         ? setCurrentSlide(0)
         : setCurrentSlide(currentSlide + 1);
-    }, 4000);
+    }, 40000);
 
     return () => clearInterval(timer);
   }, [currentSlide]);
-
   return (
     <React.Fragment>
       <div className="slideshow-container">

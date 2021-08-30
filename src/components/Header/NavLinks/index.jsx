@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
-import config from "../../../config.json";
+import config from "../../../config";
 import "./navlinks.scss";
 import links from "./linkInfo.js";
 

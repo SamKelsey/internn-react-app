@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./pricing.scss";
 import priceCalculator from "../../services/priceCalculator";
-import config from "../../config.json";
+import config from "../../config";
 
 class Pricing extends Component {
   constructor(props) {
