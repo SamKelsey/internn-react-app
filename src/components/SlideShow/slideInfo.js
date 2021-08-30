@@ -25,4 +25,17 @@ export default [
     image: "IMG_0220.JPG",
     extraClasses: "",
   },
+  {
+    text: {
+      line1: "Line 1 here",
+      line2: "Line 2 here",
+      line3: "Line 3 here",
+    },
+    button: {
+      text: "Click me",
+      link: "http://localhost:4000/test",
+    },
+    image: "IMG_0220.JPG",
+    extraClasses: "",
+  },
 ];

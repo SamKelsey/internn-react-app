@@ -19,21 +19,7 @@
       box-sizing: border-box;
       display: flex;
       margin: 0 auto;
-      width: 200%;
-    }
-
-    .position-0 {
-      transform: translate(0, 0);
-    }
-
-    .position-1 {
-      transform: translate(-50%, 0);
-    }
-
-    .position-0,
-    .position-1,
-    .position-2 {
-      transition: all 3s ease;
+      transition: all 1.5s ease;
     }
   }
 

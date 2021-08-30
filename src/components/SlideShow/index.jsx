@@ -4,22 +4,31 @@ import "./slideshow.scss";
 import slideInfo from "./slideInfo.js";
 
 const SlideShow = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [slidePosition, setSlidePosition] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      currentSlide == slideInfo.length - 1
-        ? setCurrentSlide(0)
-        : setCurrentSlide(currentSlide + 1);
-    }, 40000);
+      slidePosition == slideInfo.length - 1
+        ? setSlidePosition(0)
+        : setSlidePosition(slidePosition + 1);
+    }, 4000);
 
     return () => clearInterval(timer);
-  }, [currentSlide]);
+  }, [slidePosition]);
+
   return (
     <React.Fragment>
       <div className="slideshow-container">
         <div className="slides-outer-wrapper">
-          <div className={`slides-container position-${currentSlide}`}>
+          <div
+            className={"slides-container"}
+            style={{
+              width: `${slideInfo.length * 100}%`,
+              transform: `translate(-${
+                (100 / slideInfo.length) * slidePosition
+              }%, 0)`,
+            }}
+          >
             {slideInfo.map((slide) => (
               <Slide key={slide.image} slideInfo={slide} />
             ))}
@@ -28,8 +37,10 @@ const SlideShow = () => {
         <div className="dots">
           {slideInfo.map((_, index) => (
             <span
-              className={currentSlide == index ? "dot active" : "dot"}
-              onClick={(e) => setCurrentSlide(e.target.getAttribute("name"))}
+              className={slidePosition == index ? "dot active" : "dot"}
+              onClick={(e) =>
+                setSlidePosition(parseInt(e.target.getAttribute("name")))
+              }
               name={index}
               key={index}
             ></span>
