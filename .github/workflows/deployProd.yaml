@@ -40,3 +40,5 @@ jobs:
         run: aws s3 sync --delete images/ s3://${AWS_S3_IMAGES}
       - name: Deploy build to S3
         run: aws s3 sync --delete build/ s3://${AWS_S3_BUILD}
+      - name: Invalidate Cloudfront caches
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_PROD }} --paths '/*'
