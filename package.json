@@ -28,7 +28,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sitemap": "babel-node src/sitemap/sitemap-generator.js"
+    "sitemap": "babel-node src/sitemap/sitemap-generator.js",
+    "predeploy": "REACT_APP_STAGE=dev npm run build",
+    "predeploy:prod": "REACT_APP_STAGE=prod npm run build"
   },
   "eslintConfig": {
     "extends": [
