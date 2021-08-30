@@ -7,6 +7,7 @@ jobs:
     env:
       AWS_S3_IMAGES: "internn-images-dev"
       AWS_S3_BUILD: "internn-frontend-dev"
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_DEV }}
     runs-on: ubuntu-latest
 
     strategy:
@@ -40,3 +41,5 @@ jobs:
         run: aws s3 sync --delete images/ s3://${AWS_S3_IMAGES}
       - name: Deploy build to S3
         run: aws s3 sync --delete build/ s3://${AWS_S3_BUILD}
+      - name: Invalidate Cloudfront caches
+        run: aws create-invalidation --distribution-id ${{ CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'
