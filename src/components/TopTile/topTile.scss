@@ -1,0 +1,61 @@
+@import "../styleVariables";
+
+.top-tile {
+  padding-top: $headerLinksHeight + (2 * $headerPadding);
+  background-size: cover;
+  color: $sigWhite;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  height: 650px;
+  position: relative;
+
+  h2 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    padding-top: 100px;
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: clamp(2rem, 3.5vw, 3, 5rem);
+    color: $sigWhiteOpaque;
+  }
+
+  i {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 4rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.35);
+    }
+  }
+
+  .bounce {
+    animation: bounce 2s;
+    animation-delay: 2s;
+    animation-iteration-count: 4;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -20px);
+  }
+  60% {
+    transform: translate(-50%, -12px);
+  }
+}

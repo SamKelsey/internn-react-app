@@ -1,0 +1,37 @@
+@import "../styleVariables";
+
+.about-us {
+  .about-content {
+    border: 2px solid green;
+    width: clamp(300px, 100%, 1000px);
+    margin: auto;
+    padding: 120px 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    > * {
+      border: 2px solid red;
+      margin: 30px;
+    }
+
+    .image-wrapper {
+      overflow: hidden;
+      border-radius: 10px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    p {
+      font-family: "Nunito", sans-serif;
+      font-size: 23px;
+      color: $sigGrey;
+    }
+
+    h2 {
+      color: rgba(0, 0, 0, 0.2);
+      font-size: 5rem;
+    }
+  }
+}

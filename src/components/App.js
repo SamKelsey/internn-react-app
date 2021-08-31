@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import "./app.scss";
 
 // Import components
+import AboutUs from "./AboutUs";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import JoinUs from "./JoinUs/JoinUs";
@@ -27,6 +28,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={Landing} />
+          <Route exact path="/about-us" component={AboutUs} />
           <Route exact path="/join-us" component={JoinUs} />
           <Route exact path="/portfolio" component={Portfolio} />
           <Route path="/blog" component={BlogRouter} />
