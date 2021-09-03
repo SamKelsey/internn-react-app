@@ -2,6 +2,7 @@ import React from "react";
 import TopTile from "../TopTile";
 import "./aboutUs.scss";
 import config from "../../config";
+import LineBreaker from "../utils/LineBreaker";
 
 const AboutUs = () => {
   return (
@@ -35,6 +36,7 @@ const AboutUs = () => {
           life!
         </p>
       </div>
+      <LineBreaker extraClasses="about-page-line-break" />
     </div>
   );
 };
