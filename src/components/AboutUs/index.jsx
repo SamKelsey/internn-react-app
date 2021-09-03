@@ -5,7 +5,7 @@ import config from "../../config";
 
 const AboutUs = () => {
   return (
-    <div className="about-us">
+    <div className="about-us-page">
       <TopTile
         title="About us"
         subtitle='"Rethinking property photography, starting in Aberdeen."'

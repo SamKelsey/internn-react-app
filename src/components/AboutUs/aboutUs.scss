@@ -1,22 +1,23 @@
 @import "../styleVariables";
 
-.about-us {
+.about-us-page {
   .about-content {
-    border: 2px solid green;
-    width: clamp(300px, 100%, 1000px);
     margin: auto;
-    padding: 120px 0;
+    padding: 50px 0;
+    max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
 
     > * {
-      border: 2px solid red;
-      margin: 30px;
+      margin: 40px;
     }
 
     .image-wrapper {
       overflow: hidden;
+      height: 500px;
       border-radius: 10px;
+      box-sizing: border-box;
 
       img {
         height: 100%;
