@@ -11,10 +11,10 @@
   transform: translateY(-20vh);
 }
 .fade-in-section.left {
-  transform: translateX(-20vh);
+  transform: translateX(20vh);
 }
 .fade-in-section.right {
-  transform: translateY(20vh);
+  transform: translateX(-20vh);
 }
 .fade-in-section.is-visible {
   opacity: 1;
