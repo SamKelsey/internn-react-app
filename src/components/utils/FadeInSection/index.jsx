@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./fadeInSection.scss";
 
 const FadeInSection = ({ direction, children }) => {
   const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
+  const domRef = useRef();
 
   React.useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        setVisible(entry.isIntersecting);
+        entry.isIntersecting && observer.unobserve(entry.target);
+      });
     });
     observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
   }, []);
 
   return (
