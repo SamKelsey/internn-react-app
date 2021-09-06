@@ -3,7 +3,6 @@ import SlideShow from "../SlideShow";
 import About from "../About/About";
 import Pricing from "../Pricing/Pricing";
 import Contact from "../Contact/Contact";
-import HowItWorks from "../HowItWorks/HowItWorks";
 
 class Landing extends Component {
   componentDidMount() {
@@ -16,7 +15,6 @@ class Landing extends Component {
         <SlideShow />
         <About />
         <Pricing />
-        <HowItWorks />
         <Contact />
       </Fragment>
     );

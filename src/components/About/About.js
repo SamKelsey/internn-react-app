@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.scss";
-import Card from "../Card/Card";
+import Card from "../utils/Card/Card";
 
 class About extends React.Component {
   render() {

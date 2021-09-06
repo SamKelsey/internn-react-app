@@ -5,7 +5,7 @@ const LineBreaker = ({ extraClasses }) => {
   return (
     <div className={`line-breaker ${extraClasses}`}>
       <div></div>
-      <i class="fas fa-camera"></i>
+      <i className="fas fa-camera"></i>
       <div></div>
     </div>
   );
