@@ -12,7 +12,11 @@ const WeAreHere = () => {
           <h2>AirBnb owners,</h2>
           <h2>Holiday let owners</h2>
         </div>
-        <p className="text-content">here is the text content</p>
+        <p className="text-content">
+          internn is the perfect place for anyone selling or advertising
+          property. Whether you're a landlord, BnB owner, or a rental agency, we
+          can help you!
+        </p>
       </div>
       <div className="image right">
         <img src={`${config["s3-images-url"]}/IMG_0220.JPG`} alt="doorway" />

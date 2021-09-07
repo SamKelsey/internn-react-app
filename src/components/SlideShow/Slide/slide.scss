@@ -14,13 +14,13 @@
 
     .slide-text {
       font-family: "Montserrat", sans-serif;
-      font-weight: 900;
       font-size: clamp(1.5rem, 3vw, 2rem);
       color: $sigWhite;
       padding: 40px 0;
       box-sizing: border-box;
 
       h2 {
+        font-weight: 600;
         padding: 6px 0;
         box-sizing: border-box;
       }
@@ -32,7 +32,7 @@
       border-radius: 8px;
       border: 2px solid $sigWhite;
       font-family: "Montserrat", sans-serif;
-      font-weight: bolder;
+      font-weight: 600;
       font-size: clamp(1.5rem, 3vw, 2rem);
       margin-bottom: 10px;
 
