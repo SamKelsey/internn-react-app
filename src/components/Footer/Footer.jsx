@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./footer.scss";
 import logo from "../../images/white_without_slogan.png";
+import SocialIcons from "../utils/SocialIcons";
 
 class Footer extends Component {
   render() {
@@ -22,17 +23,7 @@ class Footer extends Component {
             </Link>
           </div>
         </div>
-        <div className="media-icons">
-          <a href="https://www.facebook.com/internnOfficial">
-            <i className="fab fa-facebook fa-fw"></i>
-          </a>
-          <a href="https://www.instagram.com/internnofficial">
-            <i className="fab fa-instagram fa-fw"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/internn">
-            <i className="fab fa-linkedin fa-fw"></i>
-          </a>
-        </div>
+        <SocialIcons />
         <div className="terms-link-wrapper">
           <Link to="/terms-and-conditions" className="terms-link">
             Terms & Conditions and Privacy Policy.

@@ -4,6 +4,7 @@ import "./aboutUs.scss";
 import WhatWeDo from "./WhatWeDo";
 import HowItWorks from "./HowItWorks";
 import WeAreHere from "./WeAreHere";
+import WeAreNew from "./WeAreNew";
 
 const AboutUs = () => {
   return (
@@ -17,6 +18,7 @@ const AboutUs = () => {
         <WhatWeDo />
         <HowItWorks />
         <WeAreHere />
+        <WeAreNew />
       </div>
     </div>
   );

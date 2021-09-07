@@ -1,0 +1,48 @@
+@import "../../styleVariables";
+
+.we-are-new-section {
+  background-color: $sigGreen;
+  padding: 20px;
+
+  .content {
+    display: flex;
+    margin: auto;
+    max-width: 1500px;
+    border: 2px solid red;
+
+    h2,
+    .support-us-wrapper {
+      border: 2px solid blue;
+    }
+
+    h2 {
+      color: $sigGrey;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: clamp(60px, 11vw, 150px);
+      flex: 1.4;
+
+      span {
+        display: block;
+      }
+    }
+
+    .support-us-wrapper {
+      text-align: right;
+      flex: 1;
+      color: $sigWhite;
+
+      h3 {
+        font-weight: 600;
+        color: $sigWhiteOpaque;
+        padding: 5px 0;
+      }
+    }
+  }
+
+  .social-icons {
+    i {
+      color: $sigWhite;
+    }
+  }
+}
