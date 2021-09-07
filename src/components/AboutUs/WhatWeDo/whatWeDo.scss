@@ -24,3 +24,9 @@
     margin: 50px auto 20px auto;
   }
 }
+
+@media (max-width: 500px) {
+  .what-we-do p {
+    text-align: left;
+  }
+}
