@@ -1,5 +1,5 @@
 import React from "react";
-import TopTile from "../TopTile";
+import TopTile from "../utils/TopTile";
 import "./aboutUs.scss";
 import WhatWeDo from "./WhatWeDo";
 import HowItWorks from "./HowItWorks";

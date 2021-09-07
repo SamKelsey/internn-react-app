@@ -1,4 +1,4 @@
-@import "../styleVariables";
+@import "../../styleVariables";
 
 .top-tile {
   padding-top: $headerLinksHeight + (2 * $headerPadding);
@@ -6,7 +6,9 @@
   color: $sigWhite;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  height: 650px;
+  height: 90vh;
+  min-height: 500px;
+  max-height: 900px;
   position: relative;
 
   h2 {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./topTile.scss";
 
-import config from "../../config";
+import config from "../../../config";
 
 const TopTile = ({ title, subtitle, image }) => {
   const scrollDown = () => {
