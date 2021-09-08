@@ -21,7 +21,7 @@ const WeAreNew = () => {
         </div>
       </div>
       <div className="follow-us-wrapper">
-        <h4>Follow us</h4>
+        <h3>Follow us</h3>
         <SocialIcons />
       </div>
     </div>
