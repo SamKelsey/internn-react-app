@@ -5,6 +5,7 @@ import WhatWeDo from "./WhatWeDo";
 import HowItWorks from "./HowItWorks";
 import WeAreHere from "./WeAreHere";
 import WeAreNew from "./WeAreNew";
+import OurTeam from "./OurTeam";
 
 const AboutUs = () => {
   return (
@@ -19,6 +20,7 @@ const AboutUs = () => {
         <HowItWorks />
         <WeAreHere />
         <WeAreNew />
+        <OurTeam />
       </div>
     </div>
   );
