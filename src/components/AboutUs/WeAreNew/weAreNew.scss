@@ -45,11 +45,10 @@
     margin-top: 30px;
     text-align: center;
     h4 {
+      color: $sigWhite;
+      font-weight: 800;
       font-size: 1.5rem;
       font-family: "Nunito", sans-serif;
-      font-style: italic;
-      font-weight: 800;
-      color: $sigWhite;
     }
     .social-icons {
       i {
