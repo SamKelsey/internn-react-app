@@ -20,7 +20,10 @@ const WeAreNew = () => {
           </p>
         </div>
       </div>
-      <SocialIcons />
+      <div className="follow-us-wrapper">
+        <h4>Follow us</h4>
+        <SocialIcons />
+      </div>
     </div>
   );
 };
