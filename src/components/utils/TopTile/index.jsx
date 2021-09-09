@@ -17,8 +17,10 @@ const TopTile = ({ title, subtitle, image }) => {
         )`,
       }}
     >
-      <h2>{title}</h2>
-      <h3>{subtitle}</h3>
+      <div className="top-tile-text">
+        <h2>{title}</h2>
+        <h3>{subtitle}</h3>
+      </div>
       <i
         className="fas fa-chevron-down bounce"
         onClick={() => scrollDown()}
