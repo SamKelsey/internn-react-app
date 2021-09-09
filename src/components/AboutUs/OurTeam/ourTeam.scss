@@ -1,0 +1,14 @@
+@import "../../styleVariables";
+
+.our-team-section {
+  padding: 0 30px 30px 30px;
+
+  h2 {
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: $sigGrey;
+    margin: 50px auto;
+    text-align: center;
+  }
+}
