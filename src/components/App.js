@@ -15,10 +15,10 @@ import BlogRouter from "./Blog/BlogRouter";
 import Terms from "./Terms/Terms";
 import NotFound from "./NotFound/NotFound";
 
-import smoothScroll from "smoothscroll-polyfill";
-smoothScroll.polyfill();
+import smoothscroll from "smoothscroll-polyfill";
 
 function App() {
+  smoothscroll.polyfill();
   return (
     <BrowserRouter>
       <Helmet>
