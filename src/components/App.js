@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Helmet } from "react-helmet";
+
 import "./app.scss";
 
 // Import components
@@ -13,6 +14,9 @@ import Landing from "./Landing";
 import BlogRouter from "./Blog/BlogRouter";
 import Terms from "./Terms/Terms";
 import NotFound from "./NotFound/NotFound";
+
+import smoothScroll from "smoothscroll-polyfill";
+smoothScroll.polyfill();
 
 function App() {
   return (
