@@ -1,29 +1,21 @@
 import React from "react";
-import TopTile from "../utils/TopTile";
-import "./aboutUs.scss";
-import WhatWeDo from "./WhatWeDo";
-import HowItWorks from "./HowItWorks";
-import WeAreHere from "./WeAreHere";
-import WeAreNew from "./WeAreNew";
-import OurTeam from "./OurTeam";
+import { Route, Switch, useRouteMatch } from "react-router-dom";
+import AboutPage from "./AboutPage";
+import PersonProfile from "./PersonProfile";
 
-const AboutUs = () => {
+const AboutUsRouter = () => {
+  let { url } = useRouteMatch();
+
   return (
-    <div className="about-us-page">
-      <TopTile
-        title="About us"
-        subtitle='"Rethinking property photography, starting in Aberdeen."'
-        image="IMG_0220.JPG"
-      />
-      <div className="about-content">
-        <WhatWeDo />
-        <HowItWorks />
-        <WeAreHere />
-        <WeAreNew />
-        <OurTeam />
-      </div>
-    </div>
+    <Switch>
+      <Route exact path={`${url}/`}>
+        <AboutPage />
+      </Route>
+      <Route path={`${url}/:name`}>
+        <PersonProfile />
+      </Route>
+    </Switch>
   );
 };
 
-export default AboutUs;
+export default AboutUsRouter;

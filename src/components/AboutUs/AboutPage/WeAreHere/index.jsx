@@ -1,7 +1,7 @@
 import React from "react";
 import "./weAreHere.scss";
-import FadeInSection from "../../utils/FadeInSection";
-import config from "../../../config";
+import FadeInSection from "../../../utils/FadeInSection";
+import config from "../../../../config";
 
 const WeAreHere = () => {
   return (

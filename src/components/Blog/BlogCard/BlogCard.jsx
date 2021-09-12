@@ -1,20 +1,11 @@
 import React from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
+import { toKebabCase } from "../../../services/stringServices";
 import "./blogCard.scss";
 
 const BlogCard = ({ title, subtitle, intro, imageName }) => {
   let { url } = useRouteMatch();
-  // Remove any trailing slashes from url
-  url = url.replace(/\/$/, "");
-
-  const getBlogLink = () =>
-    subtitle
-      .match(
-        /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g
-      )
-      .join("-")
-      .toLowerCase();
 
   return (
     <div className="blogCard">
@@ -31,7 +22,7 @@ const BlogCard = ({ title, subtitle, intro, imageName }) => {
           <TextTruncate line={3} element="p" text={intro} />
         </div>
         <div className="button-wrapper">
-          <Link className="post-link" to={`${url}/${getBlogLink()}`}>
+          <Link className="post-link" to={`${url}/${toKebabCase(subtitle)}`}>
             Read post
           </Link>
         </div>

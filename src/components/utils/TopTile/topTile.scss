@@ -1,15 +1,16 @@
 @import "../../styleVariables";
 
 .top-tile {
-  padding-top: $headerLinksHeight + (2 * $headerPadding);
+  padding: ($headerLinksHeight + (2 * $headerPadding)) 0 4rem 0;
   background-size: cover;
   color: $sigWhite;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  height: 90vh;
-  min-height: 500px;
+  height: 100%;
+  min-height: 90vh;
   max-height: 900px;
   position: relative;
+
   .top-tile-text {
     position: absolute;
     top: 50%;
@@ -31,7 +32,7 @@
       color: $sigWhiteOpaque;
     }
   }
-  i {
+  > i {
     position: absolute;
     bottom: 0;
     left: 50%;

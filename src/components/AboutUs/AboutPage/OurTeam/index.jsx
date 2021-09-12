@@ -1,7 +1,7 @@
 import React from "react";
 import "./ourTeam.scss";
 import teamInfo from "./teamInfo";
-import PersonCard from "./PersonCard";
+import PersonCard from "../../PersonCard";
 
 const OurTeam = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import SocialIcons from "../../utils/SocialIcons";
+import SocialIcons from "../../../utils/SocialIcons";
 import "./weAreNew.scss";
-import FadeInSection from "../../utils/FadeInSection";
+import FadeInSection from "../../../utils/FadeInSection";
 
 const WeAreNew = () => {
   return (

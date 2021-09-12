@@ -1,5 +1,5 @@
 import React from "react";
-import FadeInSection from "../../utils/FadeInSection";
+import FadeInSection from "../../../utils/FadeInSection";
 import "./whatWeDo.scss";
 
 const WhatWeDo = () => {

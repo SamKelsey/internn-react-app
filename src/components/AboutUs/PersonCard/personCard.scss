@@ -1,4 +1,4 @@
-@import "../../../styleVariables";
+@import "../../styleVariables";
 
 .person-card {
   display: flex;
@@ -17,6 +17,8 @@
 
   .person-card-text {
     margin-right: 20px;
+    text-align: left;
+
     .headers {
       h2,
       h3 {
@@ -60,6 +62,34 @@
     width: 300px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+  }
+}
+
+.person-card--expanded {
+  background-color: $headerBlack;
+  width: 95%;
+
+  .person-card-text {
+    .headers {
+      h2,
+      h3 {
+        color: $sigWhiteOpaque;
+      }
+    }
+
+    p {
+      color: $sigWhiteOpaque;
+    }
+
+    .person-card-button {
+      color: $sigWhiteOpaque;
+    }
+  }
+
+  .social-icons {
+    i {
+      color: $sigWhiteOpaque;
+    }
   }
 }
 
