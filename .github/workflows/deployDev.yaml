@@ -2,10 +2,6 @@ name: Develop Deployment
 on:
   workflow_dispatch:
 
-env:
-  AWS_S3_IMAGES: "internn-images-dev"
-  AWS_S3_BUILD: "internn-frontend-dev"
-
 jobs:
   Setup:
     runs-on: ubuntu-latest
