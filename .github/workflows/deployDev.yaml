@@ -20,8 +20,8 @@ jobs:
         node-version: [12.x]
     steps:
       - uses: actions/checkout@v1
-          with:
-            ref: "feature/re-design"
+        with:
+          ref: "feature/re-design"
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
