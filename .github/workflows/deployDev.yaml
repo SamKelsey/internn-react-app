@@ -4,7 +4,6 @@ on:
 
 jobs:
   Build:
-    needs: Setup
     runs-on: ubuntu-latest
     strategy:
       matrix:
