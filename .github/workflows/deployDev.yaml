@@ -6,9 +6,6 @@ jobs:
   Setup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-        with:
-          ref: "feature/re-design"
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -22,6 +19,9 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
+      - uses: actions/checkout@v1
+          with:
+            ref: "feature/re-design"
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
