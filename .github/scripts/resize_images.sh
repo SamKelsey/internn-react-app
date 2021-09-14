@@ -1,21 +1,38 @@
 #!/bin/bash
-# This script is for creating images of the correct size and name.
+# This script is for formatting images before going to s3.
+
 cd images
+
+# Image sizes
+SMALL=600;
+MEDIUM=1000;
+LARGE=2000;
+
 for FILE in *; do 
     if [[ $FILE == *.JPG ]] || [[ $FILE == *.jpg ]]; then
-        width=$(identify -format '%w' $FILE);
-        filename="${FILE%.*}"
+        WIDTH=$(identify -format '%w' $FILE);
+        FILENAME="${FILE%.*}"
 
-        if [[ ${filename: -4} ==  "orig" ]] || [[ ${filename: -2} ==  "sm" ]] || [[ ${filename: -2} ==  "md" ]] || [[ ${filename: -2} ==  "lg" ]]; then
+        if 
+        [[ ${FILENAME: -2} ==  "or" ]] || 
+        [[ ${FILENAME: -2} ==  "sm" ]] || 
+        [[ ${FILENAME: -2} ==  "md" ]] || 
+        [[ ${FILENAME: -2} ==  "lg" ]]; then
             continue;
-        elif [[ $width -gt 2000 ]]; then
-            echo "medium image here";
-            convert $FILE -resize 2000 "${filename}-md.jpg";
-        elif [[ $width -gt 800 ]]; then
-            echo "small image: ${filename}";
-            convert $FILE -resize 800 "${filename}-sm.jpg";
         fi
 
-        mv $FILE "${filename}-orig.jpg";
+        if [[ $WIDTH -gt $LARGE ]]; then
+            convert $FILE -resize $LARGE "${FILENAME}-lg.jpg";
+        fi
+
+        if [[ $WIDTH -gt $MEDIUM ]]; then
+            convert $FILE -resize $MEDIUM "${FILENAME}-md.jpg";
+        fi
+
+        if [[ $WIDTH -gt $SMALL ]]; then
+            convert $FILE -resize $SMALL "${FILENAME}-sm.jpg";
+        fi
+
+        mv $FILE "${FILENAME}-or.jpg";
     fi
 done
