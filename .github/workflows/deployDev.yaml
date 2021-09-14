@@ -22,7 +22,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
       - name: Install bash dependencies
-      - run: sudo apt install imagemagick
+        run: sudo apt install imagemagick
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -37,7 +37,7 @@ jobs:
         run: |
           yarn test
       - name: Format images
-      - run: ./.github/scripts/resize_images.sh
+        run: ./.github/scripts/resize_images.sh
       - name: Deploy images to S3
         run: aws s3 sync --delete images/ s3://${AWS_S3_IMAGES}
       - name: Deploy build to S3
