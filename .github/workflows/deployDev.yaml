@@ -37,7 +37,7 @@ jobs:
         run: |
           yarn test
       - name: Format images
-        run: sh "bash ./.github/scripts/resize_images.sh"
+        run: sh "./.github/scripts/resize_images.sh"
       - name: Deploy images to S3
         run: aws s3 sync --delete images/ s3://${AWS_S3_IMAGES}
       - name: Deploy build to S3
