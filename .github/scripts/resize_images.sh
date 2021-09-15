@@ -3,13 +3,14 @@
 
 cd images
 
-# Image sizes
+# Image widths in px.
 SMALL=600;
 MEDIUM=1000;
 LARGE=1500;
 
 for FILE in *; do 
     if [[ $FILE == *.JPG ]] || [[ $FILE == *.jpg ]]; then
+        echo "Resizing ${FILE}";
         WIDTH=$(identify -format '%w' $FILE);
         FILENAME="${FILE%.*}"
 
