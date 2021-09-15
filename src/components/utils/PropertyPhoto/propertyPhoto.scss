@@ -1,1 +1,61 @@
 @import "../../styleVariables";
+
+$BORDER_RADIUS: 10px;
+
+.property-photo-wrapper {
+  border-radius: $BORDER_RADIUS;
+  overflow: hidden;
+  width: calc(min(90vw, 400px));
+  margin: auto;
+
+  .property-photo {
+    width: 100%;
+    position: relative;
+    border-radius: $BORDER_RADIUS $BORDER_RADIUS 0 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .photo-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: $headerBlack;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2%;
+
+      h3 {
+        width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 3% 0;
+        color: $sigWhite;
+        font-family: "Nunito", sans-serif;
+        font-size: 1.2rem;
+      }
+
+      button {
+        background-color: transparent;
+        color: $sigWhite;
+        font-family: "Nunito", sans-serif;
+        font-size: 1rem;
+        border-radius: 50px;
+        border: 2px solid $sigWhite;
+        padding: 1% 2%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

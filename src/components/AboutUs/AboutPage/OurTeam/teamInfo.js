@@ -6,6 +6,6 @@ export default [
     instagram: "https://www.instagram.com/internnofficial",
     facebook: "https://www.facebook.com/internnOfficial",
     linkedIn: "https://www.linkedin.com/in/sam-kelsey-668493182/",
-    image: "IMG_0220.JPG",
+    image: "Sam_Kelsey_Headshot-sm.jpg",
   },
 ];

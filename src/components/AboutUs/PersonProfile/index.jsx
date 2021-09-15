@@ -16,10 +16,10 @@ const PersonProfile = () => {
 
   return (
     <div>
-      <TopTile image="IMG_0220.JPG">
+      <TopTile image="IMG_1472-lg.jpg">
         <PersonCard expanded {...getPersonInfo()} />
       </TopTile>
-      <PropertyPhoto />
+      <PropertyPhoto image="IMG_1472" />
     </div>
   );
 };
