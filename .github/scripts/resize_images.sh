@@ -6,7 +6,7 @@ cd images
 # Image sizes
 SMALL=600;
 MEDIUM=1000;
-LARGE=2000;
+LARGE=1500;
 
 for FILE in *; do 
     if [[ $FILE == *.JPG ]] || [[ $FILE == *.jpg ]]; then

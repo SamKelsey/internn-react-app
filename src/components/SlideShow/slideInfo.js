@@ -9,7 +9,7 @@ export default [
       text: "Book now",
       link: "https://facebook.com",
     },
-    image: "IMG_0220.JPG",
+    image: "IMG_0244-lg.jpg",
     extraClasses: "",
   },
   {
@@ -22,7 +22,7 @@ export default [
       text: "Click me",
       link: "https://instagram.com",
     },
-    image: "IMG_0220.JPG",
+    image: "IMG_0244-md.jpg",
     extraClasses: "",
   },
   {
@@ -35,7 +35,7 @@ export default [
       text: "Click me",
       link: "http://localhost:4000/test",
     },
-    image: "IMG_0220.JPG",
+    image: "IMG_0244-md.jpg",
     extraClasses: "",
   },
 ];
