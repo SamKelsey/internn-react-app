@@ -17,12 +17,38 @@ const PropertyPhoto = ({ image }) => {
     <div className="property-photo-wrapper">
       <div className="property-photo">
         <img src={`${config["s3-images-url"]}/${image}-sm.jpg`} alt={title} />
-        <div className="photo-footer">
+        <div
+          className={`photo-footer ${isExpanded && "photo-footer--inactive"}`}
+        >
           <h3>1 bed flat, Peterculter</h3>
-          <button onClick={() => setIsExpanded(!isExpanded)}>Read more</button>
+          <button
+            className="read-button"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            Read more
+          </button>
         </div>
       </div>
-      <div className="property-info">Property info here</div>
+      <div className={`property-info ${isExpanded && "property-info--active"}`}>
+        <h3>{title}</h3>
+        <div className="room-stats">
+          <div className="room-stat">
+            <i class="fas fa-bed"></i>
+            <h3>{beds}</h3>
+          </div>
+          <div className="room-stat">
+            <i class="fas fa-bath"></i>
+            <h3>{bathrooms}</h3>
+          </div>
+        </div>
+        <p>{bio}</p>
+        <button
+          className="read-button read-button--dark"
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          Read less
+        </button>
+      </div>
     </div>
   );
 };
