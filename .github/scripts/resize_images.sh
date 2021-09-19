@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script is for formatting images before going to s3.
+# This script is for formatting (resizing) images before going to s3.
 
 cd images
 
