@@ -6,8 +6,8 @@ $BORDER_RADIUS: 10px;
   overflow: hidden;
   position: relative;
   border-radius: $BORDER_RADIUS;
-  width: calc(min(90vw, 400px));
   margin: auto;
+  box-sizing: border-box;
 
   .property-photo {
     z-index: 1;

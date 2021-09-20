@@ -4,7 +4,7 @@ import config from "../../../config";
 
 import info from "./info.json";
 
-const PropertyPhoto = ({ image }) => {
+const PropertyPhoto = ({ image, extraClasses }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const getImageData = () => {
@@ -14,7 +14,7 @@ const PropertyPhoto = ({ image }) => {
   const { title, bio, beds, bathrooms } = getImageData();
 
   return (
-    <div className="property-photo-wrapper">
+    <div className={`property-photo-wrapper ${extraClasses}`}>
       <div className="property-photo">
         <img src={`${config["s3-images-url"]}/${image}-sm.jpg`} alt={title} />
         <div

@@ -14,13 +14,38 @@ const PersonProfile = () => {
     return peopleInfo.filter((person) => person.name === name)[0];
   };
 
+  const personInfo = getPersonInfo();
+
+  const renderPortfolio = () => {
+    const col1 = [];
+    const col2 = [];
+
+    personInfo.portfolio.forEach((image, index) =>
+      index % 2 === 0 ? col1.push(image) : col2.push(image)
+    );
+
+    return (
+      <div className="person-profile-portfolio">
+        <div className="col1">
+          {col1.map((image) => (
+            <PropertyPhoto extraClasses="person-profile-photo" image={image} />
+          ))}
+        </div>
+        <div className="col2">
+          {col2.map((image) => (
+            <PropertyPhoto extraClasses="person-profile-photo" image={image} />
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
       <TopTile image="IMG_1472-lg.jpg">
-        <PersonCard expanded {...getPersonInfo()} />
+        <PersonCard expanded {...personInfo} />
       </TopTile>
-      <PropertyPhoto image="IMG_1176_portrait" />
-      <PropertyPhoto image="IMG_1472" />
+      {renderPortfolio()}
     </div>
   );
 };
