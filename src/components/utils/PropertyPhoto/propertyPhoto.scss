@@ -44,11 +44,10 @@ $BORDER_RADIUS: 10px;
       transition: all 0.3s;
 
       h3 {
-        width: 70%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding: 3% 0;
+        padding: 3% 1%;
         color: $sigWhite;
         font-family: "Nunito", sans-serif;
         font-size: 1.2rem;
@@ -116,10 +115,11 @@ $BORDER_RADIUS: 10px;
     background-color: transparent;
     color: $sigWhite;
     font-family: "Nunito", sans-serif;
-    font-size: 90%;
-    border-radius: 50px;
+    font-size: 100%;
+    border-radius: 20px;
+    padding: 1% 2%;
     border: 2px solid $sigWhite;
-    padding: 2px 10px;
+    white-space: nowrap;
 
     &:hover {
       cursor: pointer;
