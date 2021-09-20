@@ -124,10 +124,11 @@ $BORDER_RADIUS: 10px;
     &:hover {
       cursor: pointer;
     }
-  }
 
-  .read-button--dark {
-    color: $sigGrey;
-    border: 2px solid $sigGrey;
+    &--dark {
+      @extend .read-button;
+      color: $sigGrey;
+      border: 2px solid $sigGrey;
+    }
   }
 }

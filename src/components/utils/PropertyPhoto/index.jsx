@@ -43,7 +43,7 @@ const PropertyPhoto = ({ image }) => {
         </div>
         <p>{bio}</p>
         <button
-          className="read-button read-button--dark"
+          className="read-button--dark"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           Read less
