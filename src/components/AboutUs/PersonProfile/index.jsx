@@ -19,8 +19,7 @@ const PersonProfile = () => {
       <TopTile image="IMG_1472-lg.jpg">
         <PersonCard expanded {...getPersonInfo()} />
       </TopTile>
-      <PropertyPhoto image="IMG_1472" />
-      <PropertyPhoto image="IMG_1472" />
+      <PropertyPhoto image="IMG_1176_portrait" />
       <PropertyPhoto image="IMG_1472" />
     </div>
   );

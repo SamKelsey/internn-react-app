@@ -7,11 +7,11 @@ import info from "./info.json";
 const PropertyPhoto = ({ image }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const getImageData = (image) => {
-    return info.IMG_1472;
+  const getImageData = () => {
+    return info[image];
   };
 
-  const { title, bio, beds, bathrooms } = getImageData(image);
+  const { title, bio, beds, bathrooms } = getImageData();
 
   return (
     <div className="property-photo-wrapper">
@@ -20,7 +20,7 @@ const PropertyPhoto = ({ image }) => {
         <div
           className={`photo-footer ${isExpanded && "photo-footer--inactive"}`}
         >
-          <h3>1 bed flat, Peterculter</h3>
+          <h3>{title}</h3>
           <button
             className="read-button"
             onClick={() => setIsExpanded(!isExpanded)}
