@@ -14,6 +14,7 @@ import Landing from "./Landing";
 import BlogRouter from "./Blog/BlogRouter";
 import Terms from "./Terms/Terms";
 import NotFound from "./NotFound/NotFound";
+import WhyInternn from "./WhyInternn";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/about-us" component={AboutUsRouter} />
+          <Route path="/why-internn" component={WhyInternn} />
           <Route exact path="/join-us" component={JoinUs} />
           <Route exact path="/portfolio" component={Portfolio} />
           <Route path="/blog" component={BlogRouter} />

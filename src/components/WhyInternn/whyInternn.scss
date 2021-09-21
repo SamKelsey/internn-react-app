@@ -1,0 +1,118 @@
+@import "../styleVariables";
+
+.section-why-internn {
+  .why-internn-reason-wrapper {
+    background-color: $sigRed;
+    padding: 40px 10%;
+
+    .why-internn-reason {
+      .reason-text {
+        margin-right: 6%;
+      }
+    }
+
+    .why-internn-reason {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: auto;
+
+      .reason-text {
+        font-family: "Nunito", sans-serif;
+        font-weight: 400;
+        color: $sigGrey;
+
+        > * {
+          padding: 10px 0;
+        }
+
+        > h2 {
+          padding-top: 0;
+          line-height: 1.2;
+          font-weight: 400;
+          font-size: 4rem;
+        }
+
+        > p {
+          font-size: 1.3rem;
+          line-height: 1.6;
+          padding-bottom: 0;
+        }
+      }
+
+      img {
+        width: 300px;
+        border-radius: 10px;
+      }
+    }
+
+    &--white {
+      @extend .why-internn-reason-wrapper;
+      background-color: $sigWhite;
+
+      .why-internn-reason > .reason-text {
+        > h2 {
+          color: $sigGrey;
+        }
+
+        > p {
+          color: $sigGreyOpaque;
+        }
+      }
+    }
+    &--grey {
+      @extend .why-internn-reason-wrapper;
+      background-color: $sigGrey;
+
+      .why-internn-reason > .reason-text {
+        > h2 {
+          color: $sigWhite;
+        }
+
+        > p {
+          color: $sigWhiteOpaque;
+        }
+      }
+    }
+    &--red {
+      @extend .why-internn-reason-wrapper;
+      background-color: $sigRed;
+
+      .why-internn-reason > .reason-text {
+        > h2 {
+          color: $sigWhite;
+        }
+
+        > p {
+          color: $sigWhiteOpaque;
+        }
+      }
+    }
+  }
+
+  .reverse {
+    .why-internn-reason {
+      flex-direction: row-reverse;
+      text-align: right;
+
+      .reason-text {
+        margin-left: 6%;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .why-internn-reason-wrapper {
+      .why-internn-reason {
+        display: block;
+
+        .reason-text {
+          margin: auto;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

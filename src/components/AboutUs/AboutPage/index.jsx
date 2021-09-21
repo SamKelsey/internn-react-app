@@ -13,7 +13,7 @@ const AboutUs = () => {
       <TopTile
         title="About us"
         subtitle='"Rethinking property photography, starting in Aberdeen."'
-        image="IMG_0220.JPG"
+        image="IMG_1472-lg.jpg"
       />
       <div className="about-content">
         <WhatWeDo />
