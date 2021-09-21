@@ -41,10 +41,11 @@ const PersonProfile = () => {
   };
 
   return (
-    <div>
+    <div className="section-person-profile">
       <TopTile image="IMG_1472-lg.jpg">
         <PersonCard expanded {...personInfo} />
       </TopTile>
+      <h2>Portfolio</h2>
       {renderPortfolio()}
     </div>
   );

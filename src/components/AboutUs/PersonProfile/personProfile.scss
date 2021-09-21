@@ -1,40 +1,55 @@
 @import "../../styleVariables";
 
-.person-profile-portfolio {
-  max-width: 800px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
+.section-person-profile {
+  text-align: center;
 
-  .col1 {
-    width: 40%;
+  > h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: $sigGrey;
+    padding: 40px 0;
   }
 
-  .col2 {
-    width: 60%;
-  }
+  .person-profile-portfolio {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: left;
 
-  .person-profile-photo {
-    $IMAGE_MARGINS: 10px;
-    margin: $IMAGE_MARGINS $IMAGE_MARGINS/2;
-
-    &:first-child {
-      margin-top: $IMAGE_MARGINS/2;
+    .col1 {
+      width: 40%;
     }
 
-    &:last-child {
-      margin-bottom: $IMAGE_MARGINS/2;
+    .col2 {
+      width: 60%;
+    }
+
+    .person-profile-photo {
+      $IMAGE_MARGINS: 10px;
+      margin: $IMAGE_MARGINS $IMAGE_MARGINS/2;
+
+      &:first-child {
+        margin-top: $IMAGE_MARGINS/2;
+      }
+
+      &:last-child {
+        margin-bottom: $IMAGE_MARGINS/2;
+      }
     }
   }
 }
 
 @media (max-width: 710px) {
-  .person-profile-portfolio {
-    display: block;
-    .col1,
-    .col2 {
-      width: calc(min(95vw, 400px));
-      margin: auto;
+  .section-person-profile {
+    .person-profile-portfolio {
+      display: block;
+      .col1,
+      .col2 {
+        width: calc(min(95vw, 400px));
+        margin: auto;
+      }
     }
   }
 }
