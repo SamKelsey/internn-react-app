@@ -137,3 +137,11 @@ $BORDER_RADIUS: 10px;
     }
   }
 }
+
+@media (max-width: 710px) {
+  .property-photo-wrapper {
+    .property-photo .photo-footer {
+      transform: translate(0, 0);
+    }
+  }
+}
