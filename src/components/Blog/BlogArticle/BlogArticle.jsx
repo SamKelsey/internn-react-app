@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
+import config from "../../../config";
 import getBlogInfo from "../getBlogInfo";
-
+import TopTile from "../../utils/TopTile";
 import "./blogArticle.scss";
 
 const BlogArticle = () => {
@@ -45,16 +45,12 @@ const BlogArticle = () => {
         <title>{`${subtitle} | internn`}</title>
         <meta name="description" content={getDescription()} />
       </Helmet>
-      <div className="header-wrapper">
-        <img
-          src={require(`../../../images/${imageName}`).default}
-          alt="Article"
-        />
-        <h1>
+      <TopTile image={`${imageName}-lg.jpg`}>
+        <h1 className="blog-article-header">
           <span>{title}:</span> {subtitle}
         </h1>
-      </div>
-      <div className="content-wrapper">
+      </TopTile>
+      <div className="blog-article-content">
         <p>{intro}</p>
         {renderBody(body)}
       </div>
