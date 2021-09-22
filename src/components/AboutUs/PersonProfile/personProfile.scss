@@ -10,46 +10,4 @@
     color: $sigGrey;
     padding: 40px 0;
   }
-
-  .person-profile-portfolio {
-    max-width: 800px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    text-align: left;
-
-    .col1 {
-      width: 40%;
-    }
-
-    .col2 {
-      width: 60%;
-    }
-
-    .person-profile-photo {
-      $IMAGE_MARGINS: 10px;
-      margin: $IMAGE_MARGINS $IMAGE_MARGINS/2;
-
-      &:first-child {
-        margin-top: $IMAGE_MARGINS/2;
-      }
-
-      &:last-child {
-        margin-bottom: $IMAGE_MARGINS/2;
-      }
-    }
-  }
-}
-
-@media (max-width: 710px) {
-  .section-person-profile {
-    .person-profile-portfolio {
-      display: block;
-      .col1,
-      .col2 {
-        width: calc(min(95vw, 400px));
-        margin: auto;
-      }
-    }
-  }
 }
