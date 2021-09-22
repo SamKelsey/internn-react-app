@@ -2,6 +2,7 @@ import React from "react";
 import "./whyInternn.scss";
 import config from "../../config";
 import TopTile from "../utils/TopTile";
+import FadeInSection from "../utils/FadeInSection";
 
 const info = [
   {
@@ -51,16 +52,18 @@ const WhyInternn = () => {
               index % 2 !== 0 && "reverse"
             }`}
           >
-            <div className="why-internn-reason">
-              <div className="reason-text">
-                <h2>{reason.title}</h2>
-                <p>{reason.text}</p>
+            <FadeInSection>
+              <div className="why-internn-reason">
+                <div className="reason-text">
+                  <h2>{reason.title}</h2>
+                  <p>{reason.text}</p>
+                </div>
+                <img
+                  src={`${config["s3-images-url"]}/${reason.image}-sm.jpg`}
+                  alt="property"
+                />
               </div>
-              <img
-                src={`${config["s3-images-url"]}/${reason.image}-sm.jpg`}
-                alt="property"
-              />
-            </div>
+            </FadeInSection>
           </div>
         );
       })}
