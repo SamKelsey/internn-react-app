@@ -3,25 +3,27 @@ import { Link, useRouteMatch } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
 import { toKebabCase } from "../../../services/stringServices";
 import "./blogCard.scss";
+import config from "../../../config";
 
 const BlogCard = ({ title, subtitle, intro, imageName }) => {
   let { url } = useRouteMatch();
 
   return (
-    <div className="blogCard">
-      <div className="image-wrapper">
-        <img src={require(`../../../images/${imageName}`).default} alt="Post" />
-      </div>
-      <div className="text-wrapper">
-        <div className="header-wrapper">
-          <h1>
-            <span>{title}:</span> {subtitle}
-          </h1>
-        </div>
+    <div className="blog-card">
+      <div
+        className="blog-image"
+        style={{
+          backgroundImage: `url(${config["s3-images-url"]}/${imageName}-md.jpg)`,
+        }}
+      ></div>
+      <div className="blog-text-wrapper">
+        <h2>
+          <span>{title}:</span> {subtitle}
+        </h2>
         <div className="p-wrapper">
-          <TextTruncate line={3} element="p" text={intro} />
+          <p>{intro}</p>
         </div>
-        <div className="button-wrapper">
+        <div className="post-button-wrapper">
           <Link className="post-link" to={`${url}/${toKebabCase(subtitle)}`}>
             Read post
           </Link>
