@@ -3,6 +3,7 @@
 .top-tile {
   padding: ($headerLinksHeight + (2 * $headerPadding)) 0 4rem 0;
   background-size: cover;
+  background-position: center;
   color: $sigWhiteOpaque;
   font-family: "Montserrat", sans-serif;
   text-align: center;
