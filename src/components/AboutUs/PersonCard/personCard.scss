@@ -39,11 +39,12 @@
       }
     }
 
-    p {
+    > p {
       padding: 20px 0;
       color: $sigGrey;
-      font-family: "Montserrat", sans-serif;
-      font-size: 1rem;
+      font-family: "Nunito", sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.5;
     }
 
     .person-card-button {
