@@ -1,24 +1,24 @@
-import React, { Fragment, Component } from "react";
+import React, { Fragment, useEffect } from "react";
 import SlideShow from "../SlideShow";
 import About from "../About/About";
 import Pricing from "../Pricing/Pricing";
 import Contact from "../Contact/Contact";
+import Faqs from "./Faqs";
 
-class Landing extends Component {
-  componentDidMount() {
+const Landing = () => {
+  useEffect(() => {
     window.scrollTo(0, 0);
-  }
+  }, []);
 
-  render() {
-    return (
-      <Fragment>
-        <SlideShow />
-        <About />
-        <Pricing />
-        <Contact />
-      </Fragment>
-    );
-  }
-}
+  return (
+    <Fragment>
+      <SlideShow />
+      <About />
+      <Pricing />
+      <Faqs />
+      <Contact />
+    </Fragment>
+  );
+};
 
 export default Landing;

@@ -1,0 +1,15 @@
+@import "../../styleVariables";
+
+.section-faqs {
+  background-color: $sigGreen;
+  text-align: center;
+  padding: 20px 2%;
+
+  > h2 {
+    color: $sigWhite;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 40px 0;
+  }
+}
