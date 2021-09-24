@@ -2,7 +2,7 @@ import React from "react";
 import TopTile from "../../utils/TopTile";
 import "./aboutUs.scss";
 import WhatWeDo from "./WhatWeDo";
-import HowItWorks from "./HowItWorks";
+import HowItWorks from "../../HowItWorks";
 import WeAreHere from "./WeAreHere";
 import WeAreNew from "./WeAreNew";
 import OurTeam from "./OurTeam";
