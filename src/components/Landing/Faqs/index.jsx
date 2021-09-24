@@ -20,7 +20,7 @@ const questions = [
 
 const Faqs = () => {
   return (
-    <div className="section-faqs">
+    <div id="faqs" className="section-faqs">
       <h2>FAQ's</h2>
       {questions.map((question) => (
         <Question question={question} />

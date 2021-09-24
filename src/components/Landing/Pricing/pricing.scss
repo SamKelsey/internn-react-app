@@ -1,0 +1,164 @@
+@import "../../styleVariables";
+
+.section-pricing {
+  text-align: center;
+  padding: 30px 2%;
+  background-color: $sigWhite;
+
+  > h2 {
+    color: $sigRed;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 70px;
+  }
+
+  .pricing-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: auto;
+
+    .pricing-text,
+    .pricing-calculator {
+      margin: 10px 2%;
+    }
+
+    .pricing-text {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: $sigGrey;
+      flex: 1;
+    }
+
+    .pricing-calculator {
+      flex: 1;
+      background-color: $sigRed;
+      border-radius: 5px;
+      overflow: hidden;
+      padding: 20px 1%;
+      margin: auto;
+      max-width: 400px;
+
+      > h3 {
+        font-family: "Nunito", sans-serif;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: $sigWhite;
+        padding-bottom: 10px;
+      }
+
+      > h2 {
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        font-size: 4rem;
+        color: $sigWhite;
+        padding: 10px 0;
+      }
+
+      .custom-select {
+        position: relative;
+        width: 95%;
+        margin: auto;
+        max-width: 300px;
+
+        $selectBorder: 1px solid $sigGrey;
+        $selectBorderRadius: 5px;
+        select {
+          width: 100%;
+          display: block;
+          padding: 5px;
+          margin: auto;
+          font-family: "Nunito", sans-serif;
+          color: $sigGrey;
+          border: $selectBorder;
+          border-radius: $selectBorderRadius;
+          overflow: hidden;
+          font-size: 1.75rem;
+          background-color: $sigWhite;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .custom-icon {
+          position: absolute;
+          width: 15%;
+          height: 100%;
+          top: 0;
+          right: 0;
+          background-color: $sigWhite;
+          pointer-events: none;
+          border-top: $selectBorder;
+          border-right: $selectBorder;
+          border-bottom: $selectBorder;
+          border-radius: 0 $selectBorderRadius $selectBorderRadius 0;
+
+          .icon-wrapper {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+
+            > i {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              display: block;
+              font-size: 1rem;
+              color: $sigGrey;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+
+      > button {
+        display: block;
+        width: 95%;
+        max-width: 300px;
+        padding: 5px;
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        color: $sigWhite;
+        background-color: transparent;
+        border: 4px solid $sigWhite;
+        border-radius: 5px;
+        margin: 10px auto;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      > i {
+        display: block;
+        color: $sigGrey;
+        font-size: 1.4rem;
+        padding-top: 20px;
+      }
+
+      .pricing-faqs-link {
+        color: $sigGrey;
+        font-size: 1.1rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (max-width: 630px) {
+    .pricing-content-wrapper {
+      display: block;
+    }
+  }
+}
