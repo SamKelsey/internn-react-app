@@ -18,11 +18,15 @@
     justify-content: space-between;
     align-items: center;
 
-    > h3 {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.8rem;
-      color: $sigGrey;
-      font-weight: 600;
+    > .question-text {
+      display: flex;
+
+      > h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $sigGrey;
+      }
     }
 
     .plus-icon {
@@ -60,6 +64,10 @@
     font-family: "Nunito", sans-serif;
     font-size: 1.3rem;
     margin-top: 10px;
+
+    .question-answer {
+      margin-top: 11px;
+    }
   }
 
   .question-prefix {
@@ -79,7 +87,7 @@
     }
 
     .faqs-answer {
-      display: block;
+      display: flex;
     }
   }
 }

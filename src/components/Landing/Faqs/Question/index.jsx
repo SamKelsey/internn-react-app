@@ -10,17 +10,19 @@ const Question = ({ question }) => {
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="faqs-question">
-        <h3>
-          <span className="question-prefix">Q:</span> {question.question}
-        </h3>
+        <div className="question-text">
+          <h3 className="question-prefix">Q:</h3>
+          <h3>{question.question}</h3>
+        </div>
         <div className="plus-icon">
           <div></div>
           <div></div>
         </div>
       </div>
-      <p className="faqs-answer">
-        <span className="question-prefix">A:</span> {question.ans}
-      </p>
+      <div className="faqs-answer">
+        <p className="question-prefix">A:</p>
+        <p className="question-answer">{question.ans}</p>
+      </div>
     </div>
   );
 };
