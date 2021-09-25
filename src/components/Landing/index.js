@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import SlideShow from "../SlideShow";
+import SlideShow from "./SlideShow";
 import HowItWorks from "../HowItWorks";
 import Pricing from "./Pricing";
 import Contact from "./Contact/Contact";
