@@ -3,6 +3,7 @@ import { HashLink } from "react-router-hash-link";
 import "./pricing.scss";
 import priceCalculator from "../../../services/priceCalculator";
 import config from "../../../config";
+import FadeInSection from "../../utils/FadeInSection";
 
 const Pricing = () => {
   const [calculatedPrice, setCalculatedPrice] = useState("...");
@@ -65,12 +66,12 @@ const Pricing = () => {
           </HashLink>
         </div>
       </div>
-      {/* <p>
+      <p>
         Like what you see?{" "}
         <span>
           <a href={config["booking-url"]}>Book now</a>
         </span>
-      </p> */}
+      </p>
     </div>
   );
 };

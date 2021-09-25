@@ -1,4 +1,4 @@
-@import "../styleVariables";
+@import "../../styleVariables";
 
 .contact-form-wrapper {
   margin: 0 auto;
@@ -7,12 +7,12 @@
   color: $sigWhiteOpaque;
   background-color: $sigGrey;
   text-align: center;
-  padding: 40px 0;
+  padding: $SECTION_PADDING;
 
   h2 {
-    font-size: 2rem;
-    font-weight: lighter;
-    margin-bottom: 70px;
+    font-size: $SECTION_HEADER_FONT_SIZE;
+    font-weight: $SECTION_HEADER_FONT_WEIGHT;
+    margin: $SECTION_HEADER_MARGIN;
   }
 
   form {

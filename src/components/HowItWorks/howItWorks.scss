@@ -3,14 +3,14 @@
 .section-how-it-works {
   background-color: $sigRed;
   text-align: center;
-  padding: 40px;
+  padding: $SECTION_PADDING;
   color: $sigWhite;
 
   > h2 {
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    font-size: 2.8rem;
-    margin: 20px auto;
+    font-weight: $SECTION_HEADER_FONT_WEIGHT;
+    font-family: $SECTION_HEADER_FONT_FAMILY;
+    font-size: $SECTION_HEADER_FONT_SIZE;
+    margin: $SECTION_HEADER_MARGIN;
   }
 
   .about-cards {

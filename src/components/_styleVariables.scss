@@ -10,6 +10,22 @@ $sigGreen: #7ebc89;
 $errorRed: #f33737ec;
 $successGreen: green;
 
+/*------------------------------ 
+COMMON VARIABLES
+------------------------------*/
+
+// SECTIONS
+$SECTION_PADDING: 20px 2%;
+$SECTION_MAX_WIDTH: 1650px;
+$SECTION_HEADER_FONT_SIZE: 2.6rem;
+$SECTION_HEADER_FONT_FAMILY: "Montserrat", sans-serif;
+$SECTION_HEADER_FONT_WEIGHT: 600;
+$SECTION_HEADER_MARGIN: 30px 0;
+
+/*------------------------------ 
+COMPONENT VARIABLES
+------------------------------*/
+
 // HEADER VARIABLES
 $HEADER_SWITCH_WIDTH: 1200px;
 $headerPadding: 25px;

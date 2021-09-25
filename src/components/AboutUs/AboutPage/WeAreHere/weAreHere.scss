@@ -5,7 +5,7 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px 0;
+  padding: $SECTION_PADDING;
 
   $leftWidth: 60%;
 
@@ -39,17 +39,9 @@
     $imageWidth: 100% - $leftWidth;
     $imageMaxWidth: 350px;
 
-    width: $imageWidth;
-    max-width: $imageMaxWidth;
     height: ($imageWidth / 2) * 3;
     max-height: ($imageMaxWidth / 2) * 3;
-
-    overflow: hidden;
     border-radius: 8px;
-
-    img {
-      height: 100%;
-    }
   }
 }
 
@@ -58,10 +50,6 @@
     .left {
       width: 100%;
       max-width: 820px;
-    }
-
-    .right {
-      width: 100%;
     }
   }
 }

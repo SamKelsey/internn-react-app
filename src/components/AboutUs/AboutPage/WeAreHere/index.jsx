@@ -20,9 +20,11 @@ const WeAreHere = () => {
             we can help you!
           </p>
         </div>
-        <div className="image right">
-          <img src={`${config["s3-images-url"]}/IMG_0220.JPG`} alt="doorway" />
-        </div>
+        <img
+          className="right"
+          src={`${config["s3-images-url"]}/IMG_1176_portrait-sm.jpg`}
+          alt="doorway"
+        />
       </div>
     </FadeInSection>
   );

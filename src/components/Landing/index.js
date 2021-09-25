@@ -1,9 +1,8 @@
 import React, { Fragment, useEffect } from "react";
 import SlideShow from "../SlideShow";
-import About from "../About/About";
 import HowItWorks from "../HowItWorks";
 import Pricing from "./Pricing";
-import Contact from "../Contact/Contact";
+import Contact from "./Contact/Contact";
 import Faqs from "./Faqs";
 
 const Landing = () => {

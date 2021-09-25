@@ -7,9 +7,9 @@
 
   > h2 {
     color: $sigWhite;
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    font-weight: 400;
-    padding: 40px 0;
+    font-family: $SECTION_HEADER_FONT_FAMILY;
+    font-size: $SECTION_HEADER_FONT_SIZE;
+    font-weight: $SECTION_HEADER_FONT_WEIGHT;
+    padding: $SECTION_PADDING;
   }
 }

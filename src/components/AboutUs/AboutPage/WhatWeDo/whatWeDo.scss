@@ -4,15 +4,15 @@
   background-color: $lightGrey;
   width: 100%;
   text-align: center;
-  padding: 20px;
+  padding: $SECTION_PADDING;
   margin: auto;
 
   h2 {
     color: $sigRed;
-    font-size: 3rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    margin: 20px auto;
+    font-size: $SECTION_HEADER_FONT_SIZE;
+    font-family: $SECTION_HEADER_FONT_FAMILY;
+    font-weight: $SECTION_HEADER_FONT_WEIGHT;
+    margin: $SECTION_HEADER_MARGIN;
   }
 
   .text-wrapper {

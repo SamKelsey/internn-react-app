@@ -2,12 +2,12 @@
 
 .we-are-new-section {
   background-color: $sigGreen;
-  padding: 20px 5%;
+  padding: $SECTION_PADDING;
 
   .we-are-new-content {
     display: flex;
     margin: auto;
-    max-width: 1500px;
+    max-width: $SECTION_MAX_WIDTH;
 
     h2 {
       color: $sigGrey;

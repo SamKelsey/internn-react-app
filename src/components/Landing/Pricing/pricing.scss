@@ -2,14 +2,14 @@
 
 .section-pricing {
   text-align: center;
-  padding: 30px 2%;
+  padding: $SECTION_PADDING;
   background-color: $sigWhite;
 
   > h2 {
     color: $sigRed;
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 70px;
+    font-size: $SECTION_HEADER_FONT_SIZE;
+    font-weight: $SECTION_HEADER_FONT_WEIGHT;
+    margin: $SECTION_HEADER_MARGIN;
   }
 
   .pricing-content-wrapper {
@@ -155,6 +155,18 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
       }
+    }
+  }
+
+  > p {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $sigGrey;
+
+    > span a {
+      color: $sigRed;
     }
   }
 
