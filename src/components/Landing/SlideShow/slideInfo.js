@@ -6,36 +6,38 @@ export default [
       line3: "for a fraction of the price.",
     },
     button: {
+      isExternal: true,
       text: "Book now",
-      link: "https://facebook.com",
+      link: "https://squareup.com/appointments/book/lh5bwjbbh62mfi/L9SG5QR4MCQA8/services",
     },
-    image: "IMG_0244-lg.jpg",
+    image: "IMG_2538-md.jpg",
+  },
+  {
+    text: {
+      line1: "think Property Photography,",
+      line2: "think Students,",
+      line3: "think internn.",
+    },
+    button: {
+      isExternal: true,
+      text: "What we do",
+      link: "/about-us",
+    },
+    image: "IMG_1496-2-md.jpg",
     extraClasses: "",
   },
   {
     text: {
-      line1: "Line 1 here",
-      line2: "Line 2 here",
-      line3: "Line 3 here",
+      line1: "Rethinking Property Photography,",
+      line2: "starting in Aberdeen.",
+      line3: "",
     },
     button: {
-      text: "Click me",
-      link: "https://instagram.com",
+      isExternal: true,
+      text: "Portfolio",
+      link: "/portfolio",
     },
-    image: "IMG_0244-md.jpg",
-    extraClasses: "",
-  },
-  {
-    text: {
-      line1: "Line 1 here",
-      line2: "Line 2 here",
-      line3: "Line 3 here",
-    },
-    button: {
-      text: "Click me",
-      link: "http://localhost:4000/test",
-    },
-    image: "IMG_0244-md.jpg",
+    image: "IMG_1472-md.jpg",
     extraClasses: "",
   },
 ];

@@ -3,7 +3,7 @@ import "./topTile.scss";
 
 import config from "../../../config";
 
-const TopTile = ({ title, subtitle, image, ...props }) => {
+const TopTile = ({ title, subtitle, image, noArrow, ...props }) => {
   const scrollDown = () => {
     window.scrollTo(0, 650);
   };
@@ -27,10 +27,14 @@ const TopTile = ({ title, subtitle, image, ...props }) => {
       }}
     >
       {title || subtitle ? renderHeaders() : renderChildren()}
-      <i
-        className="fas fa-chevron-down bounce"
-        onClick={() => scrollDown()}
-      ></i>
+      {noArrow ? (
+        ""
+      ) : (
+        <i
+          className="fas fa-chevron-down bounce"
+          onClick={() => scrollDown()}
+        ></i>
+      )}
     </div>
   );
 };

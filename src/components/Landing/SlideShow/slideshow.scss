@@ -20,6 +20,41 @@
       display: flex;
       margin: 0 auto;
       transition: all 1.5s ease;
+
+      .slide {
+        text-align: left;
+        padding: 0 4%;
+
+        .slide-text {
+          font-family: "Montserrat", sans-serif;
+          font-size: clamp(1.5rem, 3vw, 2rem);
+          color: $sigWhiteOpaque;
+          padding: 40px 0;
+          box-sizing: border-box;
+
+          h2 {
+            font-weight: 600;
+            padding: 6px 0;
+            box-sizing: border-box;
+          }
+        }
+
+        .slide-button {
+          padding: 10px 20px;
+          background-color: $sigRed;
+          border-radius: 8px;
+          border: 2px solid $sigWhite;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+          font-size: clamp(1.5rem, 3vw, 2rem);
+          margin-bottom: 10px;
+
+          a {
+            text-decoration: none;
+            color: $sigWhite;
+          }
+        }
+      }
     }
   }
 
