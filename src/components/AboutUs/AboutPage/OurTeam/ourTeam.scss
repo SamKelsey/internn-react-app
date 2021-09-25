@@ -1,14 +1,14 @@
 @import "../../../styleVariables";
 
 .our-team-section {
-  padding: 0 2% 30px 2%;
+  padding: $SECTION_PADDING;
 
   h2 {
-    font-size: 3rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-size: $SECTION_HEADER_FONT_SIZE;
+    font-family: $SECTION_HEADER_FONT_FAMILY;
+    font-weight: $SECTION_HEADER_FONT_WEIGHT;
     color: $sigGrey;
-    margin: 50px auto;
+    margin: $SECTION_HEADER_MARGIN;
     text-align: center;
   }
 }
