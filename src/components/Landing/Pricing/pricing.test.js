@@ -1,4 +1,4 @@
-import Pricing from "./Pricing";
+import Pricing from "./index";
 import Enzyme, { configure, shallow, mount, render } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
