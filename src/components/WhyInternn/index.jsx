@@ -14,12 +14,12 @@ const info = [
   {
     title: "Support local talent",
     text: "We are a local startup that offers great opportunities to students. By booking with us, you’re contributing to supporting local students in kickstarting their dream careers in photography! If this isn’t reason enough, it’s also a great opportunity to support a new local business and we would be hugely grateful to hear from you!",
-    image: "IMG_1176_portrait",
+    image: "IMG_9990_portrait",
   },
   {
     title: "Simplicity",
     text: "We want property photography to be as simple as booking a haircut! No need to search around to find a reliable photographer, arranging a good date and paying an arm and a leg for your photos. Instead, take 2 minutes to make a booking using our online booking system then just be there on the day to let our student in to take the photographs. We will handle the rest, including payment (we will automatically take payment, only after we’ve photographed your property). Just sit back and relax whilst we edit your photos before sending them to you via email. Simple as that!",
-    image: "IMG_1176_portrait",
+    image: "IMG_2549-HDR",
   },
 ];
 
@@ -33,7 +33,6 @@ const WhyInternn = () => {
     } else {
       currTheme++;
     }
-    console.log(result);
     return result;
   };
 
