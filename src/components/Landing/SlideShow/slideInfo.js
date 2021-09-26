@@ -23,7 +23,7 @@ export default [
       text: "What we do",
       link: "/about-us",
     },
-    image: "IMG_1496-2-md.jpg",
+    image: "IMG_2530-HDR-md.jpg",
     extraClasses: "",
   },
   {
@@ -37,7 +37,7 @@ export default [
       text: "Portfolio",
       link: "/portfolio",
     },
-    image: "IMG_1472-md.jpg",
+    image: "IMG_1178-md.jpg",
     extraClasses: "",
   },
 ];
