@@ -5,10 +5,12 @@ import PersonCard from "../PersonCard";
 import { useParams } from "react-router";
 import peopleInfo from "../AboutPage/OurTeam/teamInfo";
 import { kebabToSentence } from "../../../services/stringServices";
-import PropertyPhoto from "../../utils/PropertyPhoto";
 import PhotoGallery from "../../utils/PhotoGallery";
+import { scrollToTop } from "../../../services/utils";
 
 const PersonProfile = () => {
+  scrollToTop();
+
   const name = kebabToSentence(useParams().name);
 
   const getPersonInfo = () => {

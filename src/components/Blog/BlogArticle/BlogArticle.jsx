@@ -1,17 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import config from "../../../config";
 import getBlogInfo from "../getBlogInfo";
 import TopTile from "../../utils/TopTile";
 import "./blogArticle.scss";
+import { scrollToTop } from "../../../services/utils";
 
 const BlogArticle = () => {
-  const DESCRIPTION_LENGTH = 160;
+  scrollToTop();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const DESCRIPTION_LENGTH = 160;
   let { articleId } = useParams();
 
   const { title, subtitle, intro, body, imageName, description } =

@@ -1,14 +1,13 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import SlideShow from "./SlideShow";
 import HowItWorks from "../HowItWorks";
 import Pricing from "./Pricing";
 import Contact from "./Contact/Contact";
 import Faqs from "./Faqs";
+import { scrollToTop } from "../../services/utils";
 
 const Landing = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  scrollToTop();
 
   return (
     <Fragment>

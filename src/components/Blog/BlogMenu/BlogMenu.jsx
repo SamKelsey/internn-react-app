@@ -4,13 +4,13 @@ import { Helmet } from "react-helmet";
 
 import TopTile from "../../utils/TopTile";
 import blogFiles from "../articleData";
-
-// import cardImage from "../../../images/IMG_0307.JPG";
+import { scrollToTop } from "../../../services/utils";
 
 import "./BlogMenu.scss";
 
 const BlogMenu = () => {
-  // Return each blogFiles as a BlogCard.
+  scrollToTop();
+
   const renderBlogCards = () =>
     blogFiles.map(({ title, subtitle, intro, imageName }) => {
       return (
@@ -21,7 +21,7 @@ const BlogMenu = () => {
   return (
     <div className="section-blog">
       <Helmet>
-        <title>Blog. | internn</title>
+        <title>Blog | internn</title>
         <meta
           name="description"
           content="Stay up to date with all the incredible work and hot tips our internn students have to offer whilst taking beautiful property photos for our customers."

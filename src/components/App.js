@@ -20,7 +20,7 @@ function App() {
   return (
     <BrowserRouter>
       <Helmet>
-        <title>Aberdeen Property Photography | internn</title>
+        <title>internn | Aberdeen Property Photography </title>
         <meta
           name="description"
           content="Aberdeen Property photography services, provided by the best students for a fraction of the price. Leading a new, low-cost alternative to property photography in Aberdeen."

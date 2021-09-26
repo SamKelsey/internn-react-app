@@ -3,6 +3,7 @@ import "./portfolio.scss";
 import { Helmet } from "react-helmet";
 import TopTile from "../utils/TopTile";
 import PhotoGallery from "../utils/PhotoGallery";
+import { scrollToTop } from "../../services/utils";
 
 const portfolioImages = [
   "IMG_1176_portrait",
@@ -13,10 +14,12 @@ const portfolioImages = [
 ];
 
 const Portfolio = () => {
+  scrollToTop();
+
   return (
     <div className="section-portfolio">
       <Helmet>
-        <title>Portfolio. | internn</title>
+        <title>Portfolio | internn</title>
         <meta
           name="description"
           content="Seeing is believing. View our portfolio of property photographs taken by our incredible student photographers. Stunning, low-cost photographs."

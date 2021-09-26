@@ -3,6 +3,7 @@ import "./whyInternn.scss";
 import config from "../../config";
 import TopTile from "../utils/TopTile";
 import FadeInSection from "../utils/FadeInSection";
+import Helmet from "react-helmet";
 
 const info = [
   {
@@ -38,6 +39,13 @@ const WhyInternn = () => {
 
   return (
     <div className="section-why-internn">
+      <Helmet>
+        <title>Why internn | internn</title>
+        <meta
+          name="description"
+          content="Beautiful property photos, for a fraction of the price. Get your property noticed with stunning photos, without breaking the bank."
+        />
+      </Helmet>
       <TopTile
         image="IMG_0307-lg.jpg"
         title="Why internn?"
