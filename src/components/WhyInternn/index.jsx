@@ -55,6 +55,7 @@ const WhyInternn = () => {
 
         return (
           <div
+            key={index}
             className={`why-internn-reason-wrapper--${colourTheme} ${
               index % 2 !== 0 && "reverse"
             }`}

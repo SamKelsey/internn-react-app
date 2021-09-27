@@ -33,7 +33,7 @@ const SlideShow = () => {
           }}
         >
           {slideInfo.map(({ text: { line1, line2, line3 }, button, image }) => (
-            <TopTile image={image} noArrow>
+            <TopTile key={line1} image={image} noArrow>
               <div className="slide">
                 <div className="slide-text">
                   <h2>{line1}</h2>

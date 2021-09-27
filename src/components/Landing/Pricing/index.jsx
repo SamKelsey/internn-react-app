@@ -16,10 +16,10 @@ const Pricing = () => {
         <div className="pricing-content-wrapper">
           <p className="pricing-text">
             Our prices really are worth sharing! We truly believe we offer the
-            most competitive prices for top tier property photography. Simply use
-            the price calculator to get an instant quote for your property, before
-            booking. Questions? Don't hesitate to get in touch via our contact
-            form.
+            most competitive prices for top tier property photography. Simply
+            use the price calculator to get an instant quote for your property,
+            before booking. Questions? Don't hesitate to get in touch via our
+            contact form.
           </p>
           <div className="pricing-calculator">
             <h3>Total cost</h3>
@@ -52,7 +52,7 @@ const Pricing = () => {
               </select>
               <div className="custom-icon">
                 <div className="icon-wrapper">
-                  <i class="fas fa-chevron-down"></i>
+                  <i className="fas fa-chevron-down"></i>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ const Pricing = () => {
             >
               Calculate
             </button>
-            <i class="far fa-question-circle"></i>
+            <i className="far fa-question-circle"></i>
             <HashLink to="/#faqs" className="pricing-faqs-link">
               See our FAQ's
             </HashLink>

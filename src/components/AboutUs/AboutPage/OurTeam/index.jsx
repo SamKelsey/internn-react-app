@@ -8,7 +8,7 @@ const OurTeam = () => {
     <div className="our-team-section">
       <h2>Our team</h2>
       {teamInfo.map((teamMember) => (
-        <PersonCard {...teamMember} />
+        <PersonCard key={teamMember.name} {...teamMember} />
       ))}
     </div>
   );

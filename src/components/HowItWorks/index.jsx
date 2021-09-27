@@ -40,7 +40,13 @@ const HowItWorks = () => {
       <h2>How it works</h2>
       <div className="about-cards">
         {infoList.map(({ icon, title, body }) => (
-          <Card icon={icon} title={title} body={body} height={300} />
+          <Card
+            key={title}
+            icon={icon}
+            title={title}
+            body={body}
+            height={300}
+          />
         ))}
       </div>
     </div>

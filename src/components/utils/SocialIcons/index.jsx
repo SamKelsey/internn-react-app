@@ -5,7 +5,7 @@ const SocialIcons = ({ fbLink, igLink, liLink, extraClasses }) => {
   return (
     <div className={`social-icons ${extraClasses}`}>
       <a href={fbLink ? fbLink : "https://www.facebook.com/internnOfficial"}>
-        <i class="fab fa-facebook-square"></i>
+        <i className="fab fa-facebook-square"></i>
       </a>
       <a href={igLink ? igLink : "https://www.instagram.com/internnofficial"}>
         <i className="fab fa-instagram fa-fw"></i>

@@ -33,11 +33,11 @@ const PropertyPhoto = ({ image, extraClasses }) => {
         <h3>{title}</h3>
         <div className="room-stats">
           <div className="room-stat">
-            <i class="fas fa-bed"></i>
+            <i className="fas fa-bed"></i>
             <h3>{beds}</h3>
           </div>
           <div className="room-stat">
-            <i class="fas fa-bath"></i>
+            <i className="fas fa-bath"></i>
             <h3>{bathrooms}</h3>
           </div>
         </div>

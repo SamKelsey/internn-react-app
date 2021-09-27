@@ -14,12 +14,20 @@ const PhotoGallery = ({ images }) => {
     <div className="photo-gallery">
       <div className="col1">
         {col1.map((image) => (
-          <PropertyPhoto extraClasses="photo-gallery-photo" image={image} />
+          <PropertyPhoto
+            key={image}
+            extraClasses="photo-gallery-photo"
+            image={image}
+          />
         ))}
       </div>
       <div className="col2">
         {col2.map((image) => (
-          <PropertyPhoto extraClasses="photo-gallery-photo" image={image} />
+          <PropertyPhoto
+            key={image}
+            extraClasses="photo-gallery-photo"
+            image={image}
+          />
         ))}
       </div>
     </div>

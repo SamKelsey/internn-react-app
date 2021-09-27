@@ -8,7 +8,7 @@ const WhatWeDo = () => {
       <h2>What we do</h2>
       <FadeInSection>
         <div className="text-wrapper">
-          <i class="fas fa-quote-left left"></i>
+          <i className="fas fa-quote-left left"></i>
           <p>
             Here at internn, we offer stunning property photography, but our
             pricing is what really sets us apart! There's a lot of property
@@ -22,7 +22,7 @@ const WhatWeDo = () => {
             to make life easy for property owners. As such, using internn is
             simple, just follow the steps below. We can't wait to hear from you!
           </p>
-          <i class="fas fa-quote-right right"></i>
+          <i className="fas fa-quote-right right"></i>
         </div>
       </FadeInSection>
     </div>
