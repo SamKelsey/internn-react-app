@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import "./portfolio.scss";
 import { Helmet } from "react-helmet";
 import TopTile from "../utils/TopTile";
