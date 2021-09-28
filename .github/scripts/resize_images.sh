@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script is for formatting (resizing) images before going to s3.
 
-cd images
+cd s3/images
 
 # Image widths in px.
 SMALL=600;

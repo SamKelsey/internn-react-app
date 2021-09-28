@@ -9,7 +9,7 @@ jobs:
       matrix:
         node-version: [12.x]
     env:
-      AWS_S3_IMAGES: "internn-images-dev"
+      AWS_S3_INFO: "internn-web-info-dev"
       AWS_S3_BUILD: "internn-frontend-dev"
     steps:
       - uses: actions/checkout@v1
@@ -40,7 +40,7 @@ jobs:
         shell: bash
         run: bash "./.github/scripts/resize_images.sh"
       - name: Deploy images to S3
-        run: aws s3 sync --delete images/ s3://${AWS_S3_IMAGES}
+        run: aws s3 sync --delete s3/ s3://${AWS_S3_INFO}
       - name: Deploy build to S3
         run: aws s3 sync --delete build/ s3://${AWS_S3_BUILD}
       - name: Invalidate Cloudfront caches
