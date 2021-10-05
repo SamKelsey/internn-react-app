@@ -8,7 +8,7 @@ const ImageDataContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       try {
         let response = await fetch("/api/get-image-data");
         const data = await response.json();
@@ -17,7 +17,7 @@ const ImageDataContextProvider = ({ children }) => {
       } catch (err) {
         console.error(err);
       }
-    }
+    };
 
     fetchData();
   }, []);
