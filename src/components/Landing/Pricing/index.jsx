@@ -23,7 +23,7 @@ const Pricing = () => {
           </p>
           <div className="pricing-calculator">
             <h3>Total cost</h3>
-            <h2 className="price">
+            <h2 className="price flash" key={calculatedPrice}>
               {calculatedPrice == "..." ? "..." : `£ ${calculatedPrice}`}
             </h2>
             <div className="custom-select">
