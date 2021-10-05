@@ -15,7 +15,7 @@ const ImageDataContextProvider = ({ children }) => {
         setImageData(data);
         setLoading(false);
       } catch (err) {
-        console.error(err);
+        console.error(`There was an error: ${err}`);
       }
     };
 
