@@ -1,17 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./propertyPhoto.scss";
 import config from "../../../config";
 
-import info from "./info.json";
-
-const PropertyPhoto = ({ image, extraClasses }) => {
+const PropertyPhoto = ({
+  image: { title, noBeds, noBaths, description, image },
+  extraClasses,
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
-
-  const getImageData = () => {
-    return info[image];
-  };
-
-  const { title, bio, beds, bathrooms } = getImageData();
 
   return (
     <div className={`property-photo-wrapper ${extraClasses}`}>
@@ -34,14 +29,14 @@ const PropertyPhoto = ({ image, extraClasses }) => {
         <div className="room-stats">
           <div className="room-stat">
             <i className="fas fa-bed"></i>
-            <h3>{beds}</h3>
+            <h3>{noBeds}</h3>
           </div>
           <div className="room-stat">
             <i className="fas fa-bath"></i>
-            <h3>{bathrooms}</h3>
+            <h3>{noBaths}</h3>
           </div>
         </div>
-        <p>{bio}</p>
+        <p>{description}</p>
         <button
           className="read-button--dark"
           onClick={() => setIsExpanded(!isExpanded)}

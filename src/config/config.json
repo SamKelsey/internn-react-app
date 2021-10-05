@@ -1,4 +1,5 @@
 {
   "booking-url": "https://squareup.com/appointments/book/lh5bwjbbh62mfi/L9SG5QR4MCQA8/services",
-  "s3-images-url": "https://internn-web-info-prod.s3.eu-west-1.amazonaws.com/images"
+  "s3-images-url": "https://internn-web-info-prod.s3.eu-west-1.amazonaws.com/images",
+  "s3-url": "https://internn-web-info-prod.s3.eu-west-1.amazonaws.com"
 }

@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./portfolio.scss";
 import { Helmet } from "react-helmet";
 import TopTile from "../utils/TopTile";
 import PhotoGallery from "../utils/PhotoGallery";
 import { scrollToTop } from "../../services/utils";
-
-const portfolioImages = [
-  "IMG_1176_portrait",
-  "IMG_1472",
-  "IMG_1472",
-  "IMG_1176_portrait",
-  "IMG_1472",
-];
+import { ImageDataContext } from "../../contexts/ImageDataContext";
 
 const Portfolio = () => {
   scrollToTop();
+
+  const { imageData, loading } = useContext(ImageDataContext);
+
+  const portfolioImages = loading
+    ? []
+    : Object.keys(imageData).map((key) => {
+        return {
+          image: key,
+          title: imageData[key].title,
+          description: imageData[key].description,
+          noBeds: imageData[key].noBeds,
+          noBaths: imageData[key].noBaths,
+        };
+      });
 
   return (
     <div className="section-portfolio">

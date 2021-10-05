@@ -16,6 +16,9 @@ import Terms from "./Terms/Terms";
 import NotFound from "./NotFound/NotFound";
 import WhyInternn from "./WhyInternn";
 
+// Import contexts
+import { ImageDataContextProvider } from "../contexts/ImageDataContext";
+
 function App() {
   return (
     <BrowserRouter>
@@ -28,16 +31,18 @@ function App() {
       </Helmet>
       <div id="page-container">
         <Header />
-        <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route path="/about-us" component={AboutUsRouter} />
-          <Route path="/why-internn" component={WhyInternn} />
-          <Route exact path="/join-us" component={JoinUs} />
-          <Route exact path="/portfolio" component={Portfolio} />
-          <Route path="/blog" component={BlogRouter} />
-          <Route path="/terms-and-conditions" component={Terms} />
-          <Route path="/" component={NotFound} />
-        </Switch>
+        <ImageDataContextProvider>
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route path="/about-us" component={AboutUsRouter} />
+            <Route path="/why-internn" component={WhyInternn} />
+            <Route exact path="/join-us" component={JoinUs} />
+            <Route exact path="/portfolio" component={Portfolio} />
+            <Route path="/blog" component={BlogRouter} />
+            <Route path="/terms-and-conditions" component={Terms} />
+            <Route path="/" component={NotFound} />
+          </Switch>
+        </ImageDataContextProvider>
       </div>
       <Footer />
     </BrowserRouter>
