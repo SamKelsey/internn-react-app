@@ -1,5 +1,4 @@
-import React, { createContext, useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { createContext, useState, useEffect } from "react";
 
 const ImageDataContext = createContext();
 
