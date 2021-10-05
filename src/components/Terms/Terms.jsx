@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./terms.scss";
 import ReactMarkdown from "react-markdown";
-
-import PageHeader from "../utils/PageHeader/PageHeader";
+import TopTile from "../utils/TopTile";
+import { scrollToTop } from "../../services/utils";
 
 import markdownFile from "./terms-and-conditions.md";
 
 const Terms = () => {
-  const [markdown, setMarkdown] = useState("");
+  scrollToTop();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-
     // Get markdownFile text and set state value.
     fetch(markdownFile)
       .then((res) => res.text())
@@ -19,9 +17,11 @@ const Terms = () => {
       .catch((err) => console.error(err));
   }, []);
 
+  const [markdown, setMarkdown] = useState("");
+
   return (
     <React.Fragment>
-      <PageHeader title="Terms and Conditions" />
+      <TopTile image={"IMG_1496-2-md.jpg"} title="Terms and Conditions" />
       <div id="section-terms-and-conditions">
         <ReactMarkdown children={markdown} />
       </div>
