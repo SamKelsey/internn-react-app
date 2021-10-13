@@ -18,12 +18,12 @@ const PersonProfile = () => {
   const peopleContext = useContext(TeamDataContext);
 
   const personInfo = peopleContext.loading
-    ? ""
+    ? {}
     : peopleContext.teamData.filter((person) => person.name === name)[0];
 
   const images = imageContext.loading
     ? []
-    : personInfo.portfolio.map((key) => ({
+    : (personInfo.portfolio || []).map((key) => ({
         image: key,
         title: imageContext.imageData[key].title,
         description: imageContext.imageData[key].description,
