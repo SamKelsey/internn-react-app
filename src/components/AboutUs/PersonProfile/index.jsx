@@ -8,6 +8,7 @@ import PhotoGallery from "../../utils/PhotoGallery";
 import { scrollToTop } from "../../../services/utils";
 import { ImageDataContext } from "../../../contexts/ImageDataContext";
 import { TeamDataContext } from "../../../contexts/TeamDataContext";
+import { Helmet } from "react-helmet";
 
 const PersonProfile = () => {
   scrollToTop();
@@ -33,6 +34,13 @@ const PersonProfile = () => {
 
   return (
     <div className="section-person-profile">
+      <Helmet>
+        <title>{name} | internn</title>
+        <meta
+          name="description"
+          content={personInfo.bio ? personInfo.bio.substring(0, 140) : ""}
+        />
+      </Helmet>
       <TopTile image="IMG_1472-lg.jpg">
         <PersonCard expanded {...personInfo} />
       </TopTile>
