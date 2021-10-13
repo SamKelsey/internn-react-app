@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import config from "../../config";
 
 import "./header.scss";
@@ -60,7 +59,7 @@ class Header extends Component {
           <HeaderLogo extraClasses="burger-logo header-logo" />
           <button
             className={
-              this.state.burgerMenuIsOpen == true
+              this.state.burgerMenuIsOpen === true
                 ? "menu-button change"
                 : "menu-button"
             }
@@ -74,7 +73,7 @@ class Header extends Component {
           </button>
           <div
             style={{
-              display: this.state.burgerMenuIsOpen == true ? "block" : "none",
+              display: this.state.burgerMenuIsOpen === true ? "block" : "none",
             }}
             className="burger-menu"
           >

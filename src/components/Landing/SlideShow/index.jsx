@@ -9,7 +9,7 @@ const SlideShow = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      slidePosition == slideInfo.length - 1
+      slidePosition === slideInfo.length - 1
         ? setSlidePosition(0)
         : setSlidePosition(slidePosition + 1);
     }, 4000);
@@ -52,7 +52,7 @@ const SlideShow = () => {
       <div className="dots">
         {slideInfo.map((_, index) => (
           <span
-            className={slidePosition == index ? "dot active" : "dot"}
+            className={slidePosition === index ? "dot active" : "dot"}
             onClick={(e) =>
               setSlidePosition(parseInt(e.target.getAttribute("name")))
             }

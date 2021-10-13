@@ -42,7 +42,10 @@ const PersonCard = ({
         <p>{bio}</p>
         {renderButton()}
       </div>
-      <img src={`${config["s3-images-url"]}/${image}`} alt="profile picture" />
+      <img
+        src={`${config["s3-images-url"]}/${image}`}
+        alt="Employee headshot"
+      />
     </div>
   );
 };

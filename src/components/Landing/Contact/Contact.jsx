@@ -48,19 +48,19 @@ class Contact extends Component {
     const { name, email, message } = this.state;
     let newErrors = [];
 
-    if (name == "") {
+    if (name === "") {
       console.log("name not present.");
       newErrors = [...newErrors, "Please provide a name."];
     }
 
-    if (email == "") {
+    if (email === "") {
       console.log("email not present");
       newErrors = [...newErrors, "Please provide an email."];
     } else if (!validateEmail(email)) {
       newErrors = [...newErrors, "Invalid email address provided."];
     }
 
-    if (message == "") {
+    if (message === "") {
       console.log("message not present.");
       newErrors = [...newErrors, "Please provide a message."];
     }
@@ -147,8 +147,8 @@ class Contact extends Component {
               this.setState({ message: e.target.value });
             }}
           ></textarea>
-          {this.state.errors != "" && this.renderErrors()}
-          {this.state.notifications != "" && this.renderNotifications()}
+          {this.state.errors !== "" && this.renderErrors()}
+          {this.state.notifications !== "" && this.renderNotifications()}
           <button
             id="submit-button"
             type="button"

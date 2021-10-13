@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import TopTile from "../utils/TopTile";
 import "./joinUs.scss";
 import { scrollToTop } from "../../services/utils";

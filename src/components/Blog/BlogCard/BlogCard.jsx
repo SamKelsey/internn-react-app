@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useRouteMatch } from "react-router-dom";
-import TextTruncate from "react-text-truncate";
 import { toKebabCase } from "../../../services/stringServices";
 import "./blogCard.scss";
 import config from "../../../config";

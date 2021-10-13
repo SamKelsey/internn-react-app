@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./propertyPhoto.scss";
 import config from "../../../config";
 

@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     linkName: "About us",
     relativePath: "/about-us",
@@ -24,3 +24,5 @@ export default [
     relativePath: "/#contact-us",
   },
 ];
+
+export default data;

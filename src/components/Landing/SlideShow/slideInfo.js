@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     text: {
       line1: "Stunning property photos,",
@@ -41,3 +41,5 @@ export default [
     extraClasses: "",
   },
 ];
+
+export default data;
