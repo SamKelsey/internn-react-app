@@ -3,31 +3,32 @@ import "./personProfile.scss";
 import TopTile from "../../utils/TopTile";
 import PersonCard from "../PersonCard";
 import { useParams } from "react-router";
-import peopleInfo from "../AboutPage/OurTeam/teamInfo";
 import { kebabToSentence } from "../../../services/stringServices";
 import PhotoGallery from "../../utils/PhotoGallery";
 import { scrollToTop } from "../../../services/utils";
 import { ImageDataContext } from "../../../contexts/ImageDataContext";
+import { TeamDataContext } from "../../../contexts/TeamDataContext";
 
 const PersonProfile = () => {
   scrollToTop();
 
-  const { imageData, loading } = useContext(ImageDataContext);
   const name = kebabToSentence(useParams().name);
 
-  const getPersonInfo = () => {
-    return peopleInfo.filter((person) => person.name === name)[0];
-  };
+  const imageContext = useContext(ImageDataContext);
+  const peopleContext = useContext(TeamDataContext);
 
-  const personInfo = getPersonInfo();
-  const images = loading
+  const personInfo = peopleContext.loading
+    ? ""
+    : peopleContext.teamData.filter((person) => person.name === name)[0];
+
+  const images = imageContext.loading
     ? []
     : personInfo.portfolio.map((key) => ({
         image: key,
-        title: imageData[key].title,
-        description: imageData[key].description,
-        noBeds: imageData[key].noBeds,
-        noBaths: imageData[key].noBaths,
+        title: imageContext.imageData[key].title,
+        description: imageContext.imageData[key].description,
+        noBeds: imageContext.imageData[key].noBeds,
+        noBaths: imageContext.imageData[key].noBaths,
       }));
 
   return (

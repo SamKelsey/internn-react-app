@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ourTeam.scss";
-import teamInfo from "./teamInfo";
 import PersonCard from "../../PersonCard";
+import { TeamDataContext } from "../../../../contexts/TeamDataContext";
 
 const OurTeam = () => {
+  const { teamData, loading } = useContext(TeamDataContext);
+
   return (
     <div className="our-team-section">
       <h2>Our team</h2>
-      {teamInfo.map((teamMember) => (
-        <PersonCard key={teamMember.name} {...teamMember} />
-      ))}
+      {loading
+        ? ""
+        : teamData.map((teamMember) => (
+            <PersonCard key={teamMember.name} {...teamMember} />
+          ))}
     </div>
   );
 };
