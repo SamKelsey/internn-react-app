@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./footer.scss";
-import logo from "../../images/white_without_slogan.png";
 import SocialIcons from "../utils/SocialIcons";
+import config from "../../config";
 
 class Footer extends Component {
   render() {
@@ -12,7 +12,10 @@ class Footer extends Component {
           <div className="logo-wrapper">
             <div className="logo">
               <Link to="/">
-                <img src={logo} alt="internn logo" />
+                <img
+                  src={`${config["s3-images-url"]}/white_without_slogan.png`}
+                  alt="internn logo"
+                />
               </Link>
             </div>
           </div>
