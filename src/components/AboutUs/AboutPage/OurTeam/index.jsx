@@ -7,7 +7,7 @@ const OurTeam = () => {
   const { teamData, loading } = useContext(TeamDataContext);
 
   return (
-    <div className="our-team-section">
+    <div id="meet-the-team" className="our-team-section">
       <h2>Our team</h2>
       {loading
         ? ""
