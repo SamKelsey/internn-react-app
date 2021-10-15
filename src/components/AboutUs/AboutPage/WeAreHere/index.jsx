@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 import "./weAreHere.scss";
 import FadeInSection from "../../../utils/FadeInSection";
 import config from "../../../../config";
@@ -19,6 +20,9 @@ const WeAreHere = () => {
             property. Whether you're a landlord, BnB owner, or a rental agency,
             we can help you!
           </p>
+          <HashLink className="lets-talk-button" to="/#contact-us">
+            Let's chat!
+          </HashLink>
         </div>
         <img
           className="right"
