@@ -5,31 +5,29 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 0.3s ease;
+    margin: 14px auto;
+    padding: 10px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: $headerLinksFontSize;
+    color: $sigWhite;
 
-    a {
-      text-decoration: none;
-      font-family: "Montserrat", sans-serif;
-      font-size: $headerLinksFontSize;
-      color: $sigWhite;
+    &:hover {
+      background-color: $sigWhite;
 
-      &:hover {
-        color: $sigWhiteOpaque;
-      }
+      color: rgba(0, 0, 0, 0.8);
     }
   }
 
   .header-booking-link {
     background-color: $sigRed;
     border-radius: 6px;
-
-    a {
-      display: block;
-      $bookingButtonVerticalMargin: 10px;
-      margin: $bookingButtonVerticalMargin 0;
-      padding: 0 10px;
-      // Vertically center "book now" in button
-      line-height: $headerLinksHeight - (2 * $bookingButtonVerticalMargin);
-      font-weight: 600;
-    }
+    padding: 10px 5px;
+    $bookingButtonVerticalMargin: 10px;
+    font-weight: 600;
+    vertical-align: middle;
   }
 }
