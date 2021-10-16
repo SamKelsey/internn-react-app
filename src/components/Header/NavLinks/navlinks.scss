@@ -17,7 +17,6 @@
 
     &:hover {
       background-color: $sigWhite;
-
       color: rgba(0, 0, 0, 0.8);
     }
   }
@@ -26,7 +25,6 @@
     background-color: $sigRed;
     border-radius: 6px;
     padding: 10px 5px;
-    $bookingButtonVerticalMargin: 10px;
     font-weight: 600;
     vertical-align: middle;
   }
