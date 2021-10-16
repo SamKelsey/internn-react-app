@@ -4,6 +4,7 @@ import "./whyInternn.scss";
 import config from "../../config";
 import TopTile from "../utils/TopTile";
 import FadeInSection from "../utils/FadeInSection";
+import { scrollToTop } from "../../services/utils";
 import Helmet from "react-helmet";
 
 const info = [
@@ -37,6 +38,7 @@ const info = [
 ];
 
 const WhyInternn = () => {
+  scrollToTop();
   const colourThemes = ["white", "red", "grey"];
   let currTheme = 0;
   const getColourTheme = () => {
