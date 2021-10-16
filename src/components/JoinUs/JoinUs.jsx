@@ -23,17 +23,17 @@ const JoinUs = () => {
         subtitle="We are looking for talented students."
         image="IMG_2471-HDR-md.jpg"
       />
-      <div className="section-text">
-        <div className="section">
+      <div className="job-section-text">
+        <div className="job-section">
           <p>
             <span className="bold-text">Location:</span> {location}
           </p>
         </div>
-        <div className="section">
+        <div className="job-section">
           <p className="header">About internn</p>
           <p>{about}</p>
         </div>
-        <div className="section">
+        <div className="job-section">
           <p className="header">Role responsibilities</p>
           <p>{responsibilities.paragraph}</p>
           <ul>
@@ -42,7 +42,7 @@ const JoinUs = () => {
             ))}
           </ul>
         </div>
-        <div className="section">
+        <div className="job-section">
           <p className="header">Role requirements</p>
           <ul>
             {requirements.map((requirement, index) => (
@@ -50,11 +50,11 @@ const JoinUs = () => {
             ))}
           </ul>
         </div>
-        <div className="section">
+        <div className="job-section">
           <p className="header">Who should apply for this role?</p>
           <p>{who}</p>
         </div>
-        <div className="section">
+        <div className="job-section">
           <p className="header">How to apply</p>
           <p>{how}</p>
         </div>
