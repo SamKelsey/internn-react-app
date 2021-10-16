@@ -103,7 +103,9 @@
   },
   "IMG_2549-HDR": {
     "title": " Lurg Lodge, Midmar",
-    "description": "This stunning and expansive country lodge has the beautiful interior to match the incredible views. Here is a quick grab of an ensuite."
+    "description": "This stunning and expansive country lodge has the beautiful interior to match the incredible views. Here is a quick grab of an ensuite.",
+    "noBeds": 4,
+    "noBaths": 4
   },
   "IMG_2571-HDR": {
     "title": "Lurg Lodge, Midmar",
