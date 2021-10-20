@@ -160,5 +160,47 @@
     "description": "A bright and modern bathroom inside a spacious 2 bedroom, ground floor flat on Cromwell Rd, Aberdeen.",
     "noBeds": 2,
     "noBaths": 1
+  },
+  "IMG_2788-HDR": {
+    "title": "1 bed flat, Cults",
+    "description": "The perfect setup for anyone working from home! This is the study area of a beautifully renovated 1 bedroom flat in Cults, Aberdeen.",
+    "noBeds": 1,
+    "noBaths": 1.5
+  },
+  "IMG_2801-HDR": {
+    "title": "1 bed flat, Cults",
+    "description": "The main bathroom in a beautifully renovated, 1 bedroom flat situated in the center of Cults, Aberdeen.",
+    "noBeds": 1,
+    "noBaths": 1.5
+  },
+  "IMG_2805": {
+    "title": "1 bed flat, Cults",
+    "description": "The main bathroom in a beautifully renovated, 1 bedroom flat situated in the center of Cults, Aberdeen.",
+    "noBeds": 1,
+    "noBaths": 1.5
+  },
+  "IMG_2809-HDR": {
+    "title": "1 bed flat, Cults",
+    "description": "The master bedroom in a beautifully renovated, 1 bedroom flat situated in the center of Cults, Aberdeen.",
+    "noBeds": 1,
+    "noBaths": 1.5
+  },
+  "IMG_2812-HDR": {
+    "title": "1 bed flat, Cults",
+    "description": "The ensuite bathroom in a beautifully renovated, 1 bedroom flat situated in the center of Cults, Aberdeen.",
+    "noBeds": 1,
+    "noBaths": 1.5
+  },
+  "IMG_2825-HDR": {
+    "title": "1 bed flat, Cults",
+    "description": "The main living space in this beautiful flat. After knocking down a wall, this has a great open-plan feel, with an entrance through french doors straight into the kitchen.",
+    "noBeds": 1,
+    "noBaths": 1.5
+  },
+  "IMG_2832-HDR": {
+    "title": "1 bed flat, Cults",
+    "description": "A bright and modern kitchen in a beautifully renovated, 1 bedroom flat situated in the center of Cults, Aberdeen.",
+    "noBeds": 1,
+    "noBaths": 1.5
   }
 }
