@@ -4,6 +4,8 @@
   text-align: center;
   padding: $SECTION_PADDING;
   background-color: $sigWhite;
+  padding-bottom: 150px;
+  overflow: hidden;
 
   > h2 {
     color: $sigRed;
@@ -20,30 +22,72 @@
     max-width: 1000px;
     margin: auto;
 
-    .pricing-text,
+    .pricing-left,
     .pricing-calculator {
       margin: 10px 2%;
     }
 
-    .pricing-text {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 400;
-      font-size: 1.4rem;
-      line-height: 1.8;
-      text-align: left;
-      color: $sigGrey;
+    .pricing-left {
       flex: 1;
+      text-align: left;
+
+      p:nth-child(2) {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2;
+        color: $sigGrey;
+
+        a {
+          color: $sigRed;
+          text-decoration: none;
+          border: 4px solid $sigRed;
+          border-radius: 50px;
+          padding: 0.25em 0.5em;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+          transition: all 0.3s ease;
+          background-color: $sigWhite;
+
+          &:hover {
+            color: $sigWhite;
+            background-color: $sigRed;
+          }
+        }
+      }
+
+      .pricing-text {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.8;
+        text-align: left;
+        color: $sigGrey;
+      }
     }
 
     .pricing-calculator {
       flex: 1;
       background-color: $sigRed;
       border-radius: 5px;
-      overflow: hidden;
       padding: 20px 1%;
       margin: auto;
       max-width: 400px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $sigGrey;
+        top: 120%;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        transform: perspective(3rem) rotateX(30deg);
+        filter: blur(1rem);
+      }
 
       > h3 {
         font-family: "Nunito", sans-serif;
@@ -164,24 +208,6 @@
         font-size: 1.1rem;
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
-      }
-    }
-  }
-
-  > p {
-    margin-top: 20px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: $sigGrey;
-
-    > span {
-      a {
-        color: $sigRed;
-
-        &:hover {
-          color: $sigRedHover;
-        }
       }
     }
   }

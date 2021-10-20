@@ -14,13 +14,19 @@ const Pricing = () => {
       <div id="pricing" className="section-pricing">
         <h2>Price Calculator</h2>
         <div className="pricing-content-wrapper">
-          <p className="pricing-text">
-            Our prices really are worth sharing! We truly believe we offer the
-            most competitive prices for top tier property photography. Simply
-            use the price calculator to get an instant quote for your property,
-            before booking. Questions? Don't hesitate to get in touch via our
-            contact form.
-          </p>
+          <div className="pricing-left">
+            <p className="pricing-text">
+              Our prices really are worth sharing! We truly believe we offer the
+              most competitive prices for top tier property photography. Simply
+              use the price calculator to get an instant quote for your
+              property, before booking. Questions? Don't hesitate to get in
+              touch via our contact form.
+            </p>
+            <p>
+              Like what you see? <br />{" "}
+              <a href={config["booking-url"]}>Book now</a>
+            </p>
+          </div>
           <div className="pricing-calculator">
             <h3>Total cost</h3>
             <h2 className="price flash" key={calculatedPrice}>
@@ -67,12 +73,6 @@ const Pricing = () => {
             </HashLink>
           </div>
         </div>
-        <p>
-          Like what you see?{" "}
-          <span>
-            <a href={config["booking-url"]}>Book now</a>
-          </span>
-        </p>
       </div>
     </FadeInSection>
   );
