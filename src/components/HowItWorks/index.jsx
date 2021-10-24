@@ -36,7 +36,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="section-how-it-works">
+    <div id="how-it-works" className="section-how-it-works">
       <h2>How it works</h2>
       <div className="about-cards">
         {infoList.map(({ icon, title, body }) => (

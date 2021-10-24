@@ -10,6 +10,9 @@ const ImageDataContextProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         let response = await fetch("/api/get-image-data");
+        if (!response.ok) {
+          throw new Error("No image data returned from api.");
+        }
         const data = await response.json();
         setImageData(data);
         setLoading(false);

@@ -48,6 +48,16 @@
           font-weight: 600;
           font-size: clamp(1.5rem, 3vw, 2rem);
           margin-bottom: 10px;
+          text-decoration: none;
+          color: $sigWhite;
+          box-shadow: rgba(0, 0, 0, 0.35) 4px 4px 16px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            cursor: pointer;
+            background-color: $sigWhite;
+            color: $sigRed;
+          }
 
           a {
             text-decoration: none;

@@ -18,7 +18,15 @@ const SlideShow = () => {
   }, [slidePosition]);
 
   const getButton = (link, isExternal, text) =>
-    isExternal ? <a href={link}>{text}</a> : <Link to={link}>{text}</Link>;
+    isExternal ? (
+      <a className="slide-button" href={link}>
+        {text}
+      </a>
+    ) : (
+      <Link className="slide-button" to={link}>
+        {text}
+      </Link>
+    );
 
   return (
     <div className="slideshow-container">
@@ -40,10 +48,7 @@ const SlideShow = () => {
                   <h2>{line2}</h2>
                   <h2>{line3}</h2>
                 </div>
-                {/* Create link generator component to return an a or Link component here. */}
-                <button className="slide-button">
-                  {getButton(button.link, button.isExternal, button.text)}
-                </button>
+                {getButton(button.link, button.isExternal, button.text)}
               </div>
             </TopTile>
           ))}

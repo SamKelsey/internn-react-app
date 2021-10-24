@@ -6,7 +6,7 @@
     padding: 40px 10%;
 
     .why-internn-reason {
-      .reason-text {
+      .reason-left {
         margin-right: 6%;
       }
     }
@@ -18,26 +18,38 @@
       max-width: 1000px;
       margin: auto;
 
-      .reason-text {
-        font-family: "Nunito", sans-serif;
-        font-weight: 400;
-        color: $sigGrey;
-
-        > * {
-          padding: 10px 0;
-        }
-
-        > h2 {
-          padding-top: 0;
-          line-height: 1.2;
+      .reason-left {
+        .reason-text {
+          font-family: "Nunito", sans-serif;
           font-weight: 400;
-          font-size: 4rem;
-        }
+          color: $sigGrey;
 
-        > p {
-          font-size: 1.3rem;
-          line-height: 1.6;
-          padding-bottom: 0;
+          > * {
+            padding: 10px 0;
+          }
+
+          > h2 {
+            padding-top: 0;
+            line-height: 1.2;
+            font-weight: 400;
+            font-size: 4rem;
+          }
+
+          > p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            padding-bottom: 30px;
+          }
+        }
+        .reason-button {
+          font-size: 1.2rem;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+          text-decoration: none;
+          border-radius: 30px;
+          padding: 10px 20px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+          transition: all 0.3s ease;
         }
       }
 
@@ -51,13 +63,25 @@
       @extend .why-internn-reason-wrapper;
       background-color: $sigWhite;
 
-      .why-internn-reason > .reason-text {
-        > h2 {
-          color: $sigGrey;
+      .why-internn-reason .reason-left {
+        .reason-text {
+          > h2 {
+            color: $sigGrey;
+          }
+
+          > p {
+            color: $sigGreyOpaque;
+          }
         }
 
-        > p {
-          color: $sigGreyOpaque;
+        .reason-button {
+          color: $sigGrey;
+          border: 3px solid $sigGrey;
+
+          &:hover {
+            color: $sigWhite;
+            background-color: $sigGrey;
+          }
         }
       }
     }
@@ -65,13 +89,25 @@
       @extend .why-internn-reason-wrapper;
       background-color: $sigGrey;
 
-      .why-internn-reason > .reason-text {
-        > h2 {
-          color: $sigWhite;
+      .why-internn-reason .reason-left {
+        .reason-text {
+          > h2 {
+            color: $sigWhite;
+          }
+
+          > p {
+            color: $sigWhiteOpaque;
+          }
         }
 
-        > p {
-          color: $sigWhiteOpaque;
+        .reason-button {
+          color: $sigWhite;
+          border: 3px solid $sigWhite;
+
+          &:hover {
+            color: $sigGrey;
+            background-color: $sigWhite;
+          }
         }
       }
     }
@@ -79,13 +115,25 @@
       @extend .why-internn-reason-wrapper;
       background-color: $sigRed;
 
-      .why-internn-reason > .reason-text {
-        > h2 {
-          color: $sigWhite;
+      .why-internn-reason .reason-left {
+        .reason-text {
+          > h2 {
+            color: $sigWhite;
+          }
+
+          > p {
+            color: $sigWhiteOpaque;
+          }
         }
 
-        > p {
-          color: $sigWhiteOpaque;
+        .reason-button {
+          color: $sigWhite;
+          border: 3px solid $sigWhite;
+
+          &:hover {
+            color: $sigRed;
+            background-color: $sigWhite;
+          }
         }
       }
     }
@@ -96,7 +144,7 @@
       flex-direction: row-reverse;
       text-align: right;
 
-      .reason-text {
+      .reason-left {
         margin-left: 6%;
         margin-right: 0;
       }
@@ -108,7 +156,7 @@
       .why-internn-reason {
         display: block;
 
-        .reason-text {
+        .reason-left {
           margin: auto;
           margin-bottom: 20px;
         }

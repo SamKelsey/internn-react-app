@@ -6,6 +6,34 @@ import PhotoGallery from "../utils/PhotoGallery";
 import { scrollToTop } from "../../services/utils";
 import { ImageDataContext } from "../../contexts/ImageDataContext";
 
+const portfolioImageNames = [
+  "IMG_0111",
+  "IMG_0244",
+  "IMG_0250",
+  "IMG_0251",
+  "IMG_0307",
+  "IMG_1161",
+  "IMG_1176_portrait",
+  "IMG_1178",
+  "IMG_1463",
+  "IMG_1472",
+  "IMG_1496-2",
+  "IMG_2461",
+  "IMG_2471-HDR",
+  "IMG_2502-HDR",
+  "IMG_2512-HDR",
+  "IMG_2530-HDR",
+  "IMG_2549-HDR",
+  "IMG_2571-HDR",
+  "IMG_2676-HDR",
+  "IMG_2706-HDR",
+  "IMG_2709-HDR",
+  "IMG_2766-HDR",
+  "IMG_7596",
+  "IMG_8256",
+  "IMG_9990_portrait",
+];
+
 const Portfolio = () => {
   scrollToTop();
 
@@ -13,7 +41,7 @@ const Portfolio = () => {
 
   const portfolioImages = loading
     ? []
-    : Object.keys(imageData).map((key) => {
+    : portfolioImageNames.map((key) => {
         return {
           image: key,
           title: imageData[key].title,

@@ -10,6 +10,9 @@ const TeamDataContextProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         let response = await fetch("/api/get-team-data");
+        if (!response.ok) {
+          throw new Error("No team data returned from api.");
+        }
         const data = await response.json();
         setTeamData(data);
         setLoading(false);

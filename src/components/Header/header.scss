@@ -27,7 +27,6 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding: 0 10px;
     width: $headerLinksWidth;
     height: $headerLinksHeight;
     border-radius: 15px;
@@ -35,7 +34,7 @@
 
     .header-booking-link {
       height: 60%;
-      margin: auto 0;
+      margin: auto 12px;
     }
   }
 }
