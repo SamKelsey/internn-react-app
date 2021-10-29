@@ -7,6 +7,8 @@ import { scrollToTop } from "../../services/utils";
 import { ImageDataContext } from "../../contexts/ImageDataContext";
 
 const portfolioImageNames = [
+  "IMG_2832-HDR-2",
+  "IMG_2825-HDR",
   "IMG_0111",
   "IMG_0244",
   "IMG_0250",
